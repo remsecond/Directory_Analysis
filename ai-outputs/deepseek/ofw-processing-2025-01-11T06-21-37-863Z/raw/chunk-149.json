@@ -1,0 +1,27 @@
+{
+  "text": "Register Here\nWe look forward to seeing you in the gym!\nMicah Mitchell\nLions League Director",
+  "metadata": {
+    "section": "HTTPS://US02WEB.ZOOM.US/J/85406634964",
+    "type": "text",
+    "position": 148,
+    "continues": true,
+    "part": 149,
+    "total_parts": 238,
+    "estimated_tokens": 23,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 149,
+    "total_chunks": 238,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

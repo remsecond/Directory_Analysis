@@ -1,0 +1,10 @@
+{
+  "processing_meta": {
+    "timestamp": "2025-01-12T20:54:46.600Z",
+    "version": "1.0",
+    "processing_time_ms": 972
+  },
+  "structure_analysis": {
+    "estimated_total_tokens": 180599
+  }
+}

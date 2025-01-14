@@ -1,0 +1,27 @@
+{
+  "text": "This week, we have:\n• Gotten AD into SAAS after denial.\n• Had a breakthrough with Dr Brown\n• Kicked off Kids therapy with Kerris Betts\n• Finalized the RO we both are happy with\n• Agree to the terms of the Parenting Plan\n• Have a co-paring dialog started with Andy\nSent:03/07/2024 at 01:05 PM\nFrom:Robert Moyer\nTo:Christine Moyer (First Viewed: 03/07/2024 at 01:40 PM)\nSubject:RO Updates",
+  "metadata": {
+    "section": "emergencies. Example: Missed bus, school nurse, medical or educational crisis (SAAS)",
+    "type": "text",
+    "position": 120,
+    "continues": true,
+    "part": 121,
+    "total_parts": 238,
+    "estimated_tokens": 97,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 121,
+    "total_chunks": 238,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

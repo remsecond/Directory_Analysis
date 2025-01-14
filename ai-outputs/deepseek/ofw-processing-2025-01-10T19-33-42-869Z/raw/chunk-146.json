@@ -1,0 +1,27 @@
+{
+  "text": "• Stop interfering with the mental health engagements run by professionals\nSent:07/11/2024 at 11:42 AM\nFrom:Robert Moyer\nTo:Christine Moyer (First Viewed: 07/11/2024 at 12:42 PM)\nSubject:Therapy and Decision Making",
+  "metadata": {
+    "section": "ASK:",
+    "type": "text",
+    "position": 145,
+    "continues": true,
+    "part": 146,
+    "total_parts": 225,
+    "estimated_tokens": 54,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 146,
+    "total_chunks": 225,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

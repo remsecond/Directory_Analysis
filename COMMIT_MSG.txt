@@ -1,29 +1,17 @@
-feat(core): preserve stable pipeline state
+Initial commit: Project documentation and architecture setup
 
-Core Pipeline Files:
-- src/services/base-processor.js
-- src/services/pdf-processor.js
-- test-base-processor.js
-- test-pdf-processor.js
-- simple-pdf-processor/src/services/pdf-processor.js
-- simple-pdf-processor/src/services/ods-processor.js
-- simple-pdf-processor/test/core-pipeline.test.js
+- Added core documentation structure outlining architecture decisions
+- Established clear separation between core and experimental features
+- Documented innovation management strategy with feature flag approach
+- Set up progress tracking framework with core stability metrics
+- Defined rebuild strategy with phase-by-phase implementation plan
+- Preserved key technical learnings and patterns from existing codebase
 
-Google Integration:
-- src/services/google-sheets.js
-- scripts/test-sheets-integration.js
-- config/google-auth-config.example.js
+Key architectural decisions:
+- Single, clean implementation over parallel approaches
+- MCP servers for truly separate services only
+- Streaming approach for large file processing
+- Clear service boundaries and error handling
+- Comprehensive testing requirements
 
-Test Files:
-- input/test-data/sample-ofw.txt
-- input/test-data/sample-email.txt
-- input/test-data/records.json
-- input/test-data/records.csv
-
-Configuration:
-- package.json
-- .gitignore
-- .env.example
-
-DO NOT add experimental features until core is stable.
-Current tests: 11/12 passing (minor email word count expectation)
+This commit establishes the foundation for a stable core platform while enabling safe innovation through isolated experimental features.

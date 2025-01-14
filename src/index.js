@@ -1,13 +1,31 @@
-// Core services
-export { routeDocument } from './services/document-router.js';
-export { analyzeDocument } from './services/document-analyzer.js';
-export { processDocument } from './services/document-processing.js';
-export { parseEmailThread } from './services/email-processing.js';
-export { processOFWEmail } from './services/ofw-processing.js';
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import cors from 'cors';
 
-// Analysis services
-export { analyzeOutlierPatterns, extractOutlierContext, generateOutlierSuggestions } from './services/outlier-analysis.js';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Utility services
-export { getLogger } from './utils/logging.js';
-export { trackProcessingTime, trackError, trackProcessingResult } from './services/monitoring.js';
+const app = express();
+const port = process.env.PORT || 3001;
+
+// Enable CORS
+app.use(cors());
+
+// Serve static files from Web directory
+app.use(express.static(path.join(__dirname, '..', 'Web')));
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.json({ status: 'ok' });
+});
+
+// Serve mission-control.html for root path
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'Web', 'mission-control.html'));
+});
+
+// Start server
+app.listen(port, () => {
+    console.log(`Web server running at http://localhost:${port}`);
+});

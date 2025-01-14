@@ -1,0 +1,1885 @@
+{
+  "document_structure": {},
+  "section_connections": [
+    {
+      "section": "Section 1",
+      "connects_to": "chunk-2"
+    },
+    {
+      "section": "(866) 755-9991",
+      "connects_to": "chunk-3"
+    },
+    {
+      "section": "Page 1 of 358",
+      "connects_to": "chunk-4"
+    },
+    {
+      "section": "Page 2 of 358",
+      "connects_to": "chunk-5"
+    },
+    {
+      "section": "Looking forward to a cooperative resolution!",
+      "connects_to": "chunk-6"
+    },
+    {
+      "section": "Page 3 of 358",
+      "connects_to": "chunk-7"
+    },
+    {
+      "section": "Page 4 of 358",
+      "connects_to": "chunk-8"
+    },
+    {
+      "section": "Looking forward to a cooperative resolution!",
+      "connects_to": "chunk-9"
+    },
+    {
+      "section": "Page 5 of 358",
+      "connects_to": "chunk-10"
+    },
+    {
+      "section": "Page 6 of 358",
+      "connects_to": "chunk-11"
+    },
+    {
+      "section": "Looking forward to a cooperative resolution!",
+      "connects_to": "chunk-12"
+    },
+    {
+      "section": "Page 7 of 358",
+      "connects_to": "chunk-13"
+    },
+    {
+      "section": "Page 8 of 358",
+      "connects_to": "chunk-14"
+    },
+    {
+      "section": "Page 9 of 358",
+      "connects_to": "chunk-15"
+    },
+    {
+      "section": "509 608 4742",
+      "connects_to": "chunk-16"
+    },
+    {
+      "section": "Page 10 of 358",
+      "connects_to": "chunk-17"
+    },
+    {
+      "section": "509 608 4742",
+      "connects_to": "chunk-18"
+    },
+    {
+      "section": "Page 11 of 358",
+      "connects_to": "chunk-19"
+    },
+    {
+      "section": "Page 12 of 358",
+      "connects_to": "chunk-20"
+    },
+    {
+      "section": "509 608 4742",
+      "connects_to": "chunk-21"
+    },
+    {
+      "section": "Page 13 of 358",
+      "connects_to": "chunk-22"
+    },
+    {
+      "section": "Page 14 of 358",
+      "connects_to": "chunk-23"
+    },
+    {
+      "section": "Page 15 of 358",
+      "connects_to": "chunk-24"
+    },
+    {
+      "section": "Page 16 of 358",
+      "connects_to": "chunk-25"
+    },
+    {
+      "section": "Page 17 of 358",
+      "connects_to": "chunk-26"
+    },
+    {
+      "section": "Looking forward to a cooperative resolution!",
+      "connects_to": "chunk-27"
+    },
+    {
+      "section": "Page 18 of 358",
+      "connects_to": "chunk-28"
+    },
+    {
+      "section": "Page 19 of 358",
+      "connects_to": "chunk-29"
+    },
+    {
+      "section": "Page 20 of 358",
+      "connects_to": "chunk-30"
+    },
+    {
+      "section": "Page 21 of 358",
+      "connects_to": "chunk-31"
+    },
+    {
+      "section": "Page 22 of 358",
+      "connects_to": "chunk-32"
+    },
+    {
+      "section": "Page 23 of 358",
+      "connects_to": "chunk-33"
+    },
+    {
+      "section": "Page 24 of 358",
+      "connects_to": "chunk-34"
+    },
+    {
+      "section": "Page 25 of 358",
+      "connects_to": "chunk-35"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-36"
+    },
+    {
+      "section": "Page 26 of 358",
+      "connects_to": "chunk-37"
+    },
+    {
+      "section": "Page 27 of 358",
+      "connects_to": "chunk-38"
+    },
+    {
+      "section": "Page 28 of 358",
+      "connects_to": "chunk-39"
+    },
+    {
+      "section": "Page 29 of 358",
+      "connects_to": "chunk-40"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-41"
+    },
+    {
+      "section": "Page 30 of 358",
+      "connects_to": "chunk-42"
+    },
+    {
+      "section": "Page 31 of 358",
+      "connects_to": "chunk-43"
+    },
+    {
+      "section": "Page 32 of 358",
+      "connects_to": "chunk-44"
+    },
+    {
+      "section": "Page 33 of 358",
+      "connects_to": "chunk-45"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-46"
+    },
+    {
+      "section": "Page 34 of 358",
+      "connects_to": "chunk-47"
+    },
+    {
+      "section": "Page 35 of 358",
+      "connects_to": "chunk-48"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-49"
+    },
+    {
+      "section": "Page 36 of 358",
+      "connects_to": "chunk-50"
+    },
+    {
+      "section": "Page 37 of 358",
+      "connects_to": "chunk-51"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-52"
+    },
+    {
+      "section": "Page 38 of 358",
+      "connects_to": "chunk-53"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-54"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-55"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-56"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-57"
+    },
+    {
+      "section": "Page 39 of 358",
+      "connects_to": "chunk-58"
+    },
+    {
+      "section": "Page 40 of 358",
+      "connects_to": "chunk-59"
+    },
+    {
+      "section": "Page 41 of 358",
+      "connects_to": "chunk-60"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-61"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-62"
+    },
+    {
+      "section": "Page 42 of 358",
+      "connects_to": "chunk-63"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-64"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-65"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-66"
+    },
+    {
+      "section": "Page 43 of 358",
+      "connects_to": "chunk-67"
+    },
+    {
+      "section": "Page 44 of 358",
+      "connects_to": "chunk-68"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-69"
+    },
+    {
+      "section": "Page 45 of 358",
+      "connects_to": "chunk-70"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-71"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-72"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-73"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-74"
+    },
+    {
+      "section": "Page 47 of 358",
+      "connects_to": "chunk-75"
+    },
+    {
+      "section": "Page 48 of 358",
+      "connects_to": "chunk-76"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-77"
+    },
+    {
+      "section": "Page 49 of 358",
+      "connects_to": "chunk-78"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-79"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-80"
+    },
+    {
+      "section": "Page 50 of 358",
+      "connects_to": "chunk-81"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-82"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-83"
+    },
+    {
+      "section": "Page 51 of 358",
+      "connects_to": "chunk-84"
+    },
+    {
+      "section": "Page 52 of 358",
+      "connects_to": "chunk-85"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-86"
+    },
+    {
+      "section": "Page 53 of 358",
+      "connects_to": "chunk-87"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-88"
+    },
+    {
+      "section": "Page 54 of 358",
+      "connects_to": "chunk-89"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-90"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-91"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-92"
+    },
+    {
+      "section": "Page 55 of 358",
+      "connects_to": "chunk-93"
+    },
+    {
+      "section": "Page 56 of 358",
+      "connects_to": "chunk-94"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-95"
+    },
+    {
+      "section": "Page 57 of 358",
+      "connects_to": "chunk-96"
+    },
+    {
+      "section": "Page 58 of 358",
+      "connects_to": "chunk-97"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-98"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-99"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-100"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-101"
+    },
+    {
+      "section": "Page 59 of 358",
+      "connects_to": "chunk-102"
+    },
+    {
+      "section": "Page 60 of 358",
+      "connects_to": "chunk-103"
+    },
+    {
+      "section": "Page 61 of 358",
+      "connects_to": "chunk-104"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-105"
+    },
+    {
+      "section": "Page 62 of 358",
+      "connects_to": "chunk-106"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-107"
+    },
+    {
+      "section": "Page 63 of 358",
+      "connects_to": "chunk-108"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-109"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-110"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-111"
+    },
+    {
+      "section": "Page 64 of 358",
+      "connects_to": "chunk-112"
+    },
+    {
+      "section": "Page 65 of 358",
+      "connects_to": "chunk-113"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-114"
+    },
+    {
+      "section": "Page 66 of 358",
+      "connects_to": "chunk-115"
+    },
+    {
+      "section": "Page 67 of 358",
+      "connects_to": "chunk-116"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-117"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-118"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-119"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-120"
+    },
+    {
+      "section": "Page 69 of 358",
+      "connects_to": "chunk-121"
+    },
+    {
+      "section": "Page 70 of 358",
+      "connects_to": "chunk-122"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-123"
+    },
+    {
+      "section": "Page 71 of 358",
+      "connects_to": "chunk-124"
+    },
+    {
+      "section": "Page 72 of 358",
+      "connects_to": "chunk-125"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-126"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-127"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-128"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-129"
+    },
+    {
+      "section": "Page 74 of 358",
+      "connects_to": "chunk-130"
+    },
+    {
+      "section": "Page 75 of 358",
+      "connects_to": "chunk-131"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-132"
+    },
+    {
+      "section": "Page 76 of 358",
+      "connects_to": "chunk-133"
+    },
+    {
+      "section": "Page 77 of 358",
+      "connects_to": "chunk-134"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-135"
+    },
+    {
+      "section": "Page 78 of 358",
+      "connects_to": "chunk-136"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-137"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-138"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-139"
+    },
+    {
+      "section": "Page 79 of 358",
+      "connects_to": "chunk-140"
+    },
+    {
+      "section": "Page 80 of 358",
+      "connects_to": "chunk-141"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-142"
+    },
+    {
+      "section": "Page 81 of 358",
+      "connects_to": "chunk-143"
+    },
+    {
+      "section": "Page 82 of 358",
+      "connects_to": "chunk-144"
+    },
+    {
+      "section": "Page 83 of 358",
+      "connects_to": "chunk-145"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-146"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-147"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-148"
+    },
+    {
+      "section": "Page 84 of 358",
+      "connects_to": "chunk-149"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-150"
+    },
+    {
+      "section": "Page 85 of 358",
+      "connects_to": "chunk-151"
+    },
+    {
+      "section": "Page 86 of 358",
+      "connects_to": "chunk-152"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-153"
+    },
+    {
+      "section": "Page 87 of 358",
+      "connects_to": "chunk-154"
+    },
+    {
+      "section": "Page 88 of 358",
+      "connects_to": "chunk-155"
+    },
+    {
+      "section": "Page 89 of 358",
+      "connects_to": "chunk-156"
+    },
+    {
+      "section": "1. Factual Comparison of Children's Status:",
+      "connects_to": "chunk-157"
+    },
+    {
+      "section": "2. Documented Impact:",
+      "connects_to": "chunk-158"
+    },
+    {
+      "section": "3. Mediation Record:",
+      "connects_to": "chunk-159"
+    },
+    {
+      "section": "Page 90 of 358",
+      "connects_to": "chunk-160"
+    },
+    {
+      "section": "4. Professional Documentation:",
+      "connects_to": "chunk-161"
+    },
+    {
+      "section": "Page 91 of 358",
+      "connects_to": "chunk-162"
+    },
+    {
+      "section": "Page 92 of 358",
+      "connects_to": "chunk-163"
+    },
+    {
+      "section": "<EndChatGPT/>",
+      "connects_to": "chunk-164"
+    },
+    {
+      "section": "Page 93 of 358",
+      "connects_to": "chunk-165"
+    },
+    {
+      "section": "Page 94 of 358",
+      "connects_to": "chunk-166"
+    },
+    {
+      "section": "Page 95 of 358",
+      "connects_to": "chunk-167"
+    },
+    {
+      "section": "Page 96 of 358",
+      "connects_to": "chunk-168"
+    },
+    {
+      "section": "Page 97 of 358",
+      "connects_to": "chunk-169"
+    },
+    {
+      "section": "Page 98 of 358",
+      "connects_to": "chunk-170"
+    },
+    {
+      "section": "Page 99 of 358",
+      "connects_to": "chunk-171"
+    },
+    {
+      "section": "Page 100 of 358",
+      "connects_to": "chunk-172"
+    },
+    {
+      "section": "Page 101 of 358",
+      "connects_to": "chunk-173"
+    },
+    {
+      "section": "Page 102 of 358",
+      "connects_to": "chunk-174"
+    },
+    {
+      "section": "Page 103 of 358",
+      "connects_to": "chunk-175"
+    },
+    {
+      "section": "Page 104 of 358",
+      "connects_to": "chunk-176"
+    },
+    {
+      "section": "Page 105 of 358",
+      "connects_to": "chunk-177"
+    },
+    {
+      "section": "Page 106 of 358",
+      "connects_to": "chunk-178"
+    },
+    {
+      "section": "Page 107 of 358",
+      "connects_to": "chunk-179"
+    },
+    {
+      "section": "Page 108 of 358",
+      "connects_to": "chunk-180"
+    },
+    {
+      "section": "Page 109 of 358",
+      "connects_to": "chunk-181"
+    },
+    {
+      "section": "Page 110 of 358",
+      "connects_to": "chunk-182"
+    },
+    {
+      "section": "Page 111 of 358",
+      "connects_to": "chunk-183"
+    },
+    {
+      "section": "Page 112 of 358",
+      "connects_to": "chunk-184"
+    },
+    {
+      "section": "Page 113 of 358",
+      "connects_to": "chunk-185"
+    },
+    {
+      "section": "Page 114 of 358",
+      "connects_to": "chunk-186"
+    },
+    {
+      "section": "Page 115 of 358",
+      "connects_to": "chunk-187"
+    },
+    {
+      "section": "Page 116 of 358",
+      "connects_to": "chunk-188"
+    },
+    {
+      "section": "Page 117 of 358",
+      "connects_to": "chunk-189"
+    },
+    {
+      "section": "Page 118 of 358",
+      "connects_to": "chunk-190"
+    },
+    {
+      "section": "Page 119 of 358",
+      "connects_to": "chunk-191"
+    },
+    {
+      "section": "Page 120 of 358",
+      "connects_to": "chunk-192"
+    },
+    {
+      "section": "Page 121 of 358",
+      "connects_to": "chunk-193"
+    },
+    {
+      "section": "Page 122 of 358",
+      "connects_to": "chunk-194"
+    },
+    {
+      "section": "Page 123 of 358",
+      "connects_to": "chunk-195"
+    },
+    {
+      "section": "Page 124 of 358",
+      "connects_to": "chunk-196"
+    },
+    {
+      "section": "Page 125 of 358",
+      "connects_to": "chunk-197"
+    },
+    {
+      "section": "Page 126 of 358",
+      "connects_to": "chunk-198"
+    },
+    {
+      "section": "Looking forward to a cooperative resolution!",
+      "connects_to": "chunk-199"
+    },
+    {
+      "section": "Page 127 of 358",
+      "connects_to": "chunk-200"
+    },
+    {
+      "section": "Page 128 of 358",
+      "connects_to": "chunk-201"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-202"
+    },
+    {
+      "section": "SCENARIO A - DECEMBER 2024 PAYMENT",
+      "connects_to": "chunk-203"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-204"
+    },
+    {
+      "section": "Page 129 of 358",
+      "connects_to": "chunk-205"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-206"
+    },
+    {
+      "section": "Page 130 of 358",
+      "connects_to": "chunk-207"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-208"
+    },
+    {
+      "section": "SCENARIO A - DECEMBER 2024 PAYMENT",
+      "connects_to": "chunk-209"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-210"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-211"
+    },
+    {
+      "section": "Page 132 of 358",
+      "connects_to": "chunk-212"
+    },
+    {
+      "section": "Page 133 of 358",
+      "connects_to": "chunk-213"
+    },
+    {
+      "section": "Page 134 of 358",
+      "connects_to": "chunk-214"
+    },
+    {
+      "section": "Looking forward to a cooperative resolution!",
+      "connects_to": "chunk-215"
+    },
+    {
+      "section": "Page 135 of 358",
+      "connects_to": "chunk-216"
+    },
+    {
+      "section": "Page 136 of 358",
+      "connects_to": "chunk-217"
+    },
+    {
+      "section": "Page 137 of 358",
+      "connects_to": "chunk-218"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-219"
+    },
+    {
+      "section": "SCENARIO A - DECEMBER 2024 PAYMENT",
+      "connects_to": "chunk-220"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-221"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-222"
+    },
+    {
+      "section": "Page 138 of 358",
+      "connects_to": "chunk-223"
+    },
+    {
+      "section": "Page 139 of 358",
+      "connects_to": "chunk-224"
+    },
+    {
+      "section": "Page 140 of 358",
+      "connects_to": "chunk-225"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-226"
+    },
+    {
+      "section": "SCENARIO A - DECEMBER 2024 PAYMENT",
+      "connects_to": "chunk-227"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-228"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-229"
+    },
+    {
+      "section": "Page 142 of 358",
+      "connects_to": "chunk-230"
+    },
+    {
+      "section": "Page 143 of 358",
+      "connects_to": "chunk-231"
+    },
+    {
+      "section": "Page 144 of 358",
+      "connects_to": "chunk-232"
+    },
+    {
+      "section": "Page 145 of 358",
+      "connects_to": "chunk-233"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-234"
+    },
+    {
+      "section": "SCENARIO A - DECEMBER 2024 PAYMENT",
+      "connects_to": "chunk-235"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-236"
+    },
+    {
+      "section": "Page 146 of 358",
+      "connects_to": "chunk-237"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-238"
+    },
+    {
+      "section": "Page 147 of 358",
+      "connects_to": "chunk-239"
+    },
+    {
+      "section": "Page 148 of 358",
+      "connects_to": "chunk-240"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-241"
+    },
+    {
+      "section": "Page 149 of 358",
+      "connects_to": "chunk-242"
+    },
+    {
+      "section": "SCENARIO A - DECEMBER 2024 PAYMENT",
+      "connects_to": "chunk-243"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-244"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-245"
+    },
+    {
+      "section": "Page 150 of 358",
+      "connects_to": "chunk-246"
+    },
+    {
+      "section": "Page 151 of 358",
+      "connects_to": "chunk-247"
+    },
+    {
+      "section": "Page 152 of 358",
+      "connects_to": "chunk-248"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-249"
+    },
+    {
+      "section": "SCENARIO A - DECEMBER 2024 PAYMENT",
+      "connects_to": "chunk-250"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-251"
+    },
+    {
+      "section": "Page 153 of 358",
+      "connects_to": "chunk-252"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-253"
+    },
+    {
+      "section": "Page 154 of 358",
+      "connects_to": "chunk-254"
+    },
+    {
+      "section": "Page 155 of 358",
+      "connects_to": "chunk-255"
+    },
+    {
+      "section": "Page 156 of 358",
+      "connects_to": "chunk-256"
+    },
+    {
+      "section": "Page 157 of 358",
+      "connects_to": "chunk-257"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-258"
+    },
+    {
+      "section": "SCENARIO A - DECEMBER 2024 PAYMENT",
+      "connects_to": "chunk-259"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-260"
+    },
+    {
+      "section": "Page 158 of 358",
+      "connects_to": "chunk-261"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-262"
+    },
+    {
+      "section": "Page 159 of 358",
+      "connects_to": "chunk-263"
+    },
+    {
+      "section": "Page 160 of 358",
+      "connects_to": "chunk-264"
+    },
+    {
+      "section": "Page 161 of 358",
+      "connects_to": "chunk-265"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-266"
+    },
+    {
+      "section": "Page 162 of 358",
+      "connects_to": "chunk-267"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-268"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-269"
+    },
+    {
+      "section": "Page 163 of 358",
+      "connects_to": "chunk-270"
+    },
+    {
+      "section": "Page 164 of 358",
+      "connects_to": "chunk-271"
+    },
+    {
+      "section": "Page 165 of 358",
+      "connects_to": "chunk-272"
+    },
+    {
+      "section": "Page 166 of 358",
+      "connects_to": "chunk-273"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-274"
+    },
+    {
+      "section": "SCENARIO A - DECEMBER 2024 PAYMENT",
+      "connects_to": "chunk-275"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-276"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-277"
+    },
+    {
+      "section": "Page 167 of 358",
+      "connects_to": "chunk-278"
+    },
+    {
+      "section": "Page 168 of 358",
+      "connects_to": "chunk-279"
+    },
+    {
+      "section": "Page 169 of 358",
+      "connects_to": "chunk-280"
+    },
+    {
+      "section": "Page 170 of 358",
+      "connects_to": "chunk-281"
+    },
+    {
+      "section": "Page 171 of 358",
+      "connects_to": "chunk-282"
+    },
+    {
+      "section": "CURRENT 2024 INCOME & PROJECTIONS",
+      "connects_to": "chunk-283"
+    },
+    {
+      "section": "Page 172 of 358",
+      "connects_to": "chunk-284"
+    },
+    {
+      "section": "SCENARIO B - JANUARY 2025 PAYMENT",
+      "connects_to": "chunk-285"
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "connects_to": "chunk-286"
+    },
+    {
+      "section": "Page 173 of 358",
+      "connects_to": "chunk-287"
+    },
+    {
+      "section": "Page 174 of 358",
+      "connects_to": "chunk-288"
+    },
+    {
+      "section": "Page 175 of 358",
+      "connects_to": "chunk-289"
+    },
+    {
+      "section": "Page 176 of 358",
+      "connects_to": "chunk-290"
+    },
+    {
+      "section": "Page 177 of 358",
+      "connects_to": "chunk-291"
+    },
+    {
+      "section": "Page 178 of 358",
+      "connects_to": "chunk-292"
+    },
+    {
+      "section": "Page 179 of 358",
+      "connects_to": "chunk-293"
+    },
+    {
+      "section": "Page 180 of 358",
+      "connects_to": "chunk-294"
+    },
+    {
+      "section": "Page 181 of 358",
+      "connects_to": "chunk-295"
+    },
+    {
+      "section": "Page 182 of 358",
+      "connects_to": "chunk-296"
+    },
+    {
+      "section": "Page 183 of 358",
+      "connects_to": "chunk-297"
+    },
+    {
+      "section": "Page 184 of 358",
+      "connects_to": "chunk-298"
+    },
+    {
+      "section": "Page 185 of 358",
+      "connects_to": "chunk-299"
+    },
+    {
+      "section": "Page 186 of 358",
+      "connects_to": "chunk-300"
+    },
+    {
+      "section": "Page 187 of 358",
+      "connects_to": "chunk-301"
+    },
+    {
+      "section": "Page 188 of 358",
+      "connects_to": "chunk-302"
+    },
+    {
+      "section": "Page 189 of 358",
+      "connects_to": "chunk-303"
+    },
+    {
+      "section": "Page 190 of 358",
+      "connects_to": "chunk-304"
+    },
+    {
+      "section": "Page 191 of 358",
+      "connects_to": "chunk-305"
+    },
+    {
+      "section": "Page 192 of 358",
+      "connects_to": "chunk-306"
+    },
+    {
+      "section": "Page 193 of 358",
+      "connects_to": "chunk-307"
+    },
+    {
+      "section": "Page 194 of 358",
+      "connects_to": "chunk-308"
+    },
+    {
+      "section": "Page 195 of 358",
+      "connects_to": "chunk-309"
+    },
+    {
+      "section": "Page 196 of 358",
+      "connects_to": "chunk-310"
+    },
+    {
+      "section": "Page 197 of 358",
+      "connects_to": "chunk-311"
+    },
+    {
+      "section": "Page 198 of 358",
+      "connects_to": "chunk-312"
+    },
+    {
+      "section": "Page 199 of 358",
+      "connects_to": "chunk-313"
+    },
+    {
+      "section": "Page 200 of 358",
+      "connects_to": "chunk-314"
+    },
+    {
+      "section": "Page 201 of 358",
+      "connects_to": "chunk-315"
+    },
+    {
+      "section": "Page 202 of 358",
+      "connects_to": "chunk-316"
+    },
+    {
+      "section": "Page 203 of 358",
+      "connects_to": "chunk-317"
+    },
+    {
+      "section": "Page 204 of 358",
+      "connects_to": "chunk-318"
+    },
+    {
+      "section": "Page 205 of 358",
+      "connects_to": "chunk-319"
+    },
+    {
+      "section": "Page 206 of 358",
+      "connects_to": "chunk-320"
+    },
+    {
+      "section": "Page 207 of 358",
+      "connects_to": "chunk-321"
+    },
+    {
+      "section": "Page 208 of 358",
+      "connects_to": "chunk-322"
+    },
+    {
+      "section": "Page 209 of 358",
+      "connects_to": "chunk-323"
+    },
+    {
+      "section": "Page 210 of 358",
+      "connects_to": "chunk-324"
+    },
+    {
+      "section": "Page 211 of 358",
+      "connects_to": "chunk-325"
+    },
+    {
+      "section": "Page 212 of 358",
+      "connects_to": "chunk-326"
+    },
+    {
+      "section": "Page 213 of 358",
+      "connects_to": "chunk-327"
+    },
+    {
+      "section": "Page 214 of 358",
+      "connects_to": "chunk-328"
+    },
+    {
+      "section": "Page 215 of 358",
+      "connects_to": "chunk-329"
+    },
+    {
+      "section": "Page 216 of 358",
+      "connects_to": "chunk-330"
+    },
+    {
+      "section": "Page 217 of 358",
+      "connects_to": "chunk-331"
+    },
+    {
+      "section": "Page 218 of 358",
+      "connects_to": "chunk-332"
+    },
+    {
+      "section": "Page 219 of 358",
+      "connects_to": "chunk-333"
+    },
+    {
+      "section": "Page 220 of 358",
+      "connects_to": "chunk-334"
+    },
+    {
+      "section": "Page 221 of 358",
+      "connects_to": "chunk-335"
+    },
+    {
+      "section": "Page 222 of 358",
+      "connects_to": "chunk-336"
+    },
+    {
+      "section": "Page 223 of 358",
+      "connects_to": "chunk-337"
+    },
+    {
+      "section": "Page 224 of 358",
+      "connects_to": "chunk-338"
+    },
+    {
+      "section": "Page 225 of 358",
+      "connects_to": "chunk-339"
+    },
+    {
+      "section": "Page 226 of 358",
+      "connects_to": "chunk-340"
+    },
+    {
+      "section": "Page 227 of 358",
+      "connects_to": "chunk-341"
+    },
+    {
+      "section": "Page 228 of 358",
+      "connects_to": "chunk-342"
+    },
+    {
+      "section": "Page 229 of 358",
+      "connects_to": "chunk-343"
+    },
+    {
+      "section": "Page 230 of 358",
+      "connects_to": "chunk-344"
+    },
+    {
+      "section": "Page 231 of 358",
+      "connects_to": "chunk-345"
+    },
+    {
+      "section": "Page 232 of 358",
+      "connects_to": "chunk-346"
+    },
+    {
+      "section": "Page 233 of 358",
+      "connects_to": "chunk-347"
+    },
+    {
+      "section": "Page 234 of 358",
+      "connects_to": "chunk-348"
+    },
+    {
+      "section": "Page 235 of 358",
+      "connects_to": "chunk-349"
+    },
+    {
+      "section": "Page 236 of 358",
+      "connects_to": "chunk-350"
+    },
+    {
+      "section": "Page 237 of 358",
+      "connects_to": "chunk-351"
+    },
+    {
+      "section": "Page 238 of 358",
+      "connects_to": "chunk-352"
+    },
+    {
+      "section": "Page 239 of 358",
+      "connects_to": "chunk-353"
+    },
+    {
+      "section": "Page 240 of 358",
+      "connects_to": "chunk-354"
+    },
+    {
+      "section": "Page 241 of 358",
+      "connects_to": "chunk-355"
+    },
+    {
+      "section": "Page 242 of 358",
+      "connects_to": "chunk-356"
+    },
+    {
+      "section": "Page 243 of 358",
+      "connects_to": "chunk-357"
+    },
+    {
+      "section": "Page 244 of 358",
+      "connects_to": "chunk-358"
+    },
+    {
+      "section": "Page 245 of 358",
+      "connects_to": "chunk-359"
+    },
+    {
+      "section": "Page 246 of 358",
+      "connects_to": "chunk-360"
+    },
+    {
+      "section": "Page 247 of 358",
+      "connects_to": "chunk-361"
+    },
+    {
+      "section": "Page 248 of 358",
+      "connects_to": "chunk-362"
+    },
+    {
+      "section": "Page 249 of 358",
+      "connects_to": "chunk-363"
+    },
+    {
+      "section": "Page 250 of 358",
+      "connects_to": "chunk-364"
+    },
+    {
+      "section": "Page 251 of 358",
+      "connects_to": "chunk-365"
+    },
+    {
+      "section": "Page 252 of 358",
+      "connects_to": "chunk-366"
+    },
+    {
+      "section": "Page 253 of 358",
+      "connects_to": "chunk-367"
+    },
+    {
+      "section": "Page 254 of 358",
+      "connects_to": "chunk-368"
+    },
+    {
+      "section": "Page 255 of 358",
+      "connects_to": "chunk-369"
+    },
+    {
+      "section": "Page 256 of 358",
+      "connects_to": "chunk-370"
+    },
+    {
+      "section": "Page 257 of 358",
+      "connects_to": "chunk-371"
+    },
+    {
+      "section": "Page 258 of 358",
+      "connects_to": "chunk-372"
+    },
+    {
+      "section": "Page 259 of 358",
+      "connects_to": "chunk-373"
+    },
+    {
+      "section": "Page 260 of 358",
+      "connects_to": "chunk-374"
+    },
+    {
+      "section": "Page 261 of 358",
+      "connects_to": "chunk-375"
+    },
+    {
+      "section": "Page 262 of 358",
+      "connects_to": "chunk-376"
+    },
+    {
+      "section": "Page 263 of 358",
+      "connects_to": "chunk-377"
+    },
+    {
+      "section": "Page 264 of 358",
+      "connects_to": "chunk-378"
+    },
+    {
+      "section": "Page 265 of 358",
+      "connects_to": "chunk-379"
+    },
+    {
+      "section": "Page 266 of 358",
+      "connects_to": "chunk-380"
+    },
+    {
+      "section": "Page 267 of 358",
+      "connects_to": "chunk-381"
+    },
+    {
+      "section": "Page 268 of 358",
+      "connects_to": "chunk-382"
+    },
+    {
+      "section": "Page 269 of 358",
+      "connects_to": "chunk-383"
+    },
+    {
+      "section": "Page 270 of 358",
+      "connects_to": "chunk-384"
+    },
+    {
+      "section": "Page 271 of 358",
+      "connects_to": "chunk-385"
+    },
+    {
+      "section": "Page 272 of 358",
+      "connects_to": "chunk-386"
+    },
+    {
+      "section": "Page 273 of 358",
+      "connects_to": "chunk-387"
+    },
+    {
+      "section": "Page 274 of 358",
+      "connects_to": "chunk-388"
+    },
+    {
+      "section": "Page 275 of 358",
+      "connects_to": "chunk-389"
+    },
+    {
+      "section": "Page 276 of 358",
+      "connects_to": "chunk-390"
+    },
+    {
+      "section": "Page 277 of 358",
+      "connects_to": "chunk-391"
+    },
+    {
+      "section": "Page 278 of 358",
+      "connects_to": "chunk-392"
+    },
+    {
+      "section": "Page 279 of 358",
+      "connects_to": "chunk-393"
+    },
+    {
+      "section": "Page 280 of 358",
+      "connects_to": "chunk-394"
+    },
+    {
+      "section": "Page 281 of 358",
+      "connects_to": "chunk-395"
+    },
+    {
+      "section": "Page 282 of 358",
+      "connects_to": "chunk-396"
+    },
+    {
+      "section": "Page 283 of 358",
+      "connects_to": "chunk-397"
+    },
+    {
+      "section": "Page 284 of 358",
+      "connects_to": "chunk-398"
+    },
+    {
+      "section": "Page 285 of 358",
+      "connects_to": "chunk-399"
+    },
+    {
+      "section": "Page 286 of 358",
+      "connects_to": "chunk-400"
+    },
+    {
+      "section": "Page 287 of 358",
+      "connects_to": "chunk-401"
+    },
+    {
+      "section": "Page 288 of 358",
+      "connects_to": "chunk-402"
+    },
+    {
+      "section": "Page 289 of 358",
+      "connects_to": "chunk-403"
+    },
+    {
+      "section": "Page 290 of 358",
+      "connects_to": "chunk-404"
+    },
+    {
+      "section": "Page 291 of 358",
+      "connects_to": "chunk-405"
+    },
+    {
+      "section": "Page 292 of 358",
+      "connects_to": "chunk-406"
+    },
+    {
+      "section": "Page 293 of 358",
+      "connects_to": "chunk-407"
+    },
+    {
+      "section": "Page 294 of 358",
+      "connects_to": "chunk-408"
+    },
+    {
+      "section": "Page 295 of 358",
+      "connects_to": "chunk-409"
+    },
+    {
+      "section": "Page 296 of 358",
+      "connects_to": "chunk-410"
+    },
+    {
+      "section": "Page 297 of 358",
+      "connects_to": "chunk-411"
+    },
+    {
+      "section": "Page 298 of 358",
+      "connects_to": "chunk-412"
+    },
+    {
+      "section": "Page 299 of 358",
+      "connects_to": "chunk-413"
+    },
+    {
+      "section": "Page 300 of 358",
+      "connects_to": "chunk-414"
+    },
+    {
+      "section": "Page 301 of 358",
+      "connects_to": "chunk-415"
+    },
+    {
+      "section": "Page 302 of 358",
+      "connects_to": "chunk-416"
+    },
+    {
+      "section": "Page 303 of 358",
+      "connects_to": "chunk-417"
+    },
+    {
+      "section": "Page 304 of 358",
+      "connects_to": "chunk-418"
+    },
+    {
+      "section": "Page 305 of 358",
+      "connects_to": "chunk-419"
+    },
+    {
+      "section": "Page 306 of 358",
+      "connects_to": "chunk-420"
+    },
+    {
+      "section": "Page 307 of 358",
+      "connects_to": "chunk-421"
+    },
+    {
+      "section": "Page 308 of 358",
+      "connects_to": "chunk-422"
+    },
+    {
+      "section": "Page 309 of 358",
+      "connects_to": "chunk-423"
+    },
+    {
+      "section": "Page 310 of 358",
+      "connects_to": "chunk-424"
+    },
+    {
+      "section": "Page 311 of 358",
+      "connects_to": "chunk-425"
+    },
+    {
+      "section": "Page 312 of 358",
+      "connects_to": "chunk-426"
+    },
+    {
+      "section": "Page 313 of 358",
+      "connects_to": "chunk-427"
+    },
+    {
+      "section": "Page 314 of 358",
+      "connects_to": "chunk-428"
+    },
+    {
+      "section": "Page 315 of 358",
+      "connects_to": "chunk-429"
+    },
+    {
+      "section": "Page 316 of 358",
+      "connects_to": "chunk-430"
+    },
+    {
+      "section": "Page 317 of 358",
+      "connects_to": "chunk-431"
+    },
+    {
+      "section": "Page 318 of 358",
+      "connects_to": "chunk-432"
+    },
+    {
+      "section": "Page 319 of 358",
+      "connects_to": "chunk-433"
+    },
+    {
+      "section": "Page 320 of 358",
+      "connects_to": "chunk-434"
+    },
+    {
+      "section": "Page 321 of 358",
+      "connects_to": "chunk-435"
+    },
+    {
+      "section": "Page 322 of 358",
+      "connects_to": "chunk-436"
+    },
+    {
+      "section": "Page 323 of 358",
+      "connects_to": "chunk-437"
+    },
+    {
+      "section": "Page 324 of 358",
+      "connects_to": "chunk-438"
+    },
+    {
+      "section": "Page 325 of 358",
+      "connects_to": "chunk-439"
+    },
+    {
+      "section": "Page 326 of 358",
+      "connects_to": "chunk-440"
+    },
+    {
+      "section": "Page 327 of 358",
+      "connects_to": "chunk-441"
+    },
+    {
+      "section": "Page 328 of 358",
+      "connects_to": "chunk-442"
+    },
+    {
+      "section": "Page 329 of 358",
+      "connects_to": "chunk-443"
+    },
+    {
+      "section": "Page 330 of 358",
+      "connects_to": "chunk-444"
+    },
+    {
+      "section": "Page 331 of 358",
+      "connects_to": "chunk-445"
+    },
+    {
+      "section": "Page 332 of 358",
+      "connects_to": "chunk-446"
+    },
+    {
+      "section": "Page 333 of 358",
+      "connects_to": "chunk-447"
+    },
+    {
+      "section": "Page 334 of 358",
+      "connects_to": "chunk-448"
+    },
+    {
+      "section": "Page 335 of 358",
+      "connects_to": "chunk-449"
+    },
+    {
+      "section": "Page 336 of 358",
+      "connects_to": "chunk-450"
+    },
+    {
+      "section": "Page 337 of 358",
+      "connects_to": "chunk-451"
+    },
+    {
+      "section": "Page 338 of 358",
+      "connects_to": "chunk-452"
+    },
+    {
+      "section": "Page 339 of 358",
+      "connects_to": "chunk-453"
+    },
+    {
+      "section": "Page 340 of 358",
+      "connects_to": "chunk-454"
+    },
+    {
+      "section": "Page 341 of 358",
+      "connects_to": "chunk-455"
+    },
+    {
+      "section": "Page 342 of 358",
+      "connects_to": "chunk-456"
+    },
+    {
+      "section": "Page 343 of 358",
+      "connects_to": "chunk-457"
+    },
+    {
+      "section": "Page 344 of 358",
+      "connects_to": "chunk-458"
+    },
+    {
+      "section": "Page 345 of 358",
+      "connects_to": "chunk-459"
+    },
+    {
+      "section": "Page 346 of 358",
+      "connects_to": "chunk-460"
+    },
+    {
+      "section": "Page 347 of 358",
+      "connects_to": "chunk-461"
+    },
+    {
+      "section": "Page 348 of 358",
+      "connects_to": "chunk-462"
+    },
+    {
+      "section": "Page 349 of 358",
+      "connects_to": "chunk-463"
+    },
+    {
+      "section": "Page 350 of 358",
+      "connects_to": "chunk-464"
+    },
+    {
+      "section": "Page 351 of 358",
+      "connects_to": "chunk-465"
+    },
+    {
+      "section": "Page 352 of 358",
+      "connects_to": "chunk-466"
+    },
+    {
+      "section": "Page 353 of 358",
+      "connects_to": "chunk-467"
+    },
+    {
+      "section": "Page 354 of 358",
+      "connects_to": "chunk-468"
+    },
+    {
+      "section": "Page 355 of 358",
+      "connects_to": "chunk-469"
+    },
+    {
+      "section": "Page 356 of 358",
+      "connects_to": "chunk-470"
+    },
+    {
+      "section": "Page 357 of 358",
+      "connects_to": null
+    }
+  ]
+}

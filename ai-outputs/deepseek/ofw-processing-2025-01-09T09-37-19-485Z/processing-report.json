@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-01-09T09:37:20.432Z",
+  "file_info": {
+    "path": "C:\\Users\\robmo\\OneDrive\\Documents\\evidenceai_test\\input\\Emails w_ Jennifer after Sept 1.pdf",
+    "size_bytes": 2453366,
+    "size_mb": "2.34",
+    "created": "2025-01-09T04:42:51.877Z",
+    "modified": "2025-01-09T04:40:15.706Z"
+  },
+  "structure": {
+    "pages": 125,
+    "info": {
+      "PDFFormatVersion": "1.4",
+      "IsAcroFormPresent": false,
+      "IsXFAPresent": false,
+      "Producer": "GPL Ghostscript 9.55.0",
+      "CreationDate": "D:20241009003730Z00'00'",
+      "ModDate": "D:20241009003730Z00'00'"
+    }
+  },
+  "statistics": {
+    "characters": 328597,
+    "words": 46590,
+    "paragraphs": 575,
+    "average_paragraph_length": 81,
+    "chunks": 6,
+    "average_chunk_size": 13692,
+    "estimated_total_tokens": 82150
+  },
+  "processing_meta": {
+    "timestamp": "2025-01-09T09:37:20.414Z",
+    "version": "1.0",
+    "processing_time_ms": 915
+  }
+}

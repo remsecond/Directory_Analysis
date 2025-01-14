@@ -1,0 +1,27 @@
+{
+  "text": "Message 1721 of 4024\nIt’s on sale ...I know you said black but thought you might like rose!\nSent:02/28/2024 at 08:17 PM\nFrom:Robert Moyer\nTo:Christine Moyer (First Viewed: 02/28/2024 at 09:54 PM)\nSubject:Color?\nAttachments:IMG_1695.PNG (1 MB)\nMessage 1722 of 4024\nBlack works. Thank you\nSent:02/28/2024 at 09:54 PM\nFrom:Christine Moyer\nTo:Robert Moyer (First Viewed: 02/28/2024 at 10:00 PM)\nSubject:Re: Color?\nMessage 1723 of 4024\nNo worries\nSent:02/28/2024 at 10:00 PM\nFrom:Robert Moyer\nTo:Christine Moyer (First Viewed: 02/29/2024 at 07:14 AM)\nSubject:Re: Color?\nMessage 1724 of 4024\nOFW only works some of the time...so I might be delayed in my responses. Hope it goes well with Annalisa.\nSent:02/29/2024 at 11:13 AM\nFrom:Robert Moyer\nTo:Christine Moyer (First Viewed: 02/29/2024 at 11:30 AM)\nSubject:Me today...\nAttachments:IMG_1703.PNG (8 MB)",
+  "metadata": {
+    "section": "Page 450 of 1048",
+    "type": "text",
+    "position": 61,
+    "continues": true,
+    "part": 62,
+    "total_parts": 238,
+    "estimated_tokens": 212,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 62,
+    "total_chunks": 238,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

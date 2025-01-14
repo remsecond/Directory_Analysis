@@ -1,0 +1,27 @@
+{
+  "text": "• Maximum contact permanently reduced\n• Cannot return to previous relationship level even with perfect compliance\n• Will be older than Max's current age before having any choice",
+  "metadata": {
+    "section": "Page 78 of 358",
+    "type": "text",
+    "position": 134,
+    "continues": true,
+    "part": 135,
+    "total_parts": 470,
+    "estimated_tokens": 45,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 135,
+    "total_chunks": 470,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

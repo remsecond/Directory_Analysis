@@ -1,0 +1,27 @@
+{
+  "text": "Difference in amount taxed at 37%: $300,000\nTax Savings: $300,000 × (37% - 35%) = $6,000 direct savings\nPlus tax deferral benefit on full $300,000 payment",
+  "metadata": {
+    "section": "NET TAX IMPACT:",
+    "type": "text",
+    "position": 275,
+    "continues": true,
+    "part": 276,
+    "total_parts": 470,
+    "estimated_tokens": 39,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 276,
+    "total_chunks": 470,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

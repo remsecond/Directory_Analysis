@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-01-11T06:21:38.680Z",
+  "file_info": {
+    "path": "C:\\Users\\robmo\\OneDrive\\Documents\\evidenceai_test\\input\\OFW Messages\\All OFW Messages_Part3.pdf",
+    "size_bytes": 543968,
+    "size_mb": "0.52",
+    "created": "2025-01-09T09:33:29.877Z",
+    "modified": "2024-09-09T22:05:34.000Z"
+  },
+  "structure": {},
+  "statistics": {
+    "characters": 387686,
+    "words": 67199,
+    "paragraphs": 205,
+    "average_paragraph_length": 328,
+    "estimated_total_tokens": 96922
+  }
+}

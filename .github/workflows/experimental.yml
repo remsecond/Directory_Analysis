@@ -1,0 +1,81 @@
+name: Experimental Projects CI
+
+on:
+  push:
+    paths:
+      - 'experimental/**'
+  pull_request:
+    paths:
+      - 'experimental/**'
+    branches:
+      - 'experimental/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Detect Changed Projects
+        id: changes
+        run: |
+          CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^experimental/' | cut -d'/' -f2 | sort -u)
+          echo "::set-output name=projects::$CHANGED"
+
+  test:
+    needs: validate
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: ${{ fromJson(needs.validate.outputs.projects) }}
+        
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          
+      - name: Install Dependencies
+        working-directory: experimental/${{ matrix.project }}
+        run: |
+          if [ -f "package.json" ]; then
+            npm install
+          fi
+        
+      - name: Run Tests
+        working-directory: experimental/${{ matrix.project }}
+        run: |
+          if [ -f "package.json" ]; then
+            npm test
+          fi
+        
+      - name: Run Linting
+        working-directory: experimental/${{ matrix.project }}
+        run: |
+          if [ -f "package.json" ]; then
+            npm run lint
+          fi
+        
+      - name: Build Project
+        working-directory: experimental/${{ matrix.project }}
+        run: |
+          if [ -f "package.json" ]; then
+            npm run build
+          fi
+
+  notify:
+    needs: test
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Check Test Results
+        run: |
+          if [ "${{ needs.test.result }}" == "success" ]; then
+            echo "All experimental project tests passed"
+          else
+            echo "Some experimental project tests failed"
+            exit 1
+          fi

@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-01-09T09:49:12.643Z",
+  "file_info": {
+    "path": "C:\\Users\\robmo\\OneDrive\\Documents\\evidenceai_test\\input\\By Month\\1 Jan\\1 23 Jan Emails.pdf",
+    "size_bytes": 5555810,
+    "size_mb": "5.30",
+    "created": "2025-01-09T09:33:28.369Z",
+    "modified": "2024-05-02T04:27:43.000Z"
+  },
+  "structure": {
+    "pages": 281,
+    "info": {
+      "PDFFormatVersion": "1.4",
+      "IsAcroFormPresent": false,
+      "IsXFAPresent": false,
+      "Producer": "GPL Ghostscript 9.55.0",
+      "CreationDate": "D:20240502034000Z00'00'",
+      "ModDate": "D:20240502034000Z00'00'"
+    }
+  },
+  "statistics": {
+    "characters": 665651,
+    "words": 104622,
+    "paragraphs": 1441,
+    "average_paragraph_length": 73,
+    "chunks": 12,
+    "average_chunk_size": 13868,
+    "estimated_total_tokens": 166413
+  },
+  "processing_meta": {
+    "timestamp": "2025-01-09T09:49:12.625Z",
+    "version": "1.0",
+    "processing_time_ms": 1515
+  }
+}

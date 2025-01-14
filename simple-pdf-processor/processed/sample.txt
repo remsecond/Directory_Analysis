@@ -1,0 +1,16 @@
+This is a sample text file to test the text processor.
+
+It contains multiple paragraphs to test the chunking functionality.
+Each paragraph should be processed separately.
+
+The processor should analyze this text and provide:
+- Word count
+- Character count
+- Number of paragraphs
+- Basic text statistics
+
+This will help verify that all components are working correctly:
+1. File upload
+2. Text processing
+3. Results display
+4. Error handling

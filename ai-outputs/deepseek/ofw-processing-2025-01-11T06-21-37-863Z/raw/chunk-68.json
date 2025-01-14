@@ -1,0 +1,27 @@
+{
+  "text": "• What we agree to: Use OFW email for urgent updates but allow for OFW-facilitated phone calls if necessary and always for emergencies.\nSent:02/29/2024 at 04:56 PM\nFrom:Robert Moyer\nTo:Christine Moyer (First Viewed: 02/29/2024 at 05:03 PM)\nSubject:Re: Round II: RO Updates",
+  "metadata": {
+    "section": "drop off is what I am thinking. It has to be real. It has to be urgent.",
+    "type": "text",
+    "position": 67,
+    "continues": true,
+    "part": 68,
+    "total_parts": 238,
+    "estimated_tokens": 68,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 68,
+    "total_chunks": 238,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

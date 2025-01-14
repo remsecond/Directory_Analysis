@@ -1,0 +1,7 @@
+This is a test file for the text processor.
+
+It contains multiple paragraphs to test the chunking functionality.
+
+This paragraph is longer to ensure that the text processor can handle longer content and properly split it into manageable chunks. The processor should analyze this text and provide statistics about word count, chunk sizes, and other relevant metrics.
+
+Here's a final paragraph to test the processing capabilities.

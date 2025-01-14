@@ -1,0 +1,27 @@
+{
+  "text": "Max (16):\n• Full autonomy over relationship",
+  "metadata": {
+    "section": "1. Factual Comparison of Children's Status:",
+    "type": "text",
+    "position": 86,
+    "continues": true,
+    "part": 87,
+    "total_parts": 470,
+    "estimated_tokens": 11,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 87,
+    "total_chunks": 470,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

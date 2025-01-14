@@ -1,0 +1,27 @@
+{
+  "text": "Training@localhoops.org\nLOCALHOOPS Training Academy\nlocalhoopsacademy@gmail.com • (425) 531-9000\nhttps://www.localhoops.org/",
+  "metadata": {
+    "section": "425-633-4244",
+    "type": "text",
+    "position": 149,
+    "continues": true,
+    "part": 150,
+    "total_parts": 238,
+    "estimated_tokens": 31,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 150,
+    "total_chunks": 238,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

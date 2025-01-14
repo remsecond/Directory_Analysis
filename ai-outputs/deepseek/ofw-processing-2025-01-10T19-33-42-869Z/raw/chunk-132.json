@@ -1,0 +1,27 @@
+{
+  "text": "\"I'd also appreciate your partnership getting us all together with Jennifer ASAP, before HK for sure. I don't think there is an argument, so please let\nme know if you disagree. I honestly hope we start with an intervention since Kari refused, but we will let Jennifer decide of course.\nSo, I'd like us to agree that we will both move heaven and earth for our boys. It starts with making sure that the people and processes we have agreed to",
+  "metadata": {
+    "section": "I am still trying to get an answer on this from yesterday:",
+    "type": "text",
+    "position": 131,
+    "continues": true,
+    "part": 132,
+    "total_parts": 225,
+    "estimated_tokens": 110,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 132,
+    "total_chunks": 225,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

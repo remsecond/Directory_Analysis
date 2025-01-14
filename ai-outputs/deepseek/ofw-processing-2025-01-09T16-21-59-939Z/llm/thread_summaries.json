@@ -1,0 +1,75 @@
+{
+  "total_chunks": 14,
+  "summaries": [
+    {
+      "section": "",
+      "estimated_tokens": 12924,
+      "continues": false
+    },
+    {
+      "section": "Page 27 of 358",
+      "estimated_tokens": 12633,
+      "continues": false
+    },
+    {
+      "section": "2. Documented Impact:",
+      "estimated_tokens": 12771,
+      "continues": false
+    },
+    {
+      "section": "Page 71 of 358",
+      "estimated_tokens": 12974,
+      "continues": false
+    },
+    {
+      "section": "Page 93 of 358",
+      "estimated_tokens": 12653,
+      "continues": false
+    },
+    {
+      "section": "Page 119 of 358",
+      "estimated_tokens": 12720,
+      "continues": false
+    },
+    {
+      "section": "Page 148 of 358",
+      "estimated_tokens": 12551,
+      "continues": false
+    },
+    {
+      "section": "NET TAX IMPACT:",
+      "estimated_tokens": 13009,
+      "continues": false
+    },
+    {
+      "section": "Page 204 of 358",
+      "estimated_tokens": 12616,
+      "continues": false
+    },
+    {
+      "section": "Page 230 of 358",
+      "estimated_tokens": 12859,
+      "continues": false
+    },
+    {
+      "section": "Page 252 of 358",
+      "estimated_tokens": 12607,
+      "continues": false
+    },
+    {
+      "section": "Page 277 of 358",
+      "estimated_tokens": 12889,
+      "continues": false
+    },
+    {
+      "section": "Page 307 of 358",
+      "estimated_tokens": 12689,
+      "continues": false
+    },
+    {
+      "section": "Page 335 of 358",
+      "estimated_tokens": 11541,
+      "continues": false
+    }
+  ]
+}

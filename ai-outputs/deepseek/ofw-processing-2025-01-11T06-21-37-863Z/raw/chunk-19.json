@@ -1,0 +1,27 @@
+{
+  "text": "Sent:02/24/2024 at 09:11 AM\nFrom:Robert Moyer\nTo:Christine Moyer (First Viewed: 02/24/2024 at 09:12 AM)\nSubject:Re: Your Availabilty",
+  "metadata": {
+    "section": "next day (today). Optimistic we can begin the healing now.",
+    "type": "text",
+    "position": 18,
+    "continues": true,
+    "part": 19,
+    "total_parts": 238,
+    "estimated_tokens": 33,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 19,
+    "total_chunks": 238,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

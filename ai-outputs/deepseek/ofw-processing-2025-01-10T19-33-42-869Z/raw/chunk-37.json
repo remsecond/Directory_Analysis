@@ -1,0 +1,27 @@
+{
+  "text": "Or we can just touch base really quickly at 1:45 and then discuss how we move forward\nMessage 3165 of 4024",
+  "metadata": {
+    "section": "Page 835 of 1048",
+    "type": "text",
+    "position": 36,
+    "continues": true,
+    "part": 37,
+    "total_parts": 225,
+    "estimated_tokens": 27,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 37,
+    "total_chunks": 225,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "text": "Message 3227 of 4024\nNot looking for replies during your workday... I know you are busy...\nSent:06/18/2024 at 02:26 PM\nFrom:Robert Moyer\nTo:Christine Moyer (First Viewed: 06/18/2024 at 03:12 PM)\nSubject:Re: Kids Bday",
+  "metadata": {
+    "section": "Page 849 of 1048",
+    "type": "text",
+    "position": 52,
+    "continues": true,
+    "part": 53,
+    "total_parts": 225,
+    "estimated_tokens": 54,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 53,
+    "total_chunks": 225,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

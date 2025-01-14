@@ -1,0 +1,27 @@
+{
+  "text": "Our All Star Weekend will be returning for Spring 2024! We will host events for athletes to participate in as well as an All-Star Game!\nAthletes will vote for their teams All-Star players to participate in the All Star Game\nWe will have a 3pt contest, as well as a skills contest, and 1on1 contest\nAll Star Weekend will take place in Mid-Late May\nJerseys\nEach athlete needs a Lions League Jersey. These are different from practice jerseys or summer league jerseys. If you participated in our Fall/Winter '23-\n24 Lions League, you do not need to purchase a jersey if your athletes still fits.\nIf this is your first season, you will need to purchase a jersey. You can do so on the registration link.\nCoaches and Attendance\nCoaches may differ week to week, but will have the same crew of coaches for the entirety of the season\nAthletes attendance will be critical to their growth during the season. Please do your best to get your athletes to all events",
+  "metadata": {
+    "section": "ALL STAR WEEKEND",
+    "type": "text",
+    "position": 145,
+    "continues": true,
+    "part": 146,
+    "total_parts": 238,
+    "estimated_tokens": 238,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 146,
+    "total_chunks": 238,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

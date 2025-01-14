@@ -1,0 +1,27 @@
+{
+  "text": "Original \"Split List\"\n• TVs : Sitting room & Deck (might ask to swap one for living room TV).",
+  "metadata": {
+    "section": "——————————————————",
+    "type": "text",
+    "position": 46,
+    "continues": true,
+    "part": 47,
+    "total_parts": 238,
+    "estimated_tokens": 24,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 47,
+    "total_chunks": 238,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

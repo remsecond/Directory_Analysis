@@ -1,0 +1,27 @@
+{
+  "text": "• Names and addresses of hotels or other lodging.\n• Reservation confirmation numbers.\n• Contact information for accommodations.",
+  "metadata": {
+    "section": "2.Accommodation Details:",
+    "type": "text",
+    "position": 105,
+    "continues": true,
+    "part": 106,
+    "total_parts": 225,
+    "estimated_tokens": 32,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 106,
+    "total_chunks": 225,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

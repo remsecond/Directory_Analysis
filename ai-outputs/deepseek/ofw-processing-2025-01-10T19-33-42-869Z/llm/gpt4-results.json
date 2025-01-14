@@ -1,0 +1,1802 @@
+[
+  {
+    "chunk_id": 1,
+    "response": "GPT-4 analysis of chunk 1...",
+    "metrics": {
+      "tokens": 457,
+      "time": 1.7516616210976061
+    }
+  },
+  {
+    "chunk_id": 2,
+    "response": "GPT-4 analysis of chunk 2...",
+    "metrics": {
+      "tokens": 437,
+      "time": 2.7873644630737537
+    }
+  },
+  {
+    "chunk_id": 3,
+    "response": "GPT-4 analysis of chunk 3...",
+    "metrics": {
+      "tokens": 305,
+      "time": 1.9263468273567597
+    }
+  },
+  {
+    "chunk_id": 4,
+    "response": "GPT-4 analysis of chunk 4...",
+    "metrics": {
+      "tokens": 445,
+      "time": 2.4772277626419457
+    }
+  },
+  {
+    "chunk_id": 5,
+    "response": "GPT-4 analysis of chunk 5...",
+    "metrics": {
+      "tokens": 522,
+      "time": 2.934283148161499
+    }
+  },
+  {
+    "chunk_id": 6,
+    "response": "GPT-4 analysis of chunk 6...",
+    "metrics": {
+      "tokens": 423,
+      "time": 1.319131060200326
+    }
+  },
+  {
+    "chunk_id": 7,
+    "response": "GPT-4 analysis of chunk 7...",
+    "metrics": {
+      "tokens": 558,
+      "time": 1.568635174316686
+    }
+  },
+  {
+    "chunk_id": 8,
+    "response": "GPT-4 analysis of chunk 8...",
+    "metrics": {
+      "tokens": 488,
+      "time": 1.9682714090692643
+    }
+  },
+  {
+    "chunk_id": 9,
+    "response": "GPT-4 analysis of chunk 9...",
+    "metrics": {
+      "tokens": 217,
+      "time": 1.5349204904905918
+    }
+  },
+  {
+    "chunk_id": 10,
+    "response": "GPT-4 analysis of chunk 10...",
+    "metrics": {
+      "tokens": 299,
+      "time": 1.9188642107045166
+    }
+  },
+  {
+    "chunk_id": 11,
+    "response": "GPT-4 analysis of chunk 11...",
+    "metrics": {
+      "tokens": 424,
+      "time": 1.4116641571971646
+    }
+  },
+  {
+    "chunk_id": 12,
+    "response": "GPT-4 analysis of chunk 12...",
+    "metrics": {
+      "tokens": 427,
+      "time": 1.7689790760179624
+    }
+  },
+  {
+    "chunk_id": 13,
+    "response": "GPT-4 analysis of chunk 13...",
+    "metrics": {
+      "tokens": 535,
+      "time": 2.358563468499049
+    }
+  },
+  {
+    "chunk_id": 14,
+    "response": "GPT-4 analysis of chunk 14...",
+    "metrics": {
+      "tokens": 670,
+      "time": 2.530725175173882
+    }
+  },
+  {
+    "chunk_id": 15,
+    "response": "GPT-4 analysis of chunk 15...",
+    "metrics": {
+      "tokens": 540,
+      "time": 2.560208322444251
+    }
+  },
+  {
+    "chunk_id": 16,
+    "response": "GPT-4 analysis of chunk 16...",
+    "metrics": {
+      "tokens": 296,
+      "time": 1.1907905913653618
+    }
+  },
+  {
+    "chunk_id": 17,
+    "response": "GPT-4 analysis of chunk 17...",
+    "metrics": {
+      "tokens": 643,
+      "time": 2.389666932602013
+    }
+  },
+  {
+    "chunk_id": 18,
+    "response": "GPT-4 analysis of chunk 18...",
+    "metrics": {
+      "tokens": 408,
+      "time": 2.0792592947072746
+    }
+  },
+  {
+    "chunk_id": 19,
+    "response": "GPT-4 analysis of chunk 19...",
+    "metrics": {
+      "tokens": 541,
+      "time": 1.6292409150116294
+    }
+  },
+  {
+    "chunk_id": 20,
+    "response": "GPT-4 analysis of chunk 20...",
+    "metrics": {
+      "tokens": 589,
+      "time": 2.3196165127696484
+    }
+  },
+  {
+    "chunk_id": 21,
+    "response": "GPT-4 analysis of chunk 21...",
+    "metrics": {
+      "tokens": 261,
+      "time": 2.6025416845671385
+    }
+  },
+  {
+    "chunk_id": 22,
+    "response": "GPT-4 analysis of chunk 22...",
+    "metrics": {
+      "tokens": 442,
+      "time": 2.005045158209928
+    }
+  },
+  {
+    "chunk_id": 23,
+    "response": "GPT-4 analysis of chunk 23...",
+    "metrics": {
+      "tokens": 411,
+      "time": 1.8137126673931703
+    }
+  },
+  {
+    "chunk_id": 24,
+    "response": "GPT-4 analysis of chunk 24...",
+    "metrics": {
+      "tokens": 694,
+      "time": 2.457104637060761
+    }
+  },
+  {
+    "chunk_id": 25,
+    "response": "GPT-4 analysis of chunk 25...",
+    "metrics": {
+      "tokens": 650,
+      "time": 2.634360150818964
+    }
+  },
+  {
+    "chunk_id": 26,
+    "response": "GPT-4 analysis of chunk 26...",
+    "metrics": {
+      "tokens": 407,
+      "time": 1.8220612383446761
+    }
+  },
+  {
+    "chunk_id": 27,
+    "response": "GPT-4 analysis of chunk 27...",
+    "metrics": {
+      "tokens": 504,
+      "time": 2.513340018235893
+    }
+  },
+  {
+    "chunk_id": 28,
+    "response": "GPT-4 analysis of chunk 28...",
+    "metrics": {
+      "tokens": 372,
+      "time": 2.541661705968126
+    }
+  },
+  {
+    "chunk_id": 29,
+    "response": "GPT-4 analysis of chunk 29...",
+    "metrics": {
+      "tokens": 647,
+      "time": 2.484519618068097
+    }
+  },
+  {
+    "chunk_id": 30,
+    "response": "GPT-4 analysis of chunk 30...",
+    "metrics": {
+      "tokens": 352,
+      "time": 1.5481295618400157
+    }
+  },
+  {
+    "chunk_id": 31,
+    "response": "GPT-4 analysis of chunk 31...",
+    "metrics": {
+      "tokens": 398,
+      "time": 2.6185756195950294
+    }
+  },
+  {
+    "chunk_id": 32,
+    "response": "GPT-4 analysis of chunk 32...",
+    "metrics": {
+      "tokens": 264,
+      "time": 1.1701671982842496
+    }
+  },
+  {
+    "chunk_id": 33,
+    "response": "GPT-4 analysis of chunk 33...",
+    "metrics": {
+      "tokens": 644,
+      "time": 2.243550449317059
+    }
+  },
+  {
+    "chunk_id": 34,
+    "response": "GPT-4 analysis of chunk 34...",
+    "metrics": {
+      "tokens": 634,
+      "time": 1.5131005664515969
+    }
+  },
+  {
+    "chunk_id": 35,
+    "response": "GPT-4 analysis of chunk 35...",
+    "metrics": {
+      "tokens": 664,
+      "time": 2.9618870139171856
+    }
+  },
+  {
+    "chunk_id": 36,
+    "response": "GPT-4 analysis of chunk 36...",
+    "metrics": {
+      "tokens": 411,
+      "time": 2.3068562875338254
+    }
+  },
+  {
+    "chunk_id": 37,
+    "response": "GPT-4 analysis of chunk 37...",
+    "metrics": {
+      "tokens": 396,
+      "time": 2.3230722956246566
+    }
+  },
+  {
+    "chunk_id": 38,
+    "response": "GPT-4 analysis of chunk 38...",
+    "metrics": {
+      "tokens": 406,
+      "time": 2.634239233236838
+    }
+  },
+  {
+    "chunk_id": 39,
+    "response": "GPT-4 analysis of chunk 39...",
+    "metrics": {
+      "tokens": 611,
+      "time": 1.642609699368827
+    }
+  },
+  {
+    "chunk_id": 40,
+    "response": "GPT-4 analysis of chunk 40...",
+    "metrics": {
+      "tokens": 517,
+      "time": 2.2110776131845515
+    }
+  },
+  {
+    "chunk_id": 41,
+    "response": "GPT-4 analysis of chunk 41...",
+    "metrics": {
+      "tokens": 270,
+      "time": 1.2267150038800643
+    }
+  },
+  {
+    "chunk_id": 42,
+    "response": "GPT-4 analysis of chunk 42...",
+    "metrics": {
+      "tokens": 224,
+      "time": 2.1989382611387245
+    }
+  },
+  {
+    "chunk_id": 43,
+    "response": "GPT-4 analysis of chunk 43...",
+    "metrics": {
+      "tokens": 646,
+      "time": 2.5857318825561233
+    }
+  },
+  {
+    "chunk_id": 44,
+    "response": "GPT-4 analysis of chunk 44...",
+    "metrics": {
+      "tokens": 547,
+      "time": 1.7660919346541926
+    }
+  },
+  {
+    "chunk_id": 45,
+    "response": "GPT-4 analysis of chunk 45...",
+    "metrics": {
+      "tokens": 438,
+      "time": 2.5331397311617208
+    }
+  },
+  {
+    "chunk_id": 46,
+    "response": "GPT-4 analysis of chunk 46...",
+    "metrics": {
+      "tokens": 396,
+      "time": 2.9700367489540627
+    }
+  },
+  {
+    "chunk_id": 47,
+    "response": "GPT-4 analysis of chunk 47...",
+    "metrics": {
+      "tokens": 379,
+      "time": 1.1210829712017345
+    }
+  },
+  {
+    "chunk_id": 48,
+    "response": "GPT-4 analysis of chunk 48...",
+    "metrics": {
+      "tokens": 243,
+      "time": 2.2878759053905013
+    }
+  },
+  {
+    "chunk_id": 49,
+    "response": "GPT-4 analysis of chunk 49...",
+    "metrics": {
+      "tokens": 522,
+      "time": 1.9854425881772455
+    }
+  },
+  {
+    "chunk_id": 50,
+    "response": "GPT-4 analysis of chunk 50...",
+    "metrics": {
+      "tokens": 670,
+      "time": 1.3441196578975414
+    }
+  },
+  {
+    "chunk_id": 51,
+    "response": "GPT-4 analysis of chunk 51...",
+    "metrics": {
+      "tokens": 464,
+      "time": 2.2749340414598946
+    }
+  },
+  {
+    "chunk_id": 52,
+    "response": "GPT-4 analysis of chunk 52...",
+    "metrics": {
+      "tokens": 497,
+      "time": 1.6279987000554619
+    }
+  },
+  {
+    "chunk_id": 53,
+    "response": "GPT-4 analysis of chunk 53...",
+    "metrics": {
+      "tokens": 642,
+      "time": 2.5091123089541405
+    }
+  },
+  {
+    "chunk_id": 54,
+    "response": "GPT-4 analysis of chunk 54...",
+    "metrics": {
+      "tokens": 471,
+      "time": 1.0209692707295033
+    }
+  },
+  {
+    "chunk_id": 55,
+    "response": "GPT-4 analysis of chunk 55...",
+    "metrics": {
+      "tokens": 612,
+      "time": 2.344339214446637
+    }
+  },
+  {
+    "chunk_id": 56,
+    "response": "GPT-4 analysis of chunk 56...",
+    "metrics": {
+      "tokens": 527,
+      "time": 1.8899905961058598
+    }
+  },
+  {
+    "chunk_id": 57,
+    "response": "GPT-4 analysis of chunk 57...",
+    "metrics": {
+      "tokens": 618,
+      "time": 1.1559406068899958
+    }
+  },
+  {
+    "chunk_id": 58,
+    "response": "GPT-4 analysis of chunk 58...",
+    "metrics": {
+      "tokens": 388,
+      "time": 1.4581435597099195
+    }
+  },
+  {
+    "chunk_id": 59,
+    "response": "GPT-4 analysis of chunk 59...",
+    "metrics": {
+      "tokens": 593,
+      "time": 2.9975563003161265
+    }
+  },
+  {
+    "chunk_id": 60,
+    "response": "GPT-4 analysis of chunk 60...",
+    "metrics": {
+      "tokens": 230,
+      "time": 1.7895312020631895
+    }
+  },
+  {
+    "chunk_id": 61,
+    "response": "GPT-4 analysis of chunk 61...",
+    "metrics": {
+      "tokens": 493,
+      "time": 1.1666779960835205
+    }
+  },
+  {
+    "chunk_id": 62,
+    "response": "GPT-4 analysis of chunk 62...",
+    "metrics": {
+      "tokens": 534,
+      "time": 2.8166576393119307
+    }
+  },
+  {
+    "chunk_id": 63,
+    "response": "GPT-4 analysis of chunk 63...",
+    "metrics": {
+      "tokens": 435,
+      "time": 1.5152473960466573
+    }
+  },
+  {
+    "chunk_id": 64,
+    "response": "GPT-4 analysis of chunk 64...",
+    "metrics": {
+      "tokens": 459,
+      "time": 2.771388832980111
+    }
+  },
+  {
+    "chunk_id": 65,
+    "response": "GPT-4 analysis of chunk 65...",
+    "metrics": {
+      "tokens": 408,
+      "time": 2.393682670119237
+    }
+  },
+  {
+    "chunk_id": 66,
+    "response": "GPT-4 analysis of chunk 66...",
+    "metrics": {
+      "tokens": 326,
+      "time": 1.4678058409383201
+    }
+  },
+  {
+    "chunk_id": 67,
+    "response": "GPT-4 analysis of chunk 67...",
+    "metrics": {
+      "tokens": 208,
+      "time": 2.190148462428948
+    }
+  },
+  {
+    "chunk_id": 68,
+    "response": "GPT-4 analysis of chunk 68...",
+    "metrics": {
+      "tokens": 368,
+      "time": 1.8927068502477717
+    }
+  },
+  {
+    "chunk_id": 69,
+    "response": "GPT-4 analysis of chunk 69...",
+    "metrics": {
+      "tokens": 364,
+      "time": 1.1064244291687269
+    }
+  },
+  {
+    "chunk_id": 70,
+    "response": "GPT-4 analysis of chunk 70...",
+    "metrics": {
+      "tokens": 578,
+      "time": 2.6630283853665886
+    }
+  },
+  {
+    "chunk_id": 71,
+    "response": "GPT-4 analysis of chunk 71...",
+    "metrics": {
+      "tokens": 461,
+      "time": 2.366862738700253
+    }
+  },
+  {
+    "chunk_id": 72,
+    "response": "GPT-4 analysis of chunk 72...",
+    "metrics": {
+      "tokens": 511,
+      "time": 2.839397582582095
+    }
+  },
+  {
+    "chunk_id": 73,
+    "response": "GPT-4 analysis of chunk 73...",
+    "metrics": {
+      "tokens": 233,
+      "time": 2.022637235355309
+    }
+  },
+  {
+    "chunk_id": 74,
+    "response": "GPT-4 analysis of chunk 74...",
+    "metrics": {
+      "tokens": 334,
+      "time": 1.5413679975743868
+    }
+  },
+  {
+    "chunk_id": 75,
+    "response": "GPT-4 analysis of chunk 75...",
+    "metrics": {
+      "tokens": 381,
+      "time": 1.9284562241575403
+    }
+  },
+  {
+    "chunk_id": 76,
+    "response": "GPT-4 analysis of chunk 76...",
+    "metrics": {
+      "tokens": 235,
+      "time": 2.124338177024405
+    }
+  },
+  {
+    "chunk_id": 77,
+    "response": "GPT-4 analysis of chunk 77...",
+    "metrics": {
+      "tokens": 219,
+      "time": 2.32105858442833
+    }
+  },
+  {
+    "chunk_id": 78,
+    "response": "GPT-4 analysis of chunk 78...",
+    "metrics": {
+      "tokens": 333,
+      "time": 1.0997025501908015
+    }
+  },
+  {
+    "chunk_id": 79,
+    "response": "GPT-4 analysis of chunk 79...",
+    "metrics": {
+      "tokens": 252,
+      "time": 2.390753732919453
+    }
+  },
+  {
+    "chunk_id": 80,
+    "response": "GPT-4 analysis of chunk 80...",
+    "metrics": {
+      "tokens": 589,
+      "time": 2.365109083267185
+    }
+  },
+  {
+    "chunk_id": 81,
+    "response": "GPT-4 analysis of chunk 81...",
+    "metrics": {
+      "tokens": 242,
+      "time": 2.8721663537362323
+    }
+  },
+  {
+    "chunk_id": 82,
+    "response": "GPT-4 analysis of chunk 82...",
+    "metrics": {
+      "tokens": 253,
+      "time": 2.161502452058212
+    }
+  },
+  {
+    "chunk_id": 83,
+    "response": "GPT-4 analysis of chunk 83...",
+    "metrics": {
+      "tokens": 380,
+      "time": 2.717291400715374
+    }
+  },
+  {
+    "chunk_id": 84,
+    "response": "GPT-4 analysis of chunk 84...",
+    "metrics": {
+      "tokens": 401,
+      "time": 1.320539764763685
+    }
+  },
+  {
+    "chunk_id": 85,
+    "response": "GPT-4 analysis of chunk 85...",
+    "metrics": {
+      "tokens": 320,
+      "time": 2.088807834782796
+    }
+  },
+  {
+    "chunk_id": 86,
+    "response": "GPT-4 analysis of chunk 86...",
+    "metrics": {
+      "tokens": 225,
+      "time": 2.020537320123112
+    }
+  },
+  {
+    "chunk_id": 87,
+    "response": "GPT-4 analysis of chunk 87...",
+    "metrics": {
+      "tokens": 252,
+      "time": 1.9910345985601103
+    }
+  },
+  {
+    "chunk_id": 88,
+    "response": "GPT-4 analysis of chunk 88...",
+    "metrics": {
+      "tokens": 663,
+      "time": 2.3928014760214613
+    }
+  },
+  {
+    "chunk_id": 89,
+    "response": "GPT-4 analysis of chunk 89...",
+    "metrics": {
+      "tokens": 467,
+      "time": 2.452859485870266
+    }
+  },
+  {
+    "chunk_id": 90,
+    "response": "GPT-4 analysis of chunk 90...",
+    "metrics": {
+      "tokens": 342,
+      "time": 1.978743164726788
+    }
+  },
+  {
+    "chunk_id": 91,
+    "response": "GPT-4 analysis of chunk 91...",
+    "metrics": {
+      "tokens": 486,
+      "time": 2.5522164570881958
+    }
+  },
+  {
+    "chunk_id": 92,
+    "response": "GPT-4 analysis of chunk 92...",
+    "metrics": {
+      "tokens": 379,
+      "time": 2.1797916886459423
+    }
+  },
+  {
+    "chunk_id": 93,
+    "response": "GPT-4 analysis of chunk 93...",
+    "metrics": {
+      "tokens": 245,
+      "time": 1.9156165530067435
+    }
+  },
+  {
+    "chunk_id": 94,
+    "response": "GPT-4 analysis of chunk 94...",
+    "metrics": {
+      "tokens": 436,
+      "time": 2.6217101223912938
+    }
+  },
+  {
+    "chunk_id": 95,
+    "response": "GPT-4 analysis of chunk 95...",
+    "metrics": {
+      "tokens": 642,
+      "time": 2.365827550590955
+    }
+  },
+  {
+    "chunk_id": 96,
+    "response": "GPT-4 analysis of chunk 96...",
+    "metrics": {
+      "tokens": 492,
+      "time": 1.0426497921348563
+    }
+  },
+  {
+    "chunk_id": 97,
+    "response": "GPT-4 analysis of chunk 97...",
+    "metrics": {
+      "tokens": 205,
+      "time": 2.002354309838144
+    }
+  },
+  {
+    "chunk_id": 98,
+    "response": "GPT-4 analysis of chunk 98...",
+    "metrics": {
+      "tokens": 671,
+      "time": 1.7178669786075171
+    }
+  },
+  {
+    "chunk_id": 99,
+    "response": "GPT-4 analysis of chunk 99...",
+    "metrics": {
+      "tokens": 336,
+      "time": 2.864995161159657
+    }
+  },
+  {
+    "chunk_id": 100,
+    "response": "GPT-4 analysis of chunk 100...",
+    "metrics": {
+      "tokens": 406,
+      "time": 2.0251997941051596
+    }
+  },
+  {
+    "chunk_id": 101,
+    "response": "GPT-4 analysis of chunk 101...",
+    "metrics": {
+      "tokens": 688,
+      "time": 2.956044196693793
+    }
+  },
+  {
+    "chunk_id": 102,
+    "response": "GPT-4 analysis of chunk 102...",
+    "metrics": {
+      "tokens": 693,
+      "time": 1.5581620270623016
+    }
+  },
+  {
+    "chunk_id": 103,
+    "response": "GPT-4 analysis of chunk 103...",
+    "metrics": {
+      "tokens": 224,
+      "time": 1.4934370837767745
+    }
+  },
+  {
+    "chunk_id": 104,
+    "response": "GPT-4 analysis of chunk 104...",
+    "metrics": {
+      "tokens": 456,
+      "time": 2.8876416590307694
+    }
+  },
+  {
+    "chunk_id": 105,
+    "response": "GPT-4 analysis of chunk 105...",
+    "metrics": {
+      "tokens": 534,
+      "time": 1.5668800379093035
+    }
+  },
+  {
+    "chunk_id": 106,
+    "response": "GPT-4 analysis of chunk 106...",
+    "metrics": {
+      "tokens": 457,
+      "time": 2.540492047326675
+    }
+  },
+  {
+    "chunk_id": 107,
+    "response": "GPT-4 analysis of chunk 107...",
+    "metrics": {
+      "tokens": 313,
+      "time": 1.4947690390020356
+    }
+  },
+  {
+    "chunk_id": 108,
+    "response": "GPT-4 analysis of chunk 108...",
+    "metrics": {
+      "tokens": 453,
+      "time": 1.0305799729865752
+    }
+  },
+  {
+    "chunk_id": 109,
+    "response": "GPT-4 analysis of chunk 109...",
+    "metrics": {
+      "tokens": 558,
+      "time": 2.423852036207958
+    }
+  },
+  {
+    "chunk_id": 110,
+    "response": "GPT-4 analysis of chunk 110...",
+    "metrics": {
+      "tokens": 670,
+      "time": 1.1675974457293243
+    }
+  },
+  {
+    "chunk_id": 111,
+    "response": "GPT-4 analysis of chunk 111...",
+    "metrics": {
+      "tokens": 442,
+      "time": 2.2519239281400982
+    }
+  },
+  {
+    "chunk_id": 112,
+    "response": "GPT-4 analysis of chunk 112...",
+    "metrics": {
+      "tokens": 635,
+      "time": 2.0769320417942354
+    }
+  },
+  {
+    "chunk_id": 113,
+    "response": "GPT-4 analysis of chunk 113...",
+    "metrics": {
+      "tokens": 344,
+      "time": 2.9889604325140797
+    }
+  },
+  {
+    "chunk_id": 114,
+    "response": "GPT-4 analysis of chunk 114...",
+    "metrics": {
+      "tokens": 414,
+      "time": 1.0970362601415973
+    }
+  },
+  {
+    "chunk_id": 115,
+    "response": "GPT-4 analysis of chunk 115...",
+    "metrics": {
+      "tokens": 332,
+      "time": 2.6908687385767744
+    }
+  },
+  {
+    "chunk_id": 116,
+    "response": "GPT-4 analysis of chunk 116...",
+    "metrics": {
+      "tokens": 658,
+      "time": 2.710537574295039
+    }
+  },
+  {
+    "chunk_id": 117,
+    "response": "GPT-4 analysis of chunk 117...",
+    "metrics": {
+      "tokens": 333,
+      "time": 1.1361401245627776
+    }
+  },
+  {
+    "chunk_id": 118,
+    "response": "GPT-4 analysis of chunk 118...",
+    "metrics": {
+      "tokens": 321,
+      "time": 1.083417450107245
+    }
+  },
+  {
+    "chunk_id": 119,
+    "response": "GPT-4 analysis of chunk 119...",
+    "metrics": {
+      "tokens": 323,
+      "time": 2.4915211858282023
+    }
+  },
+  {
+    "chunk_id": 120,
+    "response": "GPT-4 analysis of chunk 120...",
+    "metrics": {
+      "tokens": 687,
+      "time": 1.3212433679838025
+    }
+  },
+  {
+    "chunk_id": 121,
+    "response": "GPT-4 analysis of chunk 121...",
+    "metrics": {
+      "tokens": 312,
+      "time": 2.736574693733626
+    }
+  },
+  {
+    "chunk_id": 122,
+    "response": "GPT-4 analysis of chunk 122...",
+    "metrics": {
+      "tokens": 499,
+      "time": 2.9241463393372116
+    }
+  },
+  {
+    "chunk_id": 123,
+    "response": "GPT-4 analysis of chunk 123...",
+    "metrics": {
+      "tokens": 247,
+      "time": 1.8568172979421051
+    }
+  },
+  {
+    "chunk_id": 124,
+    "response": "GPT-4 analysis of chunk 124...",
+    "metrics": {
+      "tokens": 575,
+      "time": 1.649587631569756
+    }
+  },
+  {
+    "chunk_id": 125,
+    "response": "GPT-4 analysis of chunk 125...",
+    "metrics": {
+      "tokens": 496,
+      "time": 2.8191715147835517
+    }
+  },
+  {
+    "chunk_id": 126,
+    "response": "GPT-4 analysis of chunk 126...",
+    "metrics": {
+      "tokens": 256,
+      "time": 1.6308353890947531
+    }
+  },
+  {
+    "chunk_id": 127,
+    "response": "GPT-4 analysis of chunk 127...",
+    "metrics": {
+      "tokens": 549,
+      "time": 1.117025155219515
+    }
+  },
+  {
+    "chunk_id": 128,
+    "response": "GPT-4 analysis of chunk 128...",
+    "metrics": {
+      "tokens": 629,
+      "time": 1.4295320573192738
+    }
+  },
+  {
+    "chunk_id": 129,
+    "response": "GPT-4 analysis of chunk 129...",
+    "metrics": {
+      "tokens": 622,
+      "time": 2.57777555864469
+    }
+  },
+  {
+    "chunk_id": 130,
+    "response": "GPT-4 analysis of chunk 130...",
+    "metrics": {
+      "tokens": 353,
+      "time": 1.1614108945874455
+    }
+  },
+  {
+    "chunk_id": 131,
+    "response": "GPT-4 analysis of chunk 131...",
+    "metrics": {
+      "tokens": 627,
+      "time": 1.4795362837557917
+    }
+  },
+  {
+    "chunk_id": 132,
+    "response": "GPT-4 analysis of chunk 132...",
+    "metrics": {
+      "tokens": 250,
+      "time": 1.4976636342585365
+    }
+  },
+  {
+    "chunk_id": 133,
+    "response": "GPT-4 analysis of chunk 133...",
+    "metrics": {
+      "tokens": 636,
+      "time": 1.8034422488428903
+    }
+  },
+  {
+    "chunk_id": 134,
+    "response": "GPT-4 analysis of chunk 134...",
+    "metrics": {
+      "tokens": 603,
+      "time": 1.6283512014593406
+    }
+  },
+  {
+    "chunk_id": 135,
+    "response": "GPT-4 analysis of chunk 135...",
+    "metrics": {
+      "tokens": 481,
+      "time": 2.365876024313062
+    }
+  },
+  {
+    "chunk_id": 136,
+    "response": "GPT-4 analysis of chunk 136...",
+    "metrics": {
+      "tokens": 388,
+      "time": 1.759732651386046
+    }
+  },
+  {
+    "chunk_id": 137,
+    "response": "GPT-4 analysis of chunk 137...",
+    "metrics": {
+      "tokens": 537,
+      "time": 2.1817508228937816
+    }
+  },
+  {
+    "chunk_id": 138,
+    "response": "GPT-4 analysis of chunk 138...",
+    "metrics": {
+      "tokens": 675,
+      "time": 1.118244843271556
+    }
+  },
+  {
+    "chunk_id": 139,
+    "response": "GPT-4 analysis of chunk 139...",
+    "metrics": {
+      "tokens": 519,
+      "time": 2.327320615086946
+    }
+  },
+  {
+    "chunk_id": 140,
+    "response": "GPT-4 analysis of chunk 140...",
+    "metrics": {
+      "tokens": 688,
+      "time": 1.755707581171352
+    }
+  },
+  {
+    "chunk_id": 141,
+    "response": "GPT-4 analysis of chunk 141...",
+    "metrics": {
+      "tokens": 392,
+      "time": 2.8502937505860166
+    }
+  },
+  {
+    "chunk_id": 142,
+    "response": "GPT-4 analysis of chunk 142...",
+    "metrics": {
+      "tokens": 637,
+      "time": 2.1852566499470423
+    }
+  },
+  {
+    "chunk_id": 143,
+    "response": "GPT-4 analysis of chunk 143...",
+    "metrics": {
+      "tokens": 301,
+      "time": 1.5169334103248473
+    }
+  },
+  {
+    "chunk_id": 144,
+    "response": "GPT-4 analysis of chunk 144...",
+    "metrics": {
+      "tokens": 548,
+      "time": 1.7600017490632003
+    }
+  },
+  {
+    "chunk_id": 145,
+    "response": "GPT-4 analysis of chunk 145...",
+    "metrics": {
+      "tokens": 353,
+      "time": 2.3878788090762684
+    }
+  },
+  {
+    "chunk_id": 146,
+    "response": "GPT-4 analysis of chunk 146...",
+    "metrics": {
+      "tokens": 510,
+      "time": 2.8492630916244868
+    }
+  },
+  {
+    "chunk_id": 147,
+    "response": "GPT-4 analysis of chunk 147...",
+    "metrics": {
+      "tokens": 508,
+      "time": 1.7081585244876463
+    }
+  },
+  {
+    "chunk_id": 148,
+    "response": "GPT-4 analysis of chunk 148...",
+    "metrics": {
+      "tokens": 489,
+      "time": 2.7039601217396356
+    }
+  },
+  {
+    "chunk_id": 149,
+    "response": "GPT-4 analysis of chunk 149...",
+    "metrics": {
+      "tokens": 218,
+      "time": 1.7696206298210524
+    }
+  },
+  {
+    "chunk_id": 150,
+    "response": "GPT-4 analysis of chunk 150...",
+    "metrics": {
+      "tokens": 581,
+      "time": 2.1487023814706294
+    }
+  },
+  {
+    "chunk_id": 151,
+    "response": "GPT-4 analysis of chunk 151...",
+    "metrics": {
+      "tokens": 661,
+      "time": 1.931455754130217
+    }
+  },
+  {
+    "chunk_id": 152,
+    "response": "GPT-4 analysis of chunk 152...",
+    "metrics": {
+      "tokens": 666,
+      "time": 1.9733671308905412
+    }
+  },
+  {
+    "chunk_id": 153,
+    "response": "GPT-4 analysis of chunk 153...",
+    "metrics": {
+      "tokens": 513,
+      "time": 1.2119730937952382
+    }
+  },
+  {
+    "chunk_id": 154,
+    "response": "GPT-4 analysis of chunk 154...",
+    "metrics": {
+      "tokens": 455,
+      "time": 1.5949177024174483
+    }
+  },
+  {
+    "chunk_id": 155,
+    "response": "GPT-4 analysis of chunk 155...",
+    "metrics": {
+      "tokens": 440,
+      "time": 1.2344583716385369
+    }
+  },
+  {
+    "chunk_id": 156,
+    "response": "GPT-4 analysis of chunk 156...",
+    "metrics": {
+      "tokens": 370,
+      "time": 1.7301776753112108
+    }
+  },
+  {
+    "chunk_id": 157,
+    "response": "GPT-4 analysis of chunk 157...",
+    "metrics": {
+      "tokens": 436,
+      "time": 1.1872126806084529
+    }
+  },
+  {
+    "chunk_id": 158,
+    "response": "GPT-4 analysis of chunk 158...",
+    "metrics": {
+      "tokens": 350,
+      "time": 2.350528530857086
+    }
+  },
+  {
+    "chunk_id": 159,
+    "response": "GPT-4 analysis of chunk 159...",
+    "metrics": {
+      "tokens": 291,
+      "time": 1.9679612582935837
+    }
+  },
+  {
+    "chunk_id": 160,
+    "response": "GPT-4 analysis of chunk 160...",
+    "metrics": {
+      "tokens": 301,
+      "time": 2.8157823714133707
+    }
+  },
+  {
+    "chunk_id": 161,
+    "response": "GPT-4 analysis of chunk 161...",
+    "metrics": {
+      "tokens": 601,
+      "time": 1.3187210817563444
+    }
+  },
+  {
+    "chunk_id": 162,
+    "response": "GPT-4 analysis of chunk 162...",
+    "metrics": {
+      "tokens": 674,
+      "time": 2.653760068909758
+    }
+  },
+  {
+    "chunk_id": 163,
+    "response": "GPT-4 analysis of chunk 163...",
+    "metrics": {
+      "tokens": 206,
+      "time": 2.249369050874103
+    }
+  },
+  {
+    "chunk_id": 164,
+    "response": "GPT-4 analysis of chunk 164...",
+    "metrics": {
+      "tokens": 439,
+      "time": 2.121892658161743
+    }
+  },
+  {
+    "chunk_id": 165,
+    "response": "GPT-4 analysis of chunk 165...",
+    "metrics": {
+      "tokens": 237,
+      "time": 1.9627595225331969
+    }
+  },
+  {
+    "chunk_id": 166,
+    "response": "GPT-4 analysis of chunk 166...",
+    "metrics": {
+      "tokens": 584,
+      "time": 1.9026324018383485
+    }
+  },
+  {
+    "chunk_id": 167,
+    "response": "GPT-4 analysis of chunk 167...",
+    "metrics": {
+      "tokens": 300,
+      "time": 2.2659414244629765
+    }
+  },
+  {
+    "chunk_id": 168,
+    "response": "GPT-4 analysis of chunk 168...",
+    "metrics": {
+      "tokens": 516,
+      "time": 2.6272553167047628
+    }
+  },
+  {
+    "chunk_id": 169,
+    "response": "GPT-4 analysis of chunk 169...",
+    "metrics": {
+      "tokens": 507,
+      "time": 1.3360101351332467
+    }
+  },
+  {
+    "chunk_id": 170,
+    "response": "GPT-4 analysis of chunk 170...",
+    "metrics": {
+      "tokens": 553,
+      "time": 2.461879285137397
+    }
+  },
+  {
+    "chunk_id": 171,
+    "response": "GPT-4 analysis of chunk 171...",
+    "metrics": {
+      "tokens": 565,
+      "time": 1.7560210369611835
+    }
+  },
+  {
+    "chunk_id": 172,
+    "response": "GPT-4 analysis of chunk 172...",
+    "metrics": {
+      "tokens": 470,
+      "time": 2.5845706785341567
+    }
+  },
+  {
+    "chunk_id": 173,
+    "response": "GPT-4 analysis of chunk 173...",
+    "metrics": {
+      "tokens": 377,
+      "time": 2.7181301641262587
+    }
+  },
+  {
+    "chunk_id": 174,
+    "response": "GPT-4 analysis of chunk 174...",
+    "metrics": {
+      "tokens": 481,
+      "time": 2.2917544958704674
+    }
+  },
+  {
+    "chunk_id": 175,
+    "response": "GPT-4 analysis of chunk 175...",
+    "metrics": {
+      "tokens": 477,
+      "time": 2.568007422394648
+    }
+  },
+  {
+    "chunk_id": 176,
+    "response": "GPT-4 analysis of chunk 176...",
+    "metrics": {
+      "tokens": 252,
+      "time": 1.0359887191182344
+    }
+  },
+  {
+    "chunk_id": 177,
+    "response": "GPT-4 analysis of chunk 177...",
+    "metrics": {
+      "tokens": 205,
+      "time": 1.4704081437186276
+    }
+  },
+  {
+    "chunk_id": 178,
+    "response": "GPT-4 analysis of chunk 178...",
+    "metrics": {
+      "tokens": 312,
+      "time": 2.217424681134181
+    }
+  },
+  {
+    "chunk_id": 179,
+    "response": "GPT-4 analysis of chunk 179...",
+    "metrics": {
+      "tokens": 536,
+      "time": 2.3503955440168296
+    }
+  },
+  {
+    "chunk_id": 180,
+    "response": "GPT-4 analysis of chunk 180...",
+    "metrics": {
+      "tokens": 259,
+      "time": 1.4223016512892426
+    }
+  },
+  {
+    "chunk_id": 181,
+    "response": "GPT-4 analysis of chunk 181...",
+    "metrics": {
+      "tokens": 237,
+      "time": 1.0928820547480584
+    }
+  },
+  {
+    "chunk_id": 182,
+    "response": "GPT-4 analysis of chunk 182...",
+    "metrics": {
+      "tokens": 374,
+      "time": 2.707397978095429
+    }
+  },
+  {
+    "chunk_id": 183,
+    "response": "GPT-4 analysis of chunk 183...",
+    "metrics": {
+      "tokens": 615,
+      "time": 1.589137635975971
+    }
+  },
+  {
+    "chunk_id": 184,
+    "response": "GPT-4 analysis of chunk 184...",
+    "metrics": {
+      "tokens": 533,
+      "time": 1.302286677246895
+    }
+  },
+  {
+    "chunk_id": 185,
+    "response": "GPT-4 analysis of chunk 185...",
+    "metrics": {
+      "tokens": 347,
+      "time": 1.0081988325731035
+    }
+  },
+  {
+    "chunk_id": 186,
+    "response": "GPT-4 analysis of chunk 186...",
+    "metrics": {
+      "tokens": 594,
+      "time": 1.06238038330735
+    }
+  },
+  {
+    "chunk_id": 187,
+    "response": "GPT-4 analysis of chunk 187...",
+    "metrics": {
+      "tokens": 491,
+      "time": 2.0125123290974223
+    }
+  },
+  {
+    "chunk_id": 188,
+    "response": "GPT-4 analysis of chunk 188...",
+    "metrics": {
+      "tokens": 282,
+      "time": 2.096529610490057
+    }
+  },
+  {
+    "chunk_id": 189,
+    "response": "GPT-4 analysis of chunk 189...",
+    "metrics": {
+      "tokens": 589,
+      "time": 2.0623767384984024
+    }
+  },
+  {
+    "chunk_id": 190,
+    "response": "GPT-4 analysis of chunk 190...",
+    "metrics": {
+      "tokens": 530,
+      "time": 1.3269718505905765
+    }
+  },
+  {
+    "chunk_id": 191,
+    "response": "GPT-4 analysis of chunk 191...",
+    "metrics": {
+      "tokens": 315,
+      "time": 1.2028744059377678
+    }
+  },
+  {
+    "chunk_id": 192,
+    "response": "GPT-4 analysis of chunk 192...",
+    "metrics": {
+      "tokens": 411,
+      "time": 1.640974811297356
+    }
+  },
+  {
+    "chunk_id": 193,
+    "response": "GPT-4 analysis of chunk 193...",
+    "metrics": {
+      "tokens": 277,
+      "time": 1.8541236911573415
+    }
+  },
+  {
+    "chunk_id": 194,
+    "response": "GPT-4 analysis of chunk 194...",
+    "metrics": {
+      "tokens": 236,
+      "time": 1.9039497284180387
+    }
+  },
+  {
+    "chunk_id": 195,
+    "response": "GPT-4 analysis of chunk 195...",
+    "metrics": {
+      "tokens": 459,
+      "time": 1.0609042620686666
+    }
+  },
+  {
+    "chunk_id": 196,
+    "response": "GPT-4 analysis of chunk 196...",
+    "metrics": {
+      "tokens": 268,
+      "time": 2.4643838646449456
+    }
+  },
+  {
+    "chunk_id": 197,
+    "response": "GPT-4 analysis of chunk 197...",
+    "metrics": {
+      "tokens": 635,
+      "time": 2.2837461221835054
+    }
+  },
+  {
+    "chunk_id": 198,
+    "response": "GPT-4 analysis of chunk 198...",
+    "metrics": {
+      "tokens": 335,
+      "time": 2.4322651374545803
+    }
+  },
+  {
+    "chunk_id": 199,
+    "response": "GPT-4 analysis of chunk 199...",
+    "metrics": {
+      "tokens": 403,
+      "time": 2.3859535225578337
+    }
+  },
+  {
+    "chunk_id": 200,
+    "response": "GPT-4 analysis of chunk 200...",
+    "metrics": {
+      "tokens": 269,
+      "time": 2.420638614816247
+    }
+  },
+  {
+    "chunk_id": 201,
+    "response": "GPT-4 analysis of chunk 201...",
+    "metrics": {
+      "tokens": 593,
+      "time": 1.5417051022691042
+    }
+  },
+  {
+    "chunk_id": 202,
+    "response": "GPT-4 analysis of chunk 202...",
+    "metrics": {
+      "tokens": 508,
+      "time": 2.06639179897034
+    }
+  },
+  {
+    "chunk_id": 203,
+    "response": "GPT-4 analysis of chunk 203...",
+    "metrics": {
+      "tokens": 201,
+      "time": 2.804656878908178
+    }
+  },
+  {
+    "chunk_id": 204,
+    "response": "GPT-4 analysis of chunk 204...",
+    "metrics": {
+      "tokens": 502,
+      "time": 2.5576343355493942
+    }
+  },
+  {
+    "chunk_id": 205,
+    "response": "GPT-4 analysis of chunk 205...",
+    "metrics": {
+      "tokens": 266,
+      "time": 2.597533110388313
+    }
+  },
+  {
+    "chunk_id": 206,
+    "response": "GPT-4 analysis of chunk 206...",
+    "metrics": {
+      "tokens": 423,
+      "time": 1.3784485667087383
+    }
+  },
+  {
+    "chunk_id": 207,
+    "response": "GPT-4 analysis of chunk 207...",
+    "metrics": {
+      "tokens": 404,
+      "time": 1.002943203684986
+    }
+  },
+  {
+    "chunk_id": 208,
+    "response": "GPT-4 analysis of chunk 208...",
+    "metrics": {
+      "tokens": 223,
+      "time": 2.315347347538127
+    }
+  },
+  {
+    "chunk_id": 209,
+    "response": "GPT-4 analysis of chunk 209...",
+    "metrics": {
+      "tokens": 264,
+      "time": 2.6383140884633254
+    }
+  },
+  {
+    "chunk_id": 210,
+    "response": "GPT-4 analysis of chunk 210...",
+    "metrics": {
+      "tokens": 478,
+      "time": 1.0982480057640291
+    }
+  },
+  {
+    "chunk_id": 211,
+    "response": "GPT-4 analysis of chunk 211...",
+    "metrics": {
+      "tokens": 387,
+      "time": 2.8281504072835237
+    }
+  },
+  {
+    "chunk_id": 212,
+    "response": "GPT-4 analysis of chunk 212...",
+    "metrics": {
+      "tokens": 282,
+      "time": 1.9566172903229928
+    }
+  },
+  {
+    "chunk_id": 213,
+    "response": "GPT-4 analysis of chunk 213...",
+    "metrics": {
+      "tokens": 629,
+      "time": 1.3824258763543575
+    }
+  },
+  {
+    "chunk_id": 214,
+    "response": "GPT-4 analysis of chunk 214...",
+    "metrics": {
+      "tokens": 592,
+      "time": 1.8784423232235454
+    }
+  },
+  {
+    "chunk_id": 215,
+    "response": "GPT-4 analysis of chunk 215...",
+    "metrics": {
+      "tokens": 471,
+      "time": 1.9811921960483194
+    }
+  },
+  {
+    "chunk_id": 216,
+    "response": "GPT-4 analysis of chunk 216...",
+    "metrics": {
+      "tokens": 357,
+      "time": 1.6120031639706416
+    }
+  },
+  {
+    "chunk_id": 217,
+    "response": "GPT-4 analysis of chunk 217...",
+    "metrics": {
+      "tokens": 563,
+      "time": 1.7092220815211627
+    }
+  },
+  {
+    "chunk_id": 218,
+    "response": "GPT-4 analysis of chunk 218...",
+    "metrics": {
+      "tokens": 430,
+      "time": 2.8773281323905895
+    }
+  },
+  {
+    "chunk_id": 219,
+    "response": "GPT-4 analysis of chunk 219...",
+    "metrics": {
+      "tokens": 221,
+      "time": 2.256511229942394
+    }
+  },
+  {
+    "chunk_id": 220,
+    "response": "GPT-4 analysis of chunk 220...",
+    "metrics": {
+      "tokens": 572,
+      "time": 2.826777044831152
+    }
+  },
+  {
+    "chunk_id": 221,
+    "response": "GPT-4 analysis of chunk 221...",
+    "metrics": {
+      "tokens": 613,
+      "time": 2.83268684878407
+    }
+  },
+  {
+    "chunk_id": 222,
+    "response": "GPT-4 analysis of chunk 222...",
+    "metrics": {
+      "tokens": 246,
+      "time": 1.6225845405578752
+    }
+  },
+  {
+    "chunk_id": 223,
+    "response": "GPT-4 analysis of chunk 223...",
+    "metrics": {
+      "tokens": 312,
+      "time": 2.3415833271140762
+    }
+  },
+  {
+    "chunk_id": 224,
+    "response": "GPT-4 analysis of chunk 224...",
+    "metrics": {
+      "tokens": 421,
+      "time": 1.1432540791838752
+    }
+  },
+  {
+    "chunk_id": 225,
+    "response": "GPT-4 analysis of chunk 225...",
+    "metrics": {
+      "tokens": 605,
+      "time": 1.9633353084405467
+    }
+  }
+]

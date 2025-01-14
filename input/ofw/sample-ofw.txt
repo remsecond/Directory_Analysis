@@ -1,0 +1,25 @@
+Message 1 of 3
+From: user1@example.com
+Date: Thu, 11 Jan 2024 09:00:00 -0800
+Subject: Initial Request
+
+I am writing to request information about the case status.
+
+Message 2 of 3
+From: support@example.com
+Date: Thu, 11 Jan 2024 09:30:00 -0800
+Subject: Re: Initial Request
+
+Thank you for your inquiry. I am reviewing your case and will provide an update shortly.
+
+Message 3 of 3
+From: support@example.com
+Date: Thu, 11 Jan 2024 10:00:00 -0800
+Subject: Case Status Update
+
+Here is the current status of your case:
+- Review completed
+- Documentation verified
+- Next steps identified
+
+Please let me know if you have any questions.

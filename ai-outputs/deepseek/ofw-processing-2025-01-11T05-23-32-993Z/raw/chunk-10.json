@@ -1,0 +1,27 @@
+{
+  "text": "I hope this helps. And as we discussed, the most important thing is mutual respect, and space to have a different opinion without it becoming\npersonal.",
+  "metadata": {
+    "section": "Page 6 of 358",
+    "type": "text",
+    "position": 9,
+    "continues": true,
+    "part": 10,
+    "total_parts": 470,
+    "estimated_tokens": 38,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 10,
+    "total_chunks": 470,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

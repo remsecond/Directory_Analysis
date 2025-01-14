@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+evidenceai.egg-info/PKG-INFO
+evidenceai.egg-info/SOURCES.txt
+evidenceai.egg-info/dependency_links.txt
+evidenceai.egg-info/requires.txt
+evidenceai.egg-info/top_level.txt

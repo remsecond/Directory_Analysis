@@ -3,26 +3,24 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import pdfProcessor from './src/services/pdf-processor.js';
-import { ODSProcessor } from './src/services/ods-processor.js';
-
-// Initialize processors
-const odsProcessor = new ODSProcessor();
+import textProcessor from './src/services/text-processor.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Source and destination directories
-const sourceDir = 'C:\\Users\\robmo\\OneDrive\\Documents\\evidenceai_test\\input\\3_File_Nov_Jan_Test';
-const destDir = 'C:\\Users\\robmo\\Desktop\\evidenceai\\input';
+// Use relative paths
+const uploadsDir = path.join(__dirname, 'uploads');
+const processedDir = path.join(__dirname, 'processed');
 
 // Create Express app
 const app = express();
 
-// Ensure destination directory exists
-if (!fs.existsSync(destDir)) {
-    fs.mkdirSync(destDir, { recursive: true });
-}
+// Ensure directories exist
+[uploadsDir, processedDir].forEach(dir => {
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+    }
+});
 
 // Add CORS headers
 app.use((req, res, next) => {
@@ -41,9 +39,9 @@ app.get('/health', (req, res) => {
 app.get('/status', (req, res) => {
     res.json({
         status: 'running',
-        source_dir: sourceDir,
-        dest_dir: destDir,
-        supported_formats: ['pdf', 'txt']
+        uploads_dir: uploadsDir,
+        processed_dir: processedDir,
+        supported_formats: ['txt']
     });
 });
 
@@ -51,27 +49,17 @@ app.get('/status', (req, res) => {
 const upload = multer({
     storage: multer.diskStorage({
         destination: (req, file, cb) => {
-            const uploadDir = path.join(__dirname, 'uploads');
-            if (!fs.existsSync(uploadDir)) {
-                fs.mkdirSync(uploadDir);
-            }
-            cb(null, uploadDir);
+            cb(null, uploadsDir);
         },
         filename: (req, file, cb) => {
             cb(null, `${Date.now()}-${file.originalname}`);
         }
     }),
     fileFilter: (req, file, cb) => {
-        const allowedMimeTypes = [
-            'application/pdf',
-            'text/plain',
-            'application/vnd.oasis.opendocument.spreadsheet',
-            'application/x-vnd.oasis.opendocument.spreadsheet'
-        ];
-        if (allowedMimeTypes.includes(file.mimetype)) {
+        if (file.mimetype === 'text/plain') {
             cb(null, true);
         } else {
-            cb(new Error(`File type not allowed. Allowed types: PDF, TXT, ODS. Got: ${file.mimetype}`));
+            cb(new Error('Only text files are supported at this time'));
         }
     },
     limits: {
@@ -89,47 +77,26 @@ app.post('/process', upload.single('file'), async (req, res) => {
         console.log('Processing file:', req.file.originalname);
         const startTime = Date.now();
 
-        // Select processor based on file extension
-        const ext = path.extname(req.file.originalname).toLowerCase();
-        let result;
-        
-        if (ext === '.pdf') {
-            result = await pdfProcessor.process(req.file.path);
-        } else if (ext === '.ods') {
-            result = await odsProcessor.process(req.file.path);
-        } else {
-            throw new Error(`Unsupported file type: ${ext}`);
+        // Process the file
+        const result = await textProcessor.process(req.file.path);
+
+        if (result.status === 'error') {
+            throw new Error(result.message);
         }
 
-        // Create response with enhanced data
-        const response = {
-            status: 'success',
-            pages: result.statistics.pages || result.statistics.labels || 0,
-            words: result.statistics.words || result.statistics.total_cells || 0,
-            processingTime: `${((Date.now() - startTime) / 1000).toFixed(3)}s`,
-            content: {
-                text: result.raw_content.text ? result.raw_content.text.substring(0, 1000) + '...' : 'No text content',
-                metadata: result.file_info,
-                structure: result.raw_content.structure,
-                statistics: result.statistics
-            }
-        };
-
-        // Copy processed file to evidenceai input directory
-        const destDir = 'C:\\Users\\robmo\\Desktop\\evidenceai\\input';
-        if (!fs.existsSync(destDir)) {
-            fs.mkdirSync(destDir, { recursive: true });
-        }
-
-        const destPath = path.join(destDir, req.file.originalname);
+        // Copy processed file to processed directory
+        const destPath = path.join(processedDir, req.file.originalname);
         fs.copyFileSync(req.file.path, destPath);
         console.log(`Copied ${req.file.originalname} to ${destPath}`);
 
         // Clean up uploaded file
         fs.unlinkSync(req.file.path);
 
+        // Add processing time to result
+        result.processing_meta.processing_time = `${((Date.now() - startTime) / 1000).toFixed(3)}s`;
+
         res.json({
-            ...response,
+            ...result,
             destination: destPath
         });
         console.log('Processing complete');
@@ -137,7 +104,11 @@ app.post('/process', upload.single('file'), async (req, res) => {
         console.error('Processing error:', error);
         res.status(500).json({
             status: 'error',
-            message: error.message || 'Internal server error'
+            message: error.message || 'Internal server error',
+            processing_meta: {
+                timestamp: new Date().toISOString(),
+                version: '1.0.0'
+            }
         });
     }
 });
@@ -148,7 +119,9 @@ app.get('*', (req, res) => {
 });
 
 // Start server
-const port = 3002;
+const port = process.env.PORT || 3002;
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
+    console.log(`Uploads directory: ${uploadsDir}`);
+    console.log(`Processed directory: ${processedDir}`);
 });

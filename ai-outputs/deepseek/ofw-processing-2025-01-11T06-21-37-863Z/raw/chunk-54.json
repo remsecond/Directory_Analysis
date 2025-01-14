@@ -1,0 +1,27 @@
+{
+  "text": "unavailable to respond to demands or motions that may require a response or attendance at\nany hearing during the following dates:\n• January 24 – February 3, 2024\n• February 8-9, 15, 2024\n• February 19 – March 1, 2024",
+  "metadata": {
+    "section": "Page 443 of 1048",
+    "type": "text",
+    "position": 53,
+    "continues": true,
+    "part": 54,
+    "total_parts": 238,
+    "estimated_tokens": 54,
+    "format": "plain",
+    "context": {
+      "document_type": "text",
+      "formatting": {
+        "has_headers": false,
+        "has_lists": false,
+        "has_tables": false,
+        "has_code_blocks": false
+      }
+    },
+    "model": "deepseek",
+    "chunk_index": 54,
+    "total_chunks": 238,
+    "context_window": 25000,
+    "processing_notes": []
+  }
+}

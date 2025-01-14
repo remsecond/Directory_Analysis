@@ -1,102 +1,64 @@
 # Dependencies
 node_modules/
-venv/
-__pycache__/
-*.pyc
-.pytest_cache/
-.tox/
+**/node_modules/
 
-# Build artifacts
+# Build outputs
 dist/
 build/
-*.egg-info/
-*.tsbuildinfo
-.next/
-out/
+**/dist/
+**/build/
+
+# Environment
+.env
+**/.env
+.env.local
+.env.*.local
 
 # IDE
-.vscode/*
-!.vscode/extensions.json
-!.vscode/launch.json
-!.vscode/settings.json
+.vscode/
 .idea/
+*.sublime-*
 *.swp
-*.swo
-*~
 
-# OS
-.DS_Store
-Thumbs.db
-desktop.ini
-*.lnk
-
-# Logs and databases
+# Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-*.sqlite
-*.sqlite3
-*.db
 
-# Environment and secrets
-.env
-.env.*
-!.env.example
-.env.local
-.env.*.local
-google-token.json
-credentials.json
-*.pem
-*.key
-
-# Test coverage
+# Testing
 coverage/
-.nyc_output/
-htmlcov/
-.coverage
-coverage.xml
+**/coverage/
 
-# Generated files
-processed/
-uploads/
-input/*
-!input/test-data/
-ai-outputs/
-session_logs/
-monitoring/
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+experimental/*/
+!experimental/.gitkeep
+!experimental/README.md
+
+# Keep shared types
+!shared/types/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Google credentials
+google-token.json
+**/google-token.json
+
+# Local configuration
+config/local.js
+**/config/local.js
+
+# Debug files
+*.debug
+debug.log
 
 # Cache
 .cache/
 .npm/
 .eslintcache
-.stylelintcache
-.parcel-cache/
-
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.swp
-*.pid
-*.seed
-*.pid.lock
-
-# TypeScript
-*.tsbuildinfo
-
-# Yarn
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
-
-# Project specific
-demos/
-archive/
-COMMIT_MSG.txt
-CHECKPOINT.md
-*.url
