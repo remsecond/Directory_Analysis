@@ -1,124 +1,149 @@
-# File Organization Project
+# Batch Document Processor
 
-A standardized system for organizing and deduplicating sensitive legal and evidence files.
-
-## Project Structure
-
-```
-C:/Projects/Moyer/
-├── data/
-│   ├── processed/           # Organized file structure
-│   │   ├── 01_Legal_Documents/
-│   │   │   ├── Court_Orders/
-│   │   │   ├── Declarations/
-│   │   │   ├── Exhibits/
-│   │   │   └── Parenting_Plans/
-│   │   ├── 02_Communications/
-│   │   │   ├── Email/
-│   │   │   ├── Text_Messages/
-│   │   │   └── OFW_Messages/
-│   │   ├── 03_Evidence_Exhibits/
-│   │   │   ├── Photos/
-│   │   │   ├── Documents/
-│   │   │   └── Records/
-│   │   ├── 04_Case_Materials/
-│   │   │   ├── Reports/
-│   │   │   ├── Assessments/
-│   │   │   └── Evaluations/
-│   │   └── 05_Administrative/
-│   │       ├── Metadata/
-│   │       ├── Logs/
-│   │       └── Summaries/
-│   └── archive/            # Archive of deduplicated files
-├── logs/                   # System logs
-└── src/                    # Source code
-    ├── directory_analyzer_enhanced.py
-    ├── document_organizer_phase2.py
-    ├── document_deduplicator.py
-    └── file_migrator.py
-```
-
-## Implementation Results
-
-### File Migration Statistics
-- Total files processed: 2,555
-- Successfully migrated: 2,048 files
-- File type distribution:
-  * PDFs: 1,080 files (52.7%)
-  * Images: 604 files (29.5%)
-  * Documents: 197 files (9.6%)
-  * Other formats: 167 files (8.2%)
-
-### Deduplication Results
-- 122 sets of duplicate files identified
-- 343 redundant copies archived
-- Original files preserved in main structure
-- Full audit trail maintained
+A Windows desktop application for processing documents in batches with smart folder analysis and change detection.
 
 ## Features
 
-1. **Standardized Organization**
-   - Logical category-based structure
-   - Clear separation of document types
-   - Consistent naming conventions
+- Process entire folders of documents in one go
+- Smart change detection to avoid reprocessing unchanged files
+- Preview changes before processing
+- Progress tracking and status updates
+- Selective file processing
+- Processing history tracking
+- Native Windows interface with folder browser
 
-2. **Deduplication System**
-   - SHA-256 hash-based identification
-   - Newest version retention
-   - Archived copies preservation
-   - Detailed change logging
+## Prerequisites
 
-3. **File Type Management**
-   - Automatic categorization
-   - Format-specific handling
-   - Extensible mapping system
+1. Python 3.7 or higher
+   - Download from: https://www.python.org/downloads/
+   - Make sure to check "Add Python to PATH" during installation
 
-4. **Audit & Tracking**
-   - Comprehensive logging
-   - Migration records
-   - Deduplication history
-   - Archive references
+2. .NET 6.0 SDK
+   - Download from: https://dotnet.microsoft.com/download/dotnet/6.0
+   - Required for the Windows Forms UI
 
-## Scripts
+## Installation
 
-### directory_analyzer_enhanced.py
-Analyzes directory structure and generates detailed reports about file distribution and potential duplicates.
-
-### document_organizer_phase2.py
-Creates and manages the standardized folder structure for organized file storage.
-
-### document_deduplicator.py
-Identifies and processes duplicate files, maintaining newest versions and archiving duplicates.
-
-### file_migrator.py
-Handles the migration of files from source to organized structure with appropriate categorization.
-
-## Getting Started
-
-1. Clone the repository
-2. Install requirements: `pip install -r requirements.txt`
-3. Configure paths in scripts if needed
-4. Run the organization process:
-   ```bash
-   python src/document_organizer_phase2.py
-   python src/file_migrator.py
-   python src/document_deduplicator.py
+1. Clone or download this repository
+2. Open a command prompt in the repository directory
+3. Create a Python virtual environment:
+   ```
+   python -m venv venv
+   venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+4. Build the Windows Forms UI:
+   ```
+   cd src\BatchProcessorUI
+   dotnet build
+   cd ..\..
    ```
 
-## Maintenance
+## Running the Application
 
-- Regular deduplication runs recommended
-- Monitor logs for any issues
-- Update file type mappings as needed
-- Verify archive integrity periodically
+### Option 1: All-in-One Startup
+Run `start-batch-processor-system.bat` to start both the backend server and UI.
 
-## Contributing
+### Option 2: Manual Startup
+1. Start the backend server:
+   ```
+   start-batch-processor.bat
+   ```
+2. In a new window, start the UI:
+   ```
+   start-batch-processor-ui.bat
+   ```
 
-1. Create a feature branch
-2. Make changes
-3. Submit pull request
-4. Include test results and logs
+## Stopping the Application
+
+1. Close the UI window
+2. Run `stop-batch-processor.bat` to stop the backend server
+
+## Troubleshooting
+
+### Backend Server Issues
+- If you see "Address already in use":
+  1. Run `stop-batch-processor.bat`
+  2. Try starting again
+  3. If problem persists, manually kill Python processes
+
+### UI Issues
+- If the UI shows "Connection refused":
+  1. Make sure the backend server is running
+  2. Check if http://localhost:5000 is accessible
+  3. Try restarting both components
+
+### Python Environment Issues
+- If you see "python not found":
+  1. Verify Python is in your PATH
+  2. Try running with full path: `C:\Python3x\python.exe -m venv venv`
+
+### .NET Issues
+- If you see "dotnet not found":
+  1. Verify .NET 6.0 SDK is installed
+  2. Try repairing/reinstalling the .NET SDK
+
+## Usage Guide
+
+1. Launch the application using `start-batch-processor-system.bat`
+
+2. Using the Interface:
+   - Click "Browse Folder" to select a folder
+   - The system will analyze the folder and show:
+     * Last processing time
+     * New files detected
+     * Modified files
+     * Total size and count
+   
+3. Processing Options:
+   - "Process All": Process every file
+   - "Process Changes": Only process new/modified files
+   - Progress bar shows current status
+   - Recent folders are saved for quick access
+
+4. Best Practices:
+   - Start with a small folder to test
+   - Use "Process Changes" for incremental updates
+   - Keep the folder browser window open for reference
+   - Check the status messages for any issues
+
+## Technical Details
+
+### Architecture
+
+1. **Windows Forms UI** (.NET 6.0)
+   - Native Windows interface
+   - Folder browser integration
+   - Async operations for responsiveness
+   - Progress tracking
+   - Recent folders management
+
+2. **Python Backend**
+   - Flask REST API
+   - SQLite database for history
+   - File system operations
+   - Change detection
+   - Progress streaming
+
+3. **Communication**
+   - HTTP/JSON for commands
+   - Server-Sent Events for progress
+   - Local ports: 5000
+
+### Data Storage
+
+- Recent folders: `recent_folders.json`
+- Processing history: `documents/db/documents.db`
+- Temporary files: `temp/`
+
+### System Requirements
+
+- Windows 10/11
+- Python 3.7+
+- .NET 6.0 SDK
+- 4GB RAM recommended
+- SSD recommended for large folders
 
 ## License
 
-Proprietary - All rights reserved
+MIT License - See LICENSE file for details

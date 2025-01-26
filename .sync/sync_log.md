@@ -1,0 +1,542 @@
+# Sync Operation Log
+
+
+## sync-thoughts (2025-01-26T19:54:42.311Z)
+### Files Analyzed
+- 01_Input\README.md
+- 02_Processing\README.md
+- 03_Processed\README.md
+- 04_Metadata\README.md
+- 05_Archive\README.md
+- CHANGELOG.md
+- CHECKPOINT.md
+- CODE_OF_CONDUCT.md
+- COMMIT_DETAILS.md
+- CONTRIBUTING.md
+- CURRENT_STATE.md
+- debug-context.md
+- DEVELOPMENT_PROTOCOL.md
+- Directory_Analysis\README.md
+- docs\Comprehensive_Guide_for_Dev_Manager.md
+- docs\CORE_COMPONENTS.md
+- docs\GOOGLE_DOC_TEMPLATE.md
+- docs\LESSONS_LEARNED.md
+- docs\Master_File_with_Pointers.md
+- docs\PARSEUR_MIGRATION_PLAN.md
+- docs\README.md
+- docs\setup\google.md
+- docs\setup\google_drive_setup.md
+- docs\setup\google_oauth_setup.md
+- docs\setup\zapier.md
+- docs\START_HERE.md
+- docs\WELCOME.md
+- docs\workflows\README.md
+- document-scraper\README.md
+- documentation\archive\docs_20250126_100854\conversation_log.md
+- documentation\archive\docs_20250126_100854\Directory_Analysis\README.md
+- documentation\archive\docs_20250126_100854\docs\Comprehensive_Guide_for_Dev_Manager.md
+- documentation\archive\docs_20250126_100854\docs\CORE_COMPONENTS.md
+- documentation\archive\docs_20250126_100854\docs\GOOGLE_DOC_TEMPLATE.md
+- documentation\archive\docs_20250126_100854\docs\LESSONS_LEARNED.md
+- documentation\archive\docs_20250126_100854\docs\Master_File_with_Pointers.md
+- documentation\archive\docs_20250126_100854\docs\PARSEUR_MIGRATION_PLAN.md
+- documentation\archive\docs_20250126_100854\docs\README.md
+- documentation\archive\docs_20250126_100854\docs\setup\google.md
+- documentation\archive\docs_20250126_100854\docs\setup\google_drive_setup.md
+- documentation\archive\docs_20250126_100854\docs\setup\google_oauth_setup.md
+- documentation\archive\docs_20250126_100854\docs\setup\zapier.md
+- documentation\archive\docs_20250126_100854\docs\START_HERE.md
+- documentation\archive\docs_20250126_100854\docs\WELCOME.md
+- documentation\archive\docs_20250126_100854\docs\workflows\README.md
+- documentation\archive\docs_20250126_100854\evidenceai-cloud\docs\ARCHITECTURE.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\COMMIT.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\CONTEXT.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\CURRENT_STATE.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\DOCUMENT_CENTRIC_CONTEXT.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\IMMEDIATE_ACTIONS.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\IMPLEMENTATION_PLAN.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\LEARNINGS.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\NEXT_STEPS.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\PACKAGE_TYPES.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\README.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\REVISED_IMPLEMENTATION.md
+- documentation\archive\docs_20250126_100854\simple-pdf-processor\REVISED_STEPS.md
+- documentation\archive\docs_20250126_100854\src\mcp\document-organizer-server\README.md
+- documentation\archive\docs_20250126_100854\src\mcp\email-processor-server\CHECKPOINT.md
+- documentation\archive\docs_20250126_100854\src\mcp\email-processor-server\ENHANCEMENTS.md
+- documentation\archive\docs_20250126_100854\src\mcp\email-processor-server\README.md
+- documentation\archive\docs_20250126_100854\src\mcp\google-drive-server\README.md
+- documentation\current\api-template.md
+- documentation\current\Directory_Analysis\README.md
+- documentation\current\docs\Comprehensive_Guide_for_Dev_Manager.md
+- documentation\current\docs\CORE_COMPONENTS.md
+- documentation\current\docs\GOOGLE_DOC_TEMPLATE.md
+- documentation\current\docs\LESSONS_LEARNED.md
+- documentation\current\docs\Master_File_with_Pointers.md
+- documentation\current\docs\PARSEUR_MIGRATION_PLAN.md
+- documentation\current\docs\README.md
+- documentation\current\docs\setup\google.md
+- documentation\current\docs\setup\google_drive_setup.md
+- documentation\current\docs\setup\google_oauth_setup.md
+- documentation\current\docs\setup\zapier.md
+- documentation\current\docs\START_HERE.md
+- documentation\current\docs\WELCOME.md
+- documentation\current\docs\workflows\README.md
+- documentation\current\evidenceai-cloud\docs\ARCHITECTURE.md
+- documentation\current\guide-template.md
+- documentation\current\log-template.md
+- documentation\current\README.md
+- documentation\current\simple-pdf-processor\COMMIT.md
+- documentation\current\simple-pdf-processor\CONTEXT.md
+- documentation\current\simple-pdf-processor\CURRENT_STATE.md
+- documentation\current\simple-pdf-processor\DOCUMENT_CENTRIC_CONTEXT.md
+- documentation\current\simple-pdf-processor\IMMEDIATE_ACTIONS.md
+- documentation\current\simple-pdf-processor\IMPLEMENTATION_PLAN.md
+- documentation\current\simple-pdf-processor\LEARNINGS.md
+- documentation\current\simple-pdf-processor\NEXT_STEPS.md
+- documentation\current\simple-pdf-processor\PACKAGE_TYPES.md
+- documentation\current\simple-pdf-processor\README.md
+- documentation\current\simple-pdf-processor\REVISED_IMPLEMENTATION.md
+- documentation\current\simple-pdf-processor\REVISED_STEPS.md
+- documentation\current\src\mcp\document-organizer-server\README.md
+- documentation\current\src\mcp\email-processor-server\CHECKPOINT.md
+- documentation\current\src\mcp\email-processor-server\ENHANCEMENTS.md
+- documentation\current\src\mcp\email-processor-server\README.md
+- documentation\README.md
+- documentation\templates\api-template.md
+- documentation\templates\guide-template.md
+- documentation\templates\log-template.md
+- documentation\templates\README.md
+- evidenceai-cloud\docs\ARCHITECTURE.md
+- evidenceai-cloud\README.md
+- evidenceai-cloud\services\file-manager\README.md
+- experimental\README.md
+- future-features.md
+- input\README.md
+- klein-pdf-generator\README.md
+- LESSONS_LEARNED.md
+- metadata\README.md
+- NEXT_SESSION.md
+- processed\README.md
+- processing\README.md
+- project-root\web-interface\README.md
+- PROJECT_CONTEXT.md
+- prompts\deepseek\README.md
+- prompts\gpt4\README.md
+- prompts\notebooklm\README.md
+- prompts\README.md
+- prompts\roles\PROMPT_TEMPLATES.md
+- prompts\sonnet\README.md
+- prompts\VISUALIZATION_PROMPT.md
+- README.md
+- README_ASSET_DB.md
+- SESSION_SUMMARY.md
+- simple-pdf-processor\COMMIT.md
+- simple-pdf-processor\CONTEXT.md
+- simple-pdf-processor\CURRENT_STATE.md
+- simple-pdf-processor\DOCUMENT_CENTRIC_CONTEXT.md
+- simple-pdf-processor\IMMEDIATE_ACTIONS.md
+- simple-pdf-processor\IMPLEMENTATION_PLAN.md
+- simple-pdf-processor\LEARNINGS.md
+- simple-pdf-processor\NEXT_STEPS.md
+- simple-pdf-processor\PACKAGE_TYPES.md
+- simple-pdf-processor\README.md
+- simple-pdf-processor\REVISED_IMPLEMENTATION.md
+- simple-pdf-processor\REVISED_STEPS.md
+- src\document_organizer\README.md
+- src\mcp\document-organizer-server\README.md
+- src\mcp\email-processor-server\CHECKPOINT.md
+- src\mcp\email-processor-server\ENHANCEMENTS.md
+- src\mcp\email-processor-server\README.md
+- src\parseur-integration\README.md
+- src\services\models\README.md
+- tests\fixtures\README.md
+- tests\fixtures\small\README.md
+- TIMELINE_CONTROL.md
+- venv\Lib\site-packages\httpcore-1.0.7.dist-info\licenses\LICENSE.md
+- venv\Lib\site-packages\httpx-0.28.1.dist-info\licenses\LICENSE.md
+- venv\Lib\site-packages\idna-3.10.dist-info\LICENSE.md
+- venv\Lib\site-packages\numpy\random\LICENSE.md
+- venv\Lib\site-packages\werkzeug\debug\shared\ICON_LICENSE.md
+- zapier\README.md
+- zapier_flows\CODE_REVIEW.md
+- zapier_flows\EVIDENCEAI_CLOUD_STRUCTURE.md
+- zapier_flows\EVIDENCE_CLOUD_STRUCTURE.md
+- zapier_flows\IMPLEMENTATION_PLAN.md
+- zapier_flows\INITIAL_FILTER_SETUP.md
+- zapier_flows\NEXT_STEPS.md
+- zapier_flows\README.md
+- zapier_flows\REPOSITORY_SETUP.md
+- zapier_flows\setup_instructions.md
+- _archive\README.md
+
+### Insights Found
+- Action from ARCHITECTURE.md: Test-driven development
+- Action from ARCHITECTURE.md: Test-driven development
+- Action from ARCHITECTURE.md: Test-driven development
+- Action from CHANGELOG.md: Automated test suite
+- Action from CHANGELOG.md: Module cycle issues in test suite
+- Action from CHANGELOG.md: Test framework setup
+- Action from CHANGELOG.md: Test suite stability
+- Action from CODE_REVIEW.md: Add automated testing
+- Action from CODE_REVIEW.md: Add character restrictions for filenames
+- Action from CODE_REVIEW.md: Add cleanup job for orphaned versions
+- Action from CODE_REVIEW.md: Add error handling for failed operations
+- Action from CODE_REVIEW.md: Add more edge cases
+- Action from CODE_REVIEW.md: Add retry logic for file operations
+- Action from CODE_REVIEW.md: Add robust error handling
+- Action from CODE_REVIEW.md: Add validation rules for party_code format
+- Action from CODE_REVIEW.md: Covers multiple test scenarios
+- Action from CODE_REVIEW.md: Implement batch processing
+- Action from CODE_REVIEW.md: Implement batch processing capability
+- Action from CONTEXT.md: Test coverage and documentation
+- Action from CONTEXT.md: Test coverage and documentation
+- Action from CONTEXT.md: Test coverage and documentation
+- Action from CONTEXT.md: Test structure
+- Action from CONTEXT.md: Test structure
+- Action from CONTEXT.md: Test structure
+- Action from CONTRIBUTING.md: Include test cases for edge cases
+- Action from CONTRIBUTING.md: Test different document types
+- Action from CONTRIBUTING.md: Test error conditions
+- Action from CONTRIBUTING.md: Test full PDF generation
+- Action from CONTRIBUTING.md: Test in different browsers
+- Action from CONTRIBUTING.md: Test individual components
+- Action from CONTRIBUTING.md: Test print output manually
+- Action from CONTRIBUTING.md: Test print-specific styles
+- Action from CONTRIBUTING.md: Test with different page sizes
+- Action from CONTRIBUTING.md: Update API documentation
+- Action from CONTRIBUTING.md: Update README.md for user-facing changes
+- Action from conversation_log.md: [ ] Add template validation
+- Action from conversation_log.md: [ ] Create user documentation for the sync system
+- Action from conversation_log.md: [ ] Implement additional security measures
+- Action from conversation_log.md: [ ] Implement backup mechanism
+- Action from conversation_log.md: [ ] Review and update documentation regularly
+- Action from conversation_log.md: [x] Create standardized templates for consistency
+- Action from conversation_log.md: [x] Implement OAuth 2.0 for Google Drive authentication
+- Action from conversation_log.md: Standardized templates improve documentation consistency
+- Action from CORE_COMPONENTS.md: Test files (smart-chunking.test.js)
+- Action from CORE_COMPONENTS.md: Test files (smart-chunking.test.js)
+- Action from CORE_COMPONENTS.md: Test files (smart-chunking.test.js)
+- Action from CURRENT_STATE.md: ✅ Test files processed successfully
+- Action from CURRENT_STATE.md: Coquille test file
+- Action from CURRENT_STATE.md: Coquille test file
+- Action from CURRENT_STATE.md: Coquille test file
+- Action from CURRENT_STATE.md: Full test coverage
+- Action from CURRENT_STATE.md: Full test coverage
+- Action from CURRENT_STATE.md: Full test coverage
+- Action from DEVELOPMENT_PROTOCOL.md: [ ] Document the test file and results
+- Action from DEVELOPMENT_PROTOCOL.md: [ ] No "we'll fix it later" exceptions
+- Action from DEVELOPMENT_PROTOCOL.md: Test files ready: [YES/NO]
+- Action from DEVELOPMENT_PROTOCOL.md: Test files: [PATHS]
+- Action from EVIDENCE_CLOUD_STRUCTURE.md: [ ] Add document processor
+- Action from EVIDENCE_CLOUD_STRUCTURE.md: [ ] Create development guidelines
+- Action from EVIDENCE_CLOUD_STRUCTURE.md: [ ] Create evidence-cloud repository
+- Action from EVIDENCE_CLOUD_STRUCTURE.md: [ ] Implement base services
+- Action from EVIDENCE_CLOUD_STRUCTURE.md: [ ] Implement security
+- Action from EVIDENCE_CLOUD_STRUCTURE.md: Test with sample datasets
+- Action from EVIDENCE_CLOUD_STRUCTURE.md: Update to new architecture
+- Action from EVIDENCEAI_CLOUD_STRUCTURE.md: [ ] Add document processor
+- Action from EVIDENCEAI_CLOUD_STRUCTURE.md: [ ] Create development guidelines
+- Action from EVIDENCEAI_CLOUD_STRUCTURE.md: [ ] Create evidenceai-cloud repository
+- Action from EVIDENCEAI_CLOUD_STRUCTURE.md: [ ] Implement base services
+- Action from EVIDENCEAI_CLOUD_STRUCTURE.md: [ ] Implement security
+- Action from EVIDENCEAI_CLOUD_STRUCTURE.md: Test with sample datasets
+- Action from EVIDENCEAI_CLOUD_STRUCTURE.md: Update to new architecture
+- Action from google_drive_setup.md: Create the folder structure
+- Action from google_drive_setup.md: Create the folder structure
+- Action from google_drive_setup.md: Create the folder structure
+- Action from google_drive_setup.md: Display the folder IDs to add to your .env file
+- Action from google_drive_setup.md: Display the folder IDs to add to your .env file
+- Action from google_drive_setup.md: Display the folder IDs to add to your .env file
+- Action from google_oauth_setup.md: Verify that you've added yourself as a test user
+- Action from google_oauth_setup.md: Verify that you've added yourself as a test user
+- Action from google_oauth_setup.md: Verify that you've added yourself as a test user
+- Action from IMMEDIATE_ACTIONS.md: Coquille test file processing
+- Action from IMMEDIATE_ACTIONS.md: Coquille test file processing
+- Action from IMMEDIATE_ACTIONS.md: Coquille test file processing
+- Action from IMMEDIATE_ACTIONS.md: Successfully process Coquille test file
+- Action from IMMEDIATE_ACTIONS.md: Successfully process Coquille test file
+- Action from IMMEDIATE_ACTIONS.md: Successfully process Coquille test file
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add comparison logic
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add comparison logic
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add comparison logic
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add detection methods for ODS->PDF lookup
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add detection methods for ODS->PDF lookup
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add detection methods for ODS->PDF lookup
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add detection methods for PDF->ODS lookup
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add detection methods for PDF->ODS lookup
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add detection methods for PDF->ODS lookup
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add error handling
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add error handling
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add error handling
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add format-specific validation
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add format-specific validation
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add format-specific validation
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add format-specific validators
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add format-specific validators
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add format-specific validators
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add MIME type checking
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add MIME type checking
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add MIME type checking
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add to upload flow
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add to upload flow
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add to upload flow
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add unit tests
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add unit tests
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add unit tests
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add validation reporting
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add validation reporting
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add validation reporting
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add validation tests
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add validation tests
+- Action from IMPLEMENTATION_PLAN.md: [ ] Add validation tests
+- Action from IMPLEMENTATION_PLAN.md: [ ] Create CompanionDetector class
+- Action from IMPLEMENTATION_PLAN.md: [ ] Create CompanionDetector class
+- Action from IMPLEMENTATION_PLAN.md: [ ] Create CompanionDetector class
+- Action from IMPLEMENTATION_PLAN.md: [ ] Create test fixtures with companion pairs
+- Action from IMPLEMENTATION_PLAN.md: [ ] Create test fixtures with companion pairs
+- Action from IMPLEMENTATION_PLAN.md: [ ] Create test fixtures with companion pairs
+- Action from IMPLEMENTATION_PLAN.md: [ ] Create validation reports
+- Action from IMPLEMENTATION_PLAN.md: [ ] Create validation reports
+- Action from IMPLEMENTATION_PLAN.md: [ ] Create validation reports
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement basic file pattern matching
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement basic file pattern matching
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement basic file pattern matching
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement field comparison logic
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement field comparison logic
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement field comparison logic
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement field extraction
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement field extraction
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement field extraction
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement file name pattern matching
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement file name pattern matching
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement file name pattern matching
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement MIME type checking
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement MIME type checking
+- Action from IMPLEMENTATION_PLAN.md: [ ] Implement MIME type checking
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test end-to-end
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test end-to-end
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test end-to-end
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test with malformed files
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test with malformed files
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test with malformed files
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test with real data
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test with real data
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test with real data
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test with sample files
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test with sample files
+- Action from IMPLEMENTATION_PLAN.md: [ ] Test with sample files
+- Action from IMPLEMENTATION_PLAN.md: [ ] Update web interface
+- Action from IMPLEMENTATION_PLAN.md: [ ] Update web interface
+- Action from IMPLEMENTATION_PLAN.md: [ ] Update web interface
+- Action from IMPLEMENTATION_PLAN.md: Test error handling
+- Action from IMPLEMENTATION_PLAN.md: Test error handling
+- Action from IMPLEMENTATION_PLAN.md: Test error handling
+- Action from IMPLEMENTATION_PLAN.md: Test validation reporting
+- Action from IMPLEMENTATION_PLAN.md: Test validation reporting
+- Action from IMPLEMENTATION_PLAN.md: Test validation reporting
+- Action from IMPLEMENTATION_PLAN.md: Test with real CloudHQ exports
+- Action from IMPLEMENTATION_PLAN.md: Test with real CloudHQ exports
+- Action from IMPLEMENTATION_PLAN.md: Test with real CloudHQ exports
+- Action from LEARNINGS.md: Test edge cases thoroughly
+- Action from LEARNINGS.md: Test edge cases thoroughly
+- Action from LEARNINGS.md: Test edge cases thoroughly
+- Action from Master_File_with_Pointers.md: Contains test.txt with metadata and tags
+- Action from Master_File_with_Pointers.md: Contains test.txt with metadata and tags
+- Action from Master_File_with_Pointers.md: Contains test.txt with metadata and tags
+- Action from Master_File_with_Pointers.md: Current test files: test.txt, test_duplicate.txt
+- Action from Master_File_with_Pointers.md: Current test files: test.txt, test_duplicate.txt
+- Action from Master_File_with_Pointers.md: Current test files: test.txt, test_duplicate.txt
+- Action from Master_File_with_Pointers.md: File 1 (test.txt) has tags: important (1), evidence (2)
+- Action from Master_File_with_Pointers.md: File 1 (test.txt) has tags: important (1), evidence (2)
+- Action from Master_File_with_Pointers.md: File 1 (test.txt) has tags: important (1), evidence (2)
+- Action from NEXT_STEPS.md: [ ] Add access control
+- Action from NEXT_STEPS.md: [ ] Add error logging
+- Action from NEXT_STEPS.md: [ ] Add file compression
+- Action from NEXT_STEPS.md: [ ] Add format variant detection
+- Action from NEXT_STEPS.md: [ ] Add system health checks
+- Action from NEXT_STEPS.md: [ ] Add validation rules for filenames
+- Action from NEXT_STEPS.md: [ ] Create basic file storage structure
+- Action from NEXT_STEPS.md: [ ] Create error notification system
+- Action from NEXT_STEPS.md: [ ] Create FileNamingService class
+- Action from NEXT_STEPS.md: [ ] Create maintenance jobs
+- Action from NEXT_STEPS.md: [ ] Create security documentation
+- Action from NEXT_STEPS.md: [ ] Create user guides
+- Action from NEXT_STEPS.md: [ ] Create version tracking system
+- Action from NEXT_STEPS.md: [ ] Implement audit logging
+- Action from NEXT_STEPS.md: [ ] Implement basic logging system
+- Action from NEXT_STEPS.md: [ ] Implement batch processing
+- Action from NEXT_STEPS.md: [ ] Implement cleanup routines
+- Action from NEXT_STEPS.md: [ ] Implement content hash generation
+- Action from NEXT_STEPS.md: [ ] Implement metadata extraction
+- Action from NEXT_STEPS.md: [ ] Implement retry mechanism
+- Action from NEXT_STEPS.md: 100% test coverage
+- Action from NEXT_STEPS.md: 100% test coverage
+- Action from NEXT_STEPS.md: 100% test coverage
+- Action from NEXT_STEPS.md: Add API authentication
+- Action from NEXT_STEPS.md: Add API authentication
+- Action from NEXT_STEPS.md: Add API authentication
+- Action from NEXT_STEPS.md: Add API documentation
+- Action from NEXT_STEPS.md: Add API documentation
+- Action from NEXT_STEPS.md: Add API documentation
+- Action from NEXT_STEPS.md: Add automated performance testing
+- Action from NEXT_STEPS.md: Add automated performance testing
+- Action from NEXT_STEPS.md: Add automated performance testing
+- Action from NEXT_STEPS.md: Add caching layer for frequently accessed files
+- Action from NEXT_STEPS.md: Add caching layer for frequently accessed files
+- Action from NEXT_STEPS.md: Add caching layer for frequently accessed files
+- Action from NEXT_STEPS.md: Add format auto-detection based on content
+- Action from NEXT_STEPS.md: Add format auto-detection based on content
+- Action from NEXT_STEPS.md: Add format auto-detection based on content
+- Action from NEXT_STEPS.md: Add more comprehensive logging
+- Action from NEXT_STEPS.md: Add more comprehensive logging
+- Action from NEXT_STEPS.md: Add more comprehensive logging
+- Action from NEXT_STEPS.md: Add performance tuning guide
+- Action from NEXT_STEPS.md: Add performance tuning guide
+- Action from NEXT_STEPS.md: Add performance tuning guide
+- Action from NEXT_STEPS.md: Add support for more document formats:
+- Action from NEXT_STEPS.md: Add support for more document formats:
+- Action from NEXT_STEPS.md: Add support for more document formats:
+- Action from NEXT_STEPS.md: Add support for table extraction
+- Action from NEXT_STEPS.md: Add support for table extraction
+- Action from NEXT_STEPS.md: Add support for table extraction
+- Action from NEXT_STEPS.md: Add topic detection using LLM classification
+- Action from NEXT_STEPS.md: Add topic detection using LLM classification
+- Action from NEXT_STEPS.md: Add topic detection using LLM classification
+- Action from NEXT_STEPS.md: Add webhook support for async processing
+- Action from NEXT_STEPS.md: Add webhook support for async processing
+- Action from NEXT_STEPS.md: Add webhook support for async processing
+- Action from NEXT_STEPS.md: Comprehensive test suite with edge cases
+- Action from NEXT_STEPS.md: Comprehensive test suite with edge cases
+- Action from NEXT_STEPS.md: Comprehensive test suite with edge cases
+- Action from NEXT_STEPS.md: Create client libraries (Python, Node.js)
+- Action from NEXT_STEPS.md: Create client libraries (Python, Node.js)
+- Action from NEXT_STEPS.md: Create client libraries (Python, Node.js)
+- Action from NEXT_STEPS.md: Create integration guides
+- Action from NEXT_STEPS.md: Create integration guides
+- Action from NEXT_STEPS.md: Create integration guides
+- Action from NEXT_STEPS.md: Enhance test coverage
+- Action from NEXT_STEPS.md: Enhance test coverage
+- Action from NEXT_STEPS.md: Enhance test coverage
+- Action from NEXT_STEPS.md: Implement batch processing capabilities
+- Action from NEXT_STEPS.md: Implement batch processing capabilities
+- Action from NEXT_STEPS.md: Implement batch processing capabilities
+- Action from NEXT_STEPS.md: Implement format-specific metadata extraction
+- Action from NEXT_STEPS.md: Implement format-specific metadata extraction
+- Action from NEXT_STEPS.md: Implement format-specific metadata extraction
+- Action from NEXT_STEPS.md: Implement parallel processing for large files
+- Action from NEXT_STEPS.md: Implement parallel processing for large files
+- Action from NEXT_STEPS.md: Implement parallel processing for large files
+- Action from NEXT_STEPS.md: Implement participant extraction using NER
+- Action from NEXT_STEPS.md: Implement participant extraction using NER
+- Action from NEXT_STEPS.md: Implement participant extraction using NER
+- Action from NEXT_STEPS.md: Implement rate limiting
+- Action from NEXT_STEPS.md: Implement rate limiting
+- Action from NEXT_STEPS.md: Implement rate limiting
+- Action from NEXT_STEPS.md: Implement security scanning
+- Action from NEXT_STEPS.md: Implement security scanning
+- Action from NEXT_STEPS.md: Implement security scanning
+- Action from NEXT_STEPS.md: Improve error handling consistency
+- Action from NEXT_STEPS.md: Improve error handling consistency
+- Action from NEXT_STEPS.md: Improve error handling consistency
+- Action from PACKAGE_TYPES.md: Add email content detection
+- Action from PACKAGE_TYPES.md: Add email content detection
+- Action from PACKAGE_TYPES.md: Add email content detection
+- Action from PACKAGE_TYPES.md: Add record table detection
+- Action from PACKAGE_TYPES.md: Add record table detection
+- Action from PACKAGE_TYPES.md: Add record table detection
+- Action from PACKAGE_TYPES.md: Add relationship detection
+- Action from PACKAGE_TYPES.md: Add relationship detection
+- Action from PACKAGE_TYPES.md: Add relationship detection
+- Action from PACKAGE_TYPES.md: Create document identity system
+- Action from PACKAGE_TYPES.md: Create document identity system
+- Action from PACKAGE_TYPES.md: Create document identity system
+- Action from PACKAGE_TYPES.md: Implement classification rules
+- Action from PACKAGE_TYPES.md: Implement classification rules
+- Action from PACKAGE_TYPES.md: Implement classification rules
+- Action from PACKAGE_TYPES.md: Implement robust format detection
+- Action from PACKAGE_TYPES.md: Implement robust format detection
+- Action from PACKAGE_TYPES.md: Implement robust format detection
+- Action from PROJECT_CONTEXT.md: Implement feedback system
+- Action from PROJECT_CONTEXT.md: Implement timeline generation
+- Action from PROJECT_CONTEXT.md: Test coverage
+- Action from PROJECT_CONTEXT.md: Test Data: evidenceai/test-data/
+- Action from PROJECT_CONTEXT.md: Update this context file
+- Action from PROJECT_CONTEXT.md: Update this file with major developments
+- Action from README_ASSET_DB.md: File 1 (test.txt) has tags: important (1), evidence (2)
+- Action from README_ASSET_DB.md: test.txt (ID: 1) in 03_Completed/
+- Action from README.md: `/test` - Test files and test cases
+- Action from README.md: `/test` - Test files and test cases
+- Action from README.md: `/test` - Test files and test cases
+- Action from README.md: `edge_cases/` - Edge case test files
+- Action from README.md: `edge_cases/` - Edge case test files
+- Action from README.md: `emails/` - Email-specific test files
+- Action from README.md: `emails/` - Email-specific test files
+- Action from README.md: `invalid/` - Invalid test files that should fail
+- Action from README.md: `invalid/` - Invalid test files that should fail
+- Action from README.md: `npm run test` - Run tests
+- Action from README.md: `ofw/` - OFW-specific test files
+- Action from README.md: `ofw/` - OFW-specific test files
+- Action from README.md: `updateSheet` (optional): Whether to update Google Sheet with document metadata (default: true)
+- Action from README.md: `updateSheet` (optional): Whether to update Google Sheet with document metadata (default: true)
+- Action from README.md: `updateSheet` (optional): Whether to update Google Sheet with document metadata (default: true)
+- Action from README.md: 80% test coverage
+- Action from README.md: Create required directories
+- Action from README.md: Create required directories
+- Action from README.md: Create required directories
+- Action from README.md: Do not add new files here
+- Action from README.md: Do not create subfolders here
+- Action from README.md: Don't manually add files here
+- Action from README.md: Metadata management (get/update)
+- Action from README.md: Separate test suite
+- Action from README.md: Test each mailbox with sample documents
+- Action from README.md: test.txt: Sample text file for testing
+- Action from README.md: test.txt: Sample text file with metadata and tags
+- Action from README.md: Tracking 2 files (test.txt and Emails With Lisa to Date_Part1.pdf)
+- Action from README.md: Update file type mappings as needed
+- Action from README.md: Update metadata fields
+- Action from README.md: Update metadata fields
+- Action from README.md: Verify the setup with test documents
+- Action from REPOSITORY_SETUP.md: [ ] Add setup guides
+- Action from REPOSITORY_SETUP.md: [ ] Add unit tests
+- Action from REPOSITORY_SETUP.md: [ ] Create contribution guidelines
+- Action from REPOSITORY_SETUP.md: [ ] Create GitHub repository
+- Action from REPOSITORY_SETUP.md: [ ] Create initial database schema
+- Action from REPOSITORY_SETUP.md: [ ] Implement core services
+- Action from REPOSITORY_SETUP.md: `npm run test`: Run tests
+- Action from REVISED_IMPLEMENTATION.md: Create foundational entity model
+- Action from REVISED_IMPLEMENTATION.md: Create foundational entity model
+- Action from REVISED_IMPLEMENTATION.md: Create foundational entity model
+- Action from REVISED_IMPLEMENTATION.md: Implement robust file type detection
+- Action from REVISED_IMPLEMENTATION.md: Implement robust file type detection
+- Action from REVISED_IMPLEMENTATION.md: Implement robust file type detection
+- Action from zapier.md: Update paths if folders change
+- Action from zapier.md: Update paths if folders change
+- Action from zapier.md: Update paths if folders change
+- Section in CHECKPOINT.md: Next Steps
+- Section in CHECKPOINT.md: Next Steps
+- Section in CHECKPOINT.md: Next Steps
+- Section in CHECKPOINT.md: Next Steps
+- Section in CODE_REVIEW.md: Next Steps
+- Section in COMMIT_DETAILS.md: Next Steps
+- Section in COMMIT.md: Next Steps (Post-Commit)
+- Section in COMMIT.md: Next Steps (Post-Commit)
+- Section in COMMIT.md: Next Steps (Post-Commit)
+- Section in CURRENT_STATE.md: Next Actions
+- Section in debug-context.md: Next Steps After Reboot
+- Section in EVIDENCE_CLOUD_STRUCTURE.md: Next Steps
+- Section in EVIDENCEAI_CLOUD_STRUCTURE.md: Next Steps
+- Section in google.md: Next Steps
+- Section in google.md: Next Steps
+- Section in google.md: Next Steps
+- Section in NEXT_SESSION.md: Next Session Plan
+- Section in NEXT_STEPS.md: Next Steps
+- Section in NEXT_STEPS.md: Next Steps
+- Section in NEXT_STEPS.md: Next Steps
+- Section in NEXT_STEPS.md: Next Steps: File Management System Implementation
+- Section in PARSEUR_MIGRATION_PLAN.md: Next Steps
+- Section in PARSEUR_MIGRATION_PLAN.md: Next Steps
+- Section in PARSEUR_MIGRATION_PLAN.md: Next Steps
+- Section in PROJECT_CONTEXT.md: Next Milestones
+- Section in REPOSITORY_SETUP.md: Next Steps
+- Section in SESSION_SUMMARY.md: Next Session Plan

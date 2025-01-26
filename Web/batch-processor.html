@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Document Processor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .preview {
+            background: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .changes {
+            margin-left: 20px;
+        }
+        .progress {
+            height: 20px;
+            background: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-bar {
+            height: 100%;
+            background: #4CAF50;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+        .file-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .file-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .file-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .status {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .status.success {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .status.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <h1>Batch Document Processor</h1>
+    
+    <div class="container">
+        <h2>Select Folder</h2>
+        <input type="text" id="folderPath" placeholder="Enter folder path" style="width: 70%;">
+        <button onclick="previewFolder()">Preview</button>
+        <div id="previewResult" class="preview" style="display: none;"></div>
+    </div>
+
+    <div class="container" id="processingOptions" style="display: none;">
+        <h2>Processing Options</h2>
+        <label>
+            <input type="checkbox" id="recursiveOption" checked>
+            Process subfolders
+        </label>
+        <div id="fileList" class="file-list"></div>
+        <button onclick="startProcessing()" id="processButton">Process Files</button>
+    </div>
+
+    <div class="container" id="progressContainer" style="display: none;">
+        <h2>Processing Progress</h2>
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div id="progressStatus"></div>
+    </div>
+
+    <script>
+        let currentPreview = null;
+        let selectedFiles = new Set();
+
+        async function previewFolder() {
+            const folderPath = document.getElementById('folderPath').value;
+            if (!folderPath) {
+                alert('Please enter a folder path');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/preview', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        folder_path: folderPath,
+                        recursive: document.getElementById('recursiveOption').checked
+                    })
+                });
+
+                const preview = await response.json();
+                currentPreview = preview;
+                
+                const previewDiv = document.getElementById('previewResult');
+                previewDiv.style.display = 'block';
+                previewDiv.innerHTML = `
+                    <h3>Folder Analysis</h3>
+                    <p>${preview.message}</p>
+                `;
+
+                if (preview.needs_processing) {
+                    document.getElementById('processingOptions').style.display = 'block';
+                    displayFileList(preview.changes);
+                } else {
+                    document.getElementById('processingOptions').style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error previewing folder: ' + error.message);
+            }
+        }
+
+        function displayFileList(changes) {
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = '';
+            
+            if (!changes || changes.length === 0) {
+                const allFiles = currentPreview.summary.total_files;
+                fileList.innerHTML = `<p>All files will be processed (${allFiles} files)</p>`;
+                return;
+            }
+
+            changes.forEach(change => {
+                const div = document.createElement('div');
+                div.className = 'file-item';
+                
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.checked = true;
+                checkbox.value = change.path;
+                checkbox.onchange = () => toggleFile(change.path);
+                
+                const label = document.createElement('label');
+                label.textContent = `${change.type}: ${change.path} (${formatSize(change.size)})`;
+                
+                div.appendChild(checkbox);
+                div.appendChild(label);
+                fileList.appendChild(div);
+                
+                selectedFiles.add(change.path);
+            });
+        }
+
+        function toggleFile(path) {
+            if (selectedFiles.has(path)) {
+                selectedFiles.delete(path);
+            } else {
+                selectedFiles.add(path);
+            }
+        }
+
+        function formatSize(bytes) {
+            const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+            let size = bytes;
+            let unitIndex = 0;
+            
+            while (size >= 1024 && unitIndex < units.length - 1) {
+                size /= 1024;
+                unitIndex++;
+            }
+            
+            return `${size.toFixed(1)} ${units[unitIndex]}`;
+        }
+
+        async function startProcessing() {
+            const folderPath = document.getElementById('folderPath').value;
+            document.getElementById('processButton').disabled = true;
+            document.getElementById('progressContainer').style.display = 'block';
+            
+            const progressBar = document.getElementById('progressBar');
+            const progressStatus = document.getElementById('progressStatus');
+            
+            try {
+                const eventSource = new EventSource(`/api/process?folder_path=${encodeURIComponent(folderPath)}&recursive=${document.getElementById('recursiveOption').checked}`);
+                
+                eventSource.onmessage = (event) => {
+                    const data = JSON.parse(event.data);
+                    progressBar.style.width = `${data.progress}%`;
+                    progressStatus.textContent = data.message;
+                    
+                    if (data.status === 'completed') {
+                        eventSource.close();
+                        document.getElementById('processButton').disabled = false;
+                        progressStatus.innerHTML = `
+                            <div class="status success">
+                                Processing completed successfully!<br>
+                                Processed ${data.processed_files} of ${data.total_files} files.
+                            </div>
+                        `;
+                    }
+                };
+                
+                eventSource.onerror = () => {
+                    eventSource.close();
+                    document.getElementById('processButton').disabled = false;
+                    progressStatus.innerHTML = `
+                        <div class="status error">
+                            Error during processing. Please try again.
+                        </div>
+                    `;
+                };
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('processButton').disabled = false;
+                progressStatus.innerHTML = `
+                    <div class="status error">
+                        Error: ${error.message}
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

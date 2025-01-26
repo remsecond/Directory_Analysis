@@ -1,0 +1,15 @@
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\bin\Debug\net9.0-windows\BatchProcessorUI.exe
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\bin\Debug\net9.0-windows\BatchProcessorUI.deps.json
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\bin\Debug\net9.0-windows\BatchProcessorUI.runtimeconfig.json
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\bin\Debug\net9.0-windows\BatchProcessorUI.dll
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\bin\Debug\net9.0-windows\BatchProcessorUI.pdb
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\BatchProcessorUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\BatchProcessorUI.AssemblyInfoInputs.cache
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\BatchProcessorUI.AssemblyInfo.cs
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\BatchProcessorUI.csproj.CoreCompileInputs.cache
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\BatchProcessorUI.sourcelink.json
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\BatchProcessorUI.dll
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\refint\BatchProcessorUI.dll
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\BatchProcessorUI.pdb
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\BatchProcessorUI.genruntimeconfig.cache
+C:\Users\robmo\Desktop\evidenceai\src\BatchProcessorUI\obj\Debug\net9.0-windows\ref\BatchProcessorUI.dll
