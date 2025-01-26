@@ -40,3 +40,5 @@ asset_database.json  # Since this is generated and can be recreated
 # OS specific
 .DS_Store
 Thumbs.db
+node_modules
+node_modules

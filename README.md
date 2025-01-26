@@ -1,130 +1,124 @@
-# EvidenceAI
+# File Organization Project
 
-A modular document processing system for extracting, analyzing, and correlating evidence from multiple document types.
-
-## Core Features
-
-- PDF document processing with smart chunking
-- Email thread analysis and extraction
-- OFW (Office File Wrapper) document support
-- Google Sheets integration for document tracking
-- Timeline generation and correlation
-- LLM-powered content analysis
+A standardized system for organizing and deduplicating sensitive legal and evidence files.
 
 ## Project Structure
 
 ```
-evidenceai/
-├── src/                    # Source code
-│   ├── processors/         # Document processors
-│   ├── services/          # Core services
-│   ├── schemas/           # Data schemas
-│   └── utils/             # Utility functions
-├── test/                  # Test files
-│   ├── fixtures/          # Test data
-│   ├── mocks/            # Test mocks
-│   └── unit/             # Unit tests
-├── scripts/              # Utility scripts
-├── docs/                 # Documentation
-├── Web/                  # Web interface
-└── config/               # Configuration files
+C:/Projects/Moyer/
+├── data/
+│   ├── processed/           # Organized file structure
+│   │   ├── 01_Legal_Documents/
+│   │   │   ├── Court_Orders/
+│   │   │   ├── Declarations/
+│   │   │   ├── Exhibits/
+│   │   │   └── Parenting_Plans/
+│   │   ├── 02_Communications/
+│   │   │   ├── Email/
+│   │   │   ├── Text_Messages/
+│   │   │   └── OFW_Messages/
+│   │   ├── 03_Evidence_Exhibits/
+│   │   │   ├── Photos/
+│   │   │   ├── Documents/
+│   │   │   └── Records/
+│   │   ├── 04_Case_Materials/
+│   │   │   ├── Reports/
+│   │   │   ├── Assessments/
+│   │   │   └── Evaluations/
+│   │   └── 05_Administrative/
+│   │       ├── Metadata/
+│   │       ├── Logs/
+│   │       └── Summaries/
+│   └── archive/            # Archive of deduplicated files
+├── logs/                   # System logs
+└── src/                    # Source code
+    ├── directory_analyzer_enhanced.py
+    ├── document_organizer_phase2.py
+    ├── document_deduplicator.py
+    └── file_migrator.py
 ```
 
-## Prerequisites
+## Implementation Results
 
-- Node.js 18+
-- Python 3.8+
-- Google Cloud project with Sheets API enabled
+### File Migration Statistics
+- Total files processed: 2,555
+- Successfully migrated: 2,048 files
+- File type distribution:
+  * PDFs: 1,080 files (52.7%)
+  * Images: 604 files (29.5%)
+  * Documents: 197 files (9.6%)
+  * Other formats: 167 files (8.2%)
 
-## Installation
+### Deduplication Results
+- 122 sets of duplicate files identified
+- 343 redundant copies archived
+- Original files preserved in main structure
+- Full audit trail maintained
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/evidenceai.git
-cd evidenceai
-```
+## Features
 
-2. Install dependencies:
-```bash
-npm install
-python -m pip install -r requirements.txt
-```
+1. **Standardized Organization**
+   - Logical category-based structure
+   - Clear separation of document types
+   - Consistent naming conventions
 
-3. Set up environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your configuration
-```
+2. **Deduplication System**
+   - SHA-256 hash-based identification
+   - Newest version retention
+   - Archived copies preservation
+   - Detailed change logging
 
-4. Configure Google integration:
-```bash
-node scripts/setup-google-project.js
-```
-
-## Development
-
-Start the development server:
-```bash
-npm run dev
-```
-
-Run tests:
-```bash
-npm test
-```
-
-## Core Pipeline
-
-The core document processing pipeline:
-
-1. Document Ingestion
-   - Supports PDF, email, and OFW formats
-   - Smart chunking for optimal processing
-
-2. Content Extraction
-   - Text extraction with metadata
-   - Structure preservation
+3. **File Type Management**
+   - Automatic categorization
    - Format-specific handling
+   - Extensible mapping system
 
-3. Analysis
-   - LLM-powered content analysis
-   - Timeline correlation
-   - Evidence chain building
+4. **Audit & Tracking**
+   - Comprehensive logging
+   - Migration records
+   - Deduplication history
+   - Archive references
 
-4. Output Generation
-   - Google Sheets integration
-   - Timeline visualization
-   - Evidence summaries
+## Scripts
 
-## Testing
+### directory_analyzer_enhanced.py
+Analyzes directory structure and generates detailed reports about file distribution and potential duplicates.
 
-Run specific test suites:
+### document_organizer_phase2.py
+Creates and manages the standardized folder structure for organized file storage.
 
-```bash
-# Core pipeline tests
-npm run test:core-pipeline
+### document_deduplicator.py
+Identifies and processes duplicate files, maintaining newest versions and archiving duplicates.
 
-# Format handling tests
-npm run test:format-handling
+### file_migrator.py
+Handles the migration of files from source to organized structure with appropriate categorization.
 
-# Smart chunking tests
-npm run test:smart-chunking
-```
+## Getting Started
+
+1. Clone the repository
+2. Install requirements: `pip install -r requirements.txt`
+3. Configure paths in scripts if needed
+4. Run the organization process:
+   ```bash
+   python src/document_organizer_phase2.py
+   python src/file_migrator.py
+   python src/document_deduplicator.py
+   ```
+
+## Maintenance
+
+- Regular deduplication runs recommended
+- Monitor logs for any issues
+- Update file type mappings as needed
+- Verify archive integrity periodically
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Create a feature branch
+2. Make changes
+3. Submit pull request
+4. Include test results and logs
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- PDF processing powered by pdf-parse
-- Email parsing by email-reply-parser
-- LLM integration using DeepSeek
+Proprietary - All rights reserved
