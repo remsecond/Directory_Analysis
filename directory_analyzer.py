@@ -11,11 +11,11 @@ class DirectoryAnalyzer:
         # Setup directories
         self.results_dir = Path("analysis_results")
         self.results_dir.mkdir(exist_ok=True)
-        
+
         # Setup logging
         log_dir = Path("logs")
         log_dir.mkdir(exist_ok=True)
-        
+
         logging.basicConfig(
             filename=log_dir / "analysis.log",
             level=logging.INFO,
@@ -26,7 +26,7 @@ class DirectoryAnalyzer:
     def analyze_directory(self, root_path: str):
         """Comprehensive directory analysis"""
         self.logger.info(f"Starting directory analysis for: {root_path}")
-        
+
         file_stats = {
             'total_files': 0,
             'total_size': 0,
@@ -67,14 +67,14 @@ class DirectoryAnalyzer:
 
             # Clean up duplicates to only include actual duplicates
             file_stats['duplicates'] = {
-                k: v + [file_hashes[k]] 
+                k: v + [file_hashes[k]]
                 for k, v in file_stats['duplicates'].items()
             }
 
             # Generate report
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             report_path = self.results_dir / f'directory_analysis_{timestamp}.json'
-            
+
             report = {
                 'analysis_timestamp': timestamp,
                 'root_path': str(root_path),
@@ -88,8 +88,8 @@ class DirectoryAnalyzer:
                     'file_types': dict(file_stats['file_types']),
                     'potential_duplicates': dict(file_stats['duplicates']),
                     'largest_files': sorted(
-                        file_stats['file_sizes'], 
-                        key=lambda x: x['size'], 
+                        file_stats['file_sizes'],
+                        key=lambda x: x['size'],
                         reverse=True
                     )[:10]
                 }
@@ -109,17 +109,17 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python directory_analyzer.py <directory_path>")
         sys.exit(1)
-        
+
     target_dir = sys.argv[1]
     print(f"Starting analysis of directory: {target_dir}")
-    
+
     # Check if target directory exists
     if not os.path.exists(target_dir):
         print(f"Error: Target directory does not exist: {target_dir}")
         sys.exit(1)
     else:
         print("Target directory found")
-        
+
     try:
         print("Initializing analyzer...")
         analyzer = DirectoryAnalyzer()
