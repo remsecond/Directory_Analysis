@@ -1,0 +1,85 @@
+{
+  "name": "4. Success Processing",
+  "description": "Handles successful file processing and moves to processed folder",
+  "triggers": {
+    "app": "Google Sheets",
+    "event": "New or Updated Spreadsheet Row",
+    "spreadsheet": "EvidenceAI Pipeline",
+    "worksheet": "File Tracking",
+    "conditions": {
+      "Status": "processing",
+      "Current Location": "processing"
+    }
+  },
+  "actions": [
+    {
+      "app": "Code",
+      "action": "Run JavaScript",
+      "code": {
+        "source": "function getTargetPath(name, category) { const match = name.match(/\\d{4}-\\d{2}-\\d{2}/); const date = match ? match[0] : formatDate(new Date(), 'YYYY-MM-DD'); const [year, month] = date.split('-'); return `processed/${category}/${year}/${month}`; }; return getTargetPath(inputData.name, inputData.category);",
+        "output": "targetFolder",
+        "inputData": {
+          "name": "{{triggerRow.Name}}",
+          "category": "{{getCategory(triggerRow.Name)}}"
+        }
+      }
+    },
+    {
+      "app": "Google Drive",
+      "action": "Move File",
+      "file": "{{lookupFileByName(triggerRow.Name)}}",
+      "destination": "{{targetFolder}}/{{getSubfolder(triggerRow.Name)}}",
+      "options": {
+        "preserve_filename": true,
+        "create_folders": true,
+        "organize_by_type": false
+      }
+    },
+    {
+      "app": "Google Sheets",
+      "action": "Update Spreadsheet Row",
+      "spreadsheet": "EvidenceAI Pipeline",
+      "worksheet": "File Tracking",
+      "row": "{{triggerRow.__row}}",
+      "data": {
+        "Current Location": "processed",
+        "Status": "complete",
+        "Last Updated": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+        "Processing Duration": "{{calculateDuration(triggerRow.Last_Updated, now)}}"
+      }
+    },
+    {
+      "app": "Google Sheets",
+      "action": "Create Spreadsheet Row",
+      "sheet": "Automation Logs",
+      "row_data": {
+        "Operation ID": "PROC-{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+        "Timestamp": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+        "Operation Type": "processing_complete",
+        "Status": "success",
+        "Source": "processing/{{triggerRow.Name}}",
+        "Target": "{{targetFolder}}/{{triggerRow.Name}}",
+        "Details": "Processing completed successfully",
+        "Duration": "{{calculateDuration(triggerRow.Last_Updated, now)}}",
+        "Module": "success_processor",
+        "Error Message": ""
+      }
+    }
+  ],
+  "helpers": {
+    "padNumber": "function(num, size) { return String(num).padStart(size, '0'); }",
+    "lookupFileByName": "function(name) { return app.drive.findFileByName(name); }",
+    "calculateDuration": "function(start, end) { const duration = (new Date(end) - new Date(start)) / 1000; return duration.toFixed(1) + 's'; }",
+    "getSubfolder": "function(name) { if(name.includes('Phase II')) return 'Phase II Evidence'; if(name.includes('Connor Orders')) return 'Connor Orders'; if(name.includes('Mediation')) return 'Mediation'; if(name.includes('Attachments')) return 'Attachments'; return ''; }",
+    "getCategory": "function(name) { if(name.match(/Order|Agreed/i)) return 'Orders'; if(name.match(/Mediation|Signed/i)) return 'Mediation'; if(name.match(/Report|Form|Summary/i)) return 'Reports'; if(name.match(/Email|OFW|Messages/i)) return 'Correspondence'; return 'Other'; }"
+  },
+  "error_handler": {
+    "action": "Run Zap",
+    "zap": "3. Error Handling",
+    "input": {
+      "file_id": "{{triggerRow.File_ID}}",
+      "error": "{{error.message}}",
+      "step": "success_processing"
+    }
+  }
+}

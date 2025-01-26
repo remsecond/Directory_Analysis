@@ -1,0 +1,6 @@
+@echo off
+echo Installing dependencies...
+call npm install
+
+echo Starting PDF Converter web interface...
+call npm run dev

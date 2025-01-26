@@ -1,0 +1,153 @@
+/* style-template.css
+ * Template stylesheet for Klein PDF Generator
+ * Copy this file and modify as needed for custom PDF styling
+ */
+
+/* Base document styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    color: #24292e;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1 { font-size: 2em; border-bottom: 1px solid #eaecef; }
+h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.875em; }
+h6 { font-size: 0.85em; color: #6a737d; }
+
+/* Links - preserve different styles for different link types */
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+/* External links */
+a[href^="http"] {
+    color: #0366d6;
+    text-decoration: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%230366d6" height="12" width="12" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M14 2H5.75L7 3.25h5.5v5.5L13.75 10V2h.25zM2.25 14V6h8v8h-8z"/></svg>');
+    background-position: right 2px center;
+    background-repeat: no-repeat;
+    padding-right: 16px;
+}
+
+/* Internal document references */
+a[href^="#"] {
+    color: #6f42c1;
+    text-decoration: none;
+}
+
+/* Cross-document references */
+a[href$=".md"], a[href$=".markdown"] {
+    color: #22863a;
+    text-decoration: none;
+}
+
+/* Code blocks */
+pre {
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    padding: 16px;
+    overflow-x: auto;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 85%;
+    line-height: 1.45;
+}
+
+code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    font-size: 85%;
+    background-color: rgba(27, 31, 35, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 2em;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+li {
+    margin: 0.25em 0;
+}
+
+/* Tables */
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+table th, table td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+/* Blockquotes */
+blockquote {
+    margin: 0;
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+}
+
+/* Horizontal rules */
+hr {
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #e1e4e8;
+    border: 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto;
+}
+
+/* Print-specific styles */
+@media print {
+    body {
+        font-size: 12pt;
+    }
+
+    a {
+        word-wrap: break-word;
+    }
+
+    /* Ensure links are visible in print */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+        color: #666;
+    }
+}

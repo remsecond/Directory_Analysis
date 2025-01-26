@@ -1,8 +1,16 @@
 import { Transform } from 'stream';
 import { validateBaseSchema } from '../schemas/base-schema.js';
 import { getLogger } from '../utils/logging.js';
+import { DriveStorageManager } from '../services/drive-storage-manager.js';
 
 const logger = getLogger();
+
+// Processing stages that need workspace in Drive
+const PROCESSING_STAGES = {
+    EXTRACTION: 'extraction',
+    ANALYSIS: 'analysis',
+    VALIDATION: 'validation'
+};
 
 /**
  * Base processor implementing streaming pipeline architecture.
@@ -20,9 +28,23 @@ export class BaseProcessor {
             ...options
         };
 
+        // Initialize storage manager
+        this.storage = new DriveStorageManager(options.auth);
+        this.storage.initialize().catch(error => {
+            logger.error('Failed to initialize storage manager:', error);
+            throw error;
+        });
+
         // Initialize processing stages
         this.stages = new Map();
         this.setupStages();
+
+        // Track file IDs through pipeline
+        this.fileIds = {
+            input: null,
+            processing: {},
+            output: null
+        };
     }
 
     /**
@@ -112,10 +134,46 @@ export class BaseProcessor {
     /**
      * Process a file through the pipeline.
      * @param {string} filePath Path to file to process
+     * @param {string} type File type (pdf, email, ofw, etc.)
      * @returns {Promise<object>} Processing result
      */
-    async process(filePath) {
-        throw new Error('process must be implemented by subclass');
+    async process(filePath, type) {
+        try {
+            // Store input file
+            logger.info(`Storing input file: ${filePath}`);
+            const inputFile = await this.storage.storeInput(filePath, type);
+            this.fileIds.input = inputFile.id;
+
+            // Process through stages
+            let result = await this.processStages(filePath);
+
+            // Store final output
+            logger.info('Storing processing output');
+            const outputFile = await this.storage.storeOutput(result.outputPath, 'evidence');
+            this.fileIds.output = outputFile.id;
+
+            // Move input to archive
+            await this.storage.archive(this.fileIds.input);
+
+            // Clean up processing files
+            for (const [stage, fileId] of Object.entries(this.fileIds.processing)) {
+                await this.storage.archive(fileId, true);
+            }
+
+            return {
+                ...result,
+                fileIds: this.fileIds,
+                driveUrl: outputFile.webViewLink
+            };
+        } catch (error) {
+            logger.error('Processing failed:', error);
+            // Store error log
+            await this.storage.storeSystem(
+                JSON.stringify({ error: error.message, stack: error.stack }),
+                'errors'
+            );
+            throw error;
+        }
     }
 
     /**
@@ -222,6 +280,73 @@ export class BaseProcessor {
     }
 
     /**
+     * Process file through pipeline stages with Drive storage
+     */
+    async processStages(filePath) {
+        let currentStage = PROCESSING_STAGES.EXTRACTION;
+        let result = null;
+
+        try {
+            // Extract content
+            result = await this.runStage('extract', filePath);
+            const extractionFile = await this.storage.storeProcessing(
+                result.outputPath,
+                currentStage
+            );
+            this.fileIds.processing[currentStage] = extractionFile.id;
+
+            // Identify sections
+            currentStage = PROCESSING_STAGES.ANALYSIS;
+            result = await this.runStage('sections', result);
+            const analysisFile = await this.storage.storeProcessing(
+                result.outputPath,
+                currentStage
+            );
+            this.fileIds.processing[currentStage] = analysisFile.id;
+
+            // Extract metadata
+            result = await this.runStage('metadata', result);
+            await this.storage.storeOutput(
+                result.metadata,
+                'metadata'
+            );
+
+            // Validate
+            currentStage = PROCESSING_STAGES.VALIDATION;
+            result = await this.runStage('validate', result);
+            const validationFile = await this.storage.storeProcessing(
+                result.outputPath,
+                currentStage
+            );
+            this.fileIds.processing[currentStage] = validationFile.id;
+
+            return result;
+        } catch (error) {
+            logger.error(`Failed at stage ${currentStage}:`, error);
+            throw error;
+        }
+    }
+
+    /**
+     * Run a single pipeline stage
+     */
+    async runStage(stageName, input) {
+        const stage = this.stages.get(stageName);
+        if (!stage) {
+            throw new Error(`Stage not found: ${stageName}`);
+        }
+
+        return new Promise((resolve, reject) => {
+            let output = '';
+            stage.on('data', chunk => output += chunk);
+            stage.on('end', () => resolve(output));
+            stage.on('error', reject);
+            stage.write(input);
+            stage.end();
+        });
+    }
+
+    /**
      * Clean up resources
      */
     destroy() {
@@ -229,6 +354,11 @@ export class BaseProcessor {
             stage.destroy();
         }
         this.stages.clear();
+        this.fileIds = {
+            input: null,
+            processing: {},
+            output: null
+        };
     }
 }
 

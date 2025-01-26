@@ -1,0 +1,45 @@
+{
+  "spreadsheet_name": "EvidenceAI Pipeline",
+  "sheets": {
+    "file_tracking": {
+      "name": "File Tracking",
+      "columns": [
+        {"name": "File ID", "type": "text", "description": "Unique identifier for file"},
+        {"name": "Name", "type": "text", "description": "Original filename"},
+        {"name": "Current Location", "type": "text", "description": "Current folder path"},
+        {"name": "Status", "type": "text", "description": "Processing status"},
+        {"name": "Last Updated", "type": "datetime", "description": "Last modification time"},
+        {"name": "Error Details", "type": "text", "description": "Error information if failed"},
+        {"name": "File Type", "type": "text", "description": "File extension/format"},
+        {"name": "File Size", "type": "number", "description": "Size in bytes"},
+        {"name": "Processing Duration", "type": "number", "description": "Time taken to process"},
+        {"name": "Tags", "type": "text", "description": "Comma-separated tags"}
+      ]
+    },
+    "processing_log": {
+      "name": "Processing Log",
+      "columns": [
+        {"name": "Timestamp", "type": "datetime", "description": "When event occurred"},
+        {"name": "Operation", "type": "text", "description": "Action performed"},
+        {"name": "Status", "type": "text", "description": "Success/Failed"},
+        {"name": "Details", "type": "text", "description": "Operation details"},
+        {"name": "Duration", "type": "number", "description": "Time taken"},
+        {"name": "Error", "type": "text", "description": "Error details if failed"}
+      ]
+    },
+    "system_config": {
+      "name": "System Config",
+      "columns": [
+        {"name": "Setting", "type": "text", "description": "Configuration key"},
+        {"name": "Value", "type": "text", "description": "Configuration value"},
+        {"name": "Last Updated", "type": "datetime", "description": "Last modified"},
+        {"name": "Description", "type": "text", "description": "Setting description"}
+      ]
+    }
+  },
+  "default_values": {
+    "status": ["new", "processing", "complete", "error"],
+    "operations": ["file_detection", "file_movement", "deduplication", "error_handling"],
+    "locations": ["1_Input", "2_Processing", "3_Complete", "_System/Errors"]
+  }
+}

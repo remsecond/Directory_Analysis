@@ -1,0 +1,12 @@
+{
+  "name": "document-scraper",
+  "version": "1.0.0",
+  "description": "Document scraping system for financial and economic documents",
+  "main": "scraper.js",
+  "scripts": {
+    "start": "node scraper.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.7.0"
+  }
+}

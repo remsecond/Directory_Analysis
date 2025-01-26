@@ -1,0 +1,8 @@
+feat(processor): add ODS support for CloudHQ companion format
+
+- Add ODS processor with xlsx library integration
+- Implement field validation and type conversion
+- Add comprehensive test suite (4/4 passing)
+- Maintain stable server and PDF processing
+
+This adds support for processing CloudHQ spreadsheet exports while keeping the existing PDF functionality intact. All tests passing, server stable.

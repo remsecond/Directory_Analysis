@@ -1,7 +1,7 @@
-import puppeteer from 'puppeteer';
 import { google } from 'googleapis';
 import fs from 'fs';
 import { getLogger } from '../src/utils/logging.js';
+import { spawn } from 'child_process';
 
 const logger = getLogger();
 
@@ -15,48 +15,9 @@ const oauth2Client = new google.auth.OAuth2(
 );
 
 /**
- * Handle Google login process
- * @param {Page} page - Puppeteer page object
- */
-async function handleLogin(page) {
-    try {
-        // Enter email
-        await page.waitForSelector(googleConfig.selectors.emailInput);
-        await page.type(googleConfig.selectors.emailInput, googleConfig.email);
-        await page.click(googleConfig.selectors.emailNext);
-
-        // Enter password
-        await page.waitForSelector(googleConfig.selectors.passwordInput, { visible: true });
-        await page.type(googleConfig.selectors.passwordInput, googleConfig.password);
-        await page.click(googleConfig.selectors.passwordNext);
-
-        logger.info('Login successful');
-    } catch (error) {
-        logger.error('Login failed:', error);
-        throw error;
-    }
-}
-
-/**
- * Handle consent page
- * @param {Page} page - Puppeteer page object
- */
-async function handleConsent(page) {
-    try {
-        await page.waitForSelector(googleConfig.selectors.consentButton);
-        await page.click(googleConfig.selectors.consentButton);
-        logger.info('Consent granted');
-    } catch (error) {
-        logger.error('Consent handling failed:', error);
-        throw error;
-    }
-}
-
-/**
  * Automate Google OAuth process
  */
 async function automateGoogleAuth() {
-    let browser;
     try {
         // Generate auth URL
         const authUrl = oauth2Client.generateAuthUrl({
@@ -67,27 +28,25 @@ async function automateGoogleAuth() {
         });
 
         logger.info('Starting automated authentication');
+        logger.info('Please complete the authentication in the browser window that will open.');
+        logger.info('After authenticating, copy the code from the browser and paste it here.');
 
-        // Launch browser with config
-        browser = await puppeteer.launch(googleConfig.browser);
-        const page = await browser.newPage();
+        // Launch Firefox directly
+        spawn('C:\\Program Files\\Mozilla Firefox\\firefox.exe', [authUrl], {
+            detached: true,
+            stdio: 'ignore'
+        });
 
-        // Set viewport and user agent
-        await page.setViewport({ width: 1280, height: 800 });
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36');
+        // Since we can't automate the browser interaction anymore,
+        // we'll need to prompt the user to manually complete the process
+        process.stdout.write('Please enter the authorization code: ');
 
-        // Navigate to auth URL
-        await page.goto(authUrl, { waitUntil: 'networkidle0' });
-
-        // Handle login
-        await handleLogin(page);
-
-        // Handle consent
-        await handleConsent(page);
-
-        // Wait for and extract code
-        await page.waitForSelector(googleConfig.selectors.codeDisplay);
-        const code = await page.$eval(googleConfig.selectors.codeDisplay, el => el.textContent);
+        // Read the code from stdin
+        const code = await new Promise(resolve => {
+            process.stdin.once('data', data => {
+                resolve(data.toString().trim());
+            });
+        });
 
         // Exchange code for tokens
         const { tokens } = await oauth2Client.getToken(code);

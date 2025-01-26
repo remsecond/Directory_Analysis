@@ -1,0 +1,7 @@
+Error during setup: Error: Could not find Desktop application option
+    at setupGoogleProject (file:///C:/Users/robmo/Desktop/evidenceai/scripts/setup-google-project.js:371:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-01-17T20:43:50.201Z [ERROR] [default] Error during setup: "Error: Could not find Desktop application option\n    at setupGoogleProject (file:///C:/Users/robmo/Desktop/evidenceai/scripts/setup-google-project.js:371:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+Setup failed: Error: Could not find Desktop application option
+    at setupGoogleProject (file:///C:/Users/robmo/Desktop/evidenceai/scripts/setup-google-project.js:371:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

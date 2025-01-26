@@ -1,0 +1,107 @@
+{
+  "test_files": [
+    {
+      "name": "Email exchange with christinemoyer_hotmail.com after 2024-10-31 before 2025-01-12.pdf",
+      "type": "pdf",
+      "category": "Correspondence",
+      "date_range": "2024-10-31 to 2025-01-12",
+      "expected_path": "processed/Correspondence/2024/10"
+    },
+    {
+      "name": "OFW_Messages_Report_2025-01-12_09-01-06.pdf",
+      "type": "pdf",
+      "category": "Correspondence",
+      "date": "2025-01-12",
+      "expected_path": "processed/Correspondence/2025/01"
+    },
+    {
+      "name": "2024-04-03 Agreed Order appointing Parenting Evaluator (4858-2165-7268).pdf",
+      "type": "pdf",
+      "category": "Orders",
+      "subfolder": "Connor Orders",
+      "date": "2024-04-03",
+      "expected_path": "processed/Orders/2024/04/Connor Orders"
+    },
+    {
+      "name": "Mediation Signed Agreement.pdf",
+      "type": "pdf",
+      "category": "Mediation",
+      "subfolder": "Signed Outcome",
+      "expected_path": "processed/Mediation/2024/01/Signed Outcome"
+    },
+    {
+      "name": "label Emails from christinemoyer@hotmail.com after 2024-10-31 before 2025-01-12.ods",
+      "type": "ods",
+      "category": "Correspondence",
+      "date_range": "2024-10-31 to 2025-01-12",
+      "expected_path": "processed/Correspondence/2024/10"
+    },
+    {
+      "name": "Moyer Visitation Report_ 12-26-2024.docx",
+      "type": "docx",
+      "category": "Reports",
+      "subfolder": "Attachments",
+      "date": "2024-12-26",
+      "expected_path": "processed/Reports/2024/12/Attachments"
+    },
+    {
+      "name": "Fidelity_Investment_Option_Summary_X05342840_Nov-05-2024.csv",
+      "type": "csv",
+      "category": "Reports",
+      "subfolder": "Attachments",
+      "date": "2024-11-05",
+      "expected_path": "processed/Reports/2024/11/Attachments"
+    }
+  ],
+  "folder_structure": {
+    "input": {
+      "email": {},
+      "ofw": {},
+      "attachments": {}
+    },
+    "processing": {
+      "pdf": {},
+      "spreadsheets": {},
+      "attachments": {},
+      "errors": {
+        "pdf": {},
+        "spreadsheets": {},
+        "attachments": {}
+      }
+    },
+    "processed": {
+      "Orders": {
+        "2024": {
+          "04": {
+            "Connor Orders": {}
+          }
+        }
+      },
+      "Mediation": {
+        "2024": {
+          "01": {
+            "Signed Outcome": {}
+          }
+        }
+      },
+      "Reports": {
+        "2024": {
+          "11": {
+            "Attachments": {}
+          },
+          "12": {
+            "Attachments": {}
+          }
+        }
+      },
+      "Correspondence": {
+        "2024": {
+          "10": {}
+        },
+        "2025": {
+          "01": {}
+        }
+      }
+    }
+  }
+}

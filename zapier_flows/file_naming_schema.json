@@ -1,0 +1,121 @@
+{
+  "naming_schema": {
+    "core_fields": {
+      "case_identifier": {
+        "description": "Unique case reference number",
+        "format": "CASE{YYYY}{MM}{sequential}",
+        "required": true,
+        "example": "CASE202401001"
+      },
+      "document_type": {
+        "description": "Category of document",
+        "options": [
+          "ORDER",
+          "EVAL",
+          "CORR",
+          "FIN",
+          "MED"
+        ],
+        "required": true
+      },
+      "date_code": {
+        "description": "Date in compact format",
+        "format": "{YYYY}{MM}{DD}",
+        "required": true,
+        "example": "20240115"
+      },
+      "source": {
+        "description": "Origin of document",
+        "options": [
+          "OFW",
+          "EMAIL",
+          "UPLOAD",
+          "SCAN"
+        ],
+        "required": true
+      }
+    },
+    "optional_fields": {
+      "party_code": {
+        "description": "Identifier for involved party",
+        "format": "{LASTNAME}{F}",
+        "example": "SMITHJ"
+      },
+      "sequence": {
+        "description": "Version or sequence number",
+        "format": "V{nn}",
+        "example": "V01"
+      }
+    },
+    "naming_pattern": {
+      "format": "{case_identifier}_{document_type}_{date_code}_{source}[_{party_code}][_V{sequence}]_{original_filename}",
+      "examples": [
+        "CASE202401001_ORDER_20240115_OFW_SMITHJ_V01_custody_modification.pdf",
+        "CASE202401001_EVAL_20240115_UPLOAD_psych_evaluation.pdf",
+        "CASE202401001_FIN_20240115_EMAIL_DOEJ_bank_statement.pdf"
+      ]
+    },
+    "field_extraction": {
+      "patterns": {
+        "email_subject": {
+          "regex": "^RE:\\s*(.*?)\\s*-\\s*(\\d{4}-\\d{2}-\\d{2})",
+          "fields": ["subject", "date"]
+        },
+        "ofw_export": {
+          "regex": "OFW_Messages_Report_(\\d{4}-\\d{2}-\\d{2})",
+          "fields": ["date"]
+        },
+        "court_document": {
+          "regex": "(\\d{4}-\\d{2}-\\d{2})\\s*(.*?)\\s*\\((\\d{4}-\\d{4}-\\d{4})\\)",
+          "fields": ["date", "title", "case_number"]
+        }
+      }
+    },
+    "metadata_requirements": {
+      "system_fields": {
+        "upload_timestamp": "ISO8601 timestamp",
+        "uploading_user": "User ID",
+        "original_filename": "Name before standardization",
+        "content_hash": "SHA-256 of file content",
+        "processing_status": "Status code"
+      },
+      "extracted_fields": {
+        "document_date": "Date from document content/metadata",
+        "involved_parties": "Array of identified parties",
+        "document_title": "Extracted or inferred title",
+        "content_type": "Detected MIME type"
+      }
+    }
+  },
+  "implementation": {
+    "filename_generation": {
+      "steps": [
+        {
+          "order": 1,
+          "action": "Extract metadata",
+          "description": "Parse file content and metadata for key fields"
+        },
+        {
+          "order": 2,
+          "action": "Validate required fields",
+          "description": "Ensure all required components are available"
+        },
+        {
+          "order": 3,
+          "action": "Generate filename",
+          "description": "Combine fields according to pattern"
+        },
+        {
+          "order": 4,
+          "action": "Validate uniqueness",
+          "description": "Check for naming conflicts"
+        }
+      ],
+      "conflict_resolution": {
+        "strategy": "increment_sequence",
+        "max_attempts": 999,
+        "notification_threshold": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "deduplication_rules": {
+    "file_matching": {
+      "exact_match": {
+        "criteria": [
+          "filename_without_extension",
+          "file_size",
+          "content_hash"
+        ],
+        "action": "skip_duplicate",
+        "notification": "File '{filename}' has already been processed on {original_date}"
+      },
+      "format_variants": {
+        "criteria": [
+          "filename_without_extension",
+          {
+            "content_similarity_threshold": 0.9
+          }
+        ],
+        "grouping_rules": [
+          {
+            "formats": ["docx", "pdf"],
+            "preference": "pdf",
+            "action": "link_as_versions",
+            "notification": "PDF version of '{filename}' will be used as primary. Word version linked as alternate."
+          },
+          {
+            "formats": ["doc", "pdf"],
+            "preference": "pdf",
+            "action": "link_as_versions",
+            "notification": "PDF version of '{filename}' will be used as primary. Word version linked as alternate."
+          },
+          {
+            "formats": ["xlsx", "csv"],
+            "preference": "xlsx",
+            "action": "link_as_versions",
+            "notification": "Excel version of '{filename}' will be used as primary. CSV linked as alternate."
+          }
+        ]
+      },
+      "version_handling": {
+        "naming_pattern": "{base_name}_v{version_number}.{extension}",
+        "metadata": {
+          "version_history": {
+            "original_upload": "",
+            "versions": [],
+            "current_version": "",
+            "format_variants": []
+          }
+        }
+      }
+    }
+  },
+  "deduplication_flow": {
+    "name": "File Deduplication Handler",
+    "trigger": {
+      "app": "Google Drive",
+      "event": "New File Detection"
+    },
+    "actions": [
+      {
+        "app": "Code",
+        "action": "Calculate File Hash",
+        "code": {
+          "source": "const crypto = require('crypto'); const fileBuffer = await drive.files.get({fileId: file.id, alt: 'media'}); const hash = crypto.createHash('sha256').update(fileBuffer).digest('hex'); return hash;",
+          "output": "file_hash"
+        }
+      },
+      {
+        "app": "Google Sheets",
+        "action": "Check Existing Files",
+        "spreadsheet": "{{user_id}}_tracking",
+        "worksheet": "File Registry",
+        "query": {
+          "content_hash": "{{file_hash}}",
+          "filename_base": "{{filename_without_extension}}"
+        }
+      },
+      {
+        "app": "Code",
+        "action": "Process Deduplication Result",
+        "code": {
+          "source": "const result = await handleDeduplication(file, existingFiles, deduplicationRules); return result;",
+          "output": "dedup_result"
+        }
+      },
+      {
+        "app": "Switch",
+        "conditions": [
+          {
+            "condition": "{{dedup_result.action}} == 'skip_duplicate'",
+            "actions": [
+              {
+                "app": "Google Drive",
+                "action": "Move to Duplicates",
+                "source": "{{file.id}}",
+                "destination": "users/{{user_id}}/duplicates/{{YYYY}}/{{MM}}"
+              },
+              {
+                "app": "Email",
+                "action": "Send Notification",
+                "to": "{{user_email}}",
+                "subject": "Duplicate File Detected",
+                "body": "{{dedup_result.notification}}"
+              }
+            ]
+          },
+          {
+            "condition": "{{dedup_result.action}} == 'link_as_versions'",
+            "actions": [
+              {
+                "app": "Google Drive",
+                "action": "Move to Versions",
+                "source": "{{file.id}}",
+                "destination": "users/{{user_id}}/versions/{{primary_file_id}}"
+              },
+              {
+                "app": "Google Sheets",
+                "action": "Update Version Registry",
+                "spreadsheet": "{{user_id}}_tracking",
+                "worksheet": "Version History",
+                "data": {
+                  "primary_file": "{{primary_file_id}}",
+                  "version_file": "{{file.id}}",
+                  "version_type": "format_variant",
+                  "timestamp": "{{now}}"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "app": "Google Sheets",
+        "action": "Log Deduplication Event",
+        "spreadsheet": "{{user_id}}_tracking",
+        "worksheet": "Deduplication Log",
+        "row_data": {
+          "Timestamp": "{{now}}",
+          "File": "{{file.name}}",
+          "Action": "{{dedup_result.action}}",
+          "Details": "{{dedup_result.notification}}"
+        }
+      }
+    ]
+  }
+}

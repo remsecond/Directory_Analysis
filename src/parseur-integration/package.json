@@ -1,0 +1,38 @@
+{
+  "name": "evidenceai-parseur-integration",
+  "version": "1.0.0",
+  "description": "Parseur integration for EvidenceAI document processing",
+  "main": "index.js",
+  "scripts": {
+    "setup": "node setup-mailboxes.js",
+    "test": "node test.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/evidenceai"
+  },
+  "keywords": [
+    "parseur",
+    "document-processing",
+    "automation",
+    "ocr",
+    "zapier"
+  ],
+  "author": "EvidenceAI Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/evidenceai/issues"
+  },
+  "homepage": "https://github.com/yourusername/evidenceai#readme"
+}

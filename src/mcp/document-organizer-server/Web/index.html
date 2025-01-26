@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Organizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .success { background-color: #dff0d8; }
+        .error { background-color: #f2dede; }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Document Organizer</h1>
+        
+        <div>
+            <h3>Input Folder</h3>
+            <p>Place your documents in: <code>input/documents</code></p>
+        </div>
+
+        <div>
+            <h3>Output Location</h3>
+            <p>Organized files will be in: <code>output/organized</code></p>
+        </div>
+
+        <button id="organizeBtn" onclick="organizeDocuments()">Organize Documents</button>
+
+        <div id="status" class="status"></div>
+        <div id="results" class="results">
+            <h3>Organization Results</h3>
+            <pre id="resultDetails"></pre>
+        </div>
+    </div>
+
+    <script>
+        async function organizeDocuments() {
+            const btn = document.getElementById('organizeBtn');
+            const status = document.getElementById('status');
+            const results = document.getElementById('results');
+            const resultDetails = document.getElementById('resultDetails');
+
+            btn.disabled = true;
+            status.className = 'status';
+            status.textContent = 'Organizing documents...';
+            results.style.display = 'none';
+
+            try {
+                const response = await fetch('/organize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        sourcePath: 'input/documents',
+                        targetPath: 'output/organized',
+                        recursive: true
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    status.className = 'status success';
+                    status.textContent = 'Documents organized successfully!';
+                    results.style.display = 'block';
+                    resultDetails.textContent = JSON.stringify(data, null, 2);
+                } else {
+                    throw new Error(data.message || 'Organization failed');
+                }
+            } catch (error) {
+                status.className = 'status error';
+                status.textContent = `Error: ${error.message}`;
+            } finally {
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

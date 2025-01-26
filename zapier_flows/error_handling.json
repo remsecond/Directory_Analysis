@@ -1,0 +1,69 @@
+{
+  "name": "3. Error Handling",
+  "description": "Handles errors in file processing and updates status",
+  "triggers": {
+    "app": "Webhook",
+    "event": "Catch Hook",
+    "input_fields": [
+      "file_id",
+      "error",
+      "step"
+    ]
+  },
+  "actions": [
+    {
+      "app": "Google Drive",
+      "action": "Move File",
+      "file": "{{lookupFileById(webhook.file_id)}}",
+      "destination": "processing/errors/",
+      "options": {
+        "preserve_filename": true
+      }
+    },
+    {
+      "app": "Google Sheets",
+      "action": "Update Spreadsheet Row",
+      "spreadsheet": "EvidenceAI Pipeline",
+      "worksheet": "File Tracking",
+      "lookup_column": "File ID",
+      "lookup_value": "{{webhook.file_id}}",
+      "data": {
+        "Current Location": "error",
+        "Status": "failed",
+        "Last Updated": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+        "Error Details": "{{webhook.error}}"
+      }
+    },
+    {
+      "app": "Google Sheets",
+      "action": "Create Spreadsheet Row",
+      "sheet": "Automation Logs",
+      "row_data": {
+        "Operation ID": "ERR-{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+        "Timestamp": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+        "Operation Type": "error_handling",
+        "Status": "error",
+        "Source": "{{webhook.step}}",
+        "Target": "processing/errors/",
+        "Details": "Error in {{webhook.step}}: {{webhook.error}}",
+        "Duration": "{{timer.duration}}s",
+        "Module": "error_handler",
+        "Error Message": "{{webhook.error}}"
+      }
+    },
+    {
+      "app": "Email",
+      "action": "Send Email",
+      "to": ["admin@example.com"],
+      "subject": "EvidenceAI Pipeline Error: {{webhook.file_id}}",
+      "body": {
+        "text": "Error processing file:\n\nFile ID: {{webhook.file_id}}\nStep: {{webhook.step}}\nError: {{webhook.error}}\n\nPlease check the error logs for more details.",
+        "html": "<h2>Error processing file</h2><p><strong>File ID:</strong> {{webhook.file_id}}</p><p><strong>Step:</strong> {{webhook.step}}</p><p><strong>Error:</strong> {{webhook.error}}</p><p>Please check the error logs for more details.</p>"
+      }
+    }
+  ],
+  "helpers": {
+    "padNumber": "function(num, size) { return String(num).padStart(size, '0'); }",
+    "lookupFileById": "function(id) { return app.sheets.lookupValue('File Tracking', 'File ID', id, 'Name'); }"
+  }
+}

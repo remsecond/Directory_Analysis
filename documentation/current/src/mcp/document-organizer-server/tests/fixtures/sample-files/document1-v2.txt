@@ -1,0 +1,3 @@
+This is version 2 of the sample text document.
+It has slightly different content to test version detection.
+The organizer should recognize this as a new version of document1.txt.

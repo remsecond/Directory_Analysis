@@ -1,0 +1,153 @@
+{
+  "name": "Parseur Document Processing",
+  "description": "Process documents through Parseur and update tracking",
+  "flows": [
+    {
+      "name": "1. Document Detection & Processing",
+      "description": "Monitor Google Drive and send documents to Parseur",
+      "triggers": {
+        "app": "Google Drive",
+        "event": "New File in Folder",
+        "folder": "input/",
+        "include_subfolders": true
+      },
+      "actions": [
+        {
+          "app": "Google Sheets",
+          "action": "Create Spreadsheet Row",
+          "sheet": "File Tracking",
+          "row_data": {
+            "File ID": "{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+            "Name": "{{triggerData.name}}",
+            "Current Location": "input",
+            "Status": "new",
+            "Last Updated": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+            "Error Details": "",
+            "File Type": "{{toLowerCase(triggerData.fileExtension)}}",
+            "File Size": "{{formatFileSize(triggerData.size)}}",
+            "Processing Duration": "",
+            "Tags": "{{getFileTags(triggerData.name, triggerData.fileExtension)}}"
+          }
+        },
+        {
+          "app": "Parseur",
+          "action": "Process Document",
+          "mailbox": "{{getMailboxByType(triggerData.fileExtension)}}",
+          "file": "{{triggerData.id}}",
+          "options": {
+            "wait_for_completion": true,
+            "metadata": {
+              "file_id": "{{triggerData.id}}",
+              "original_name": "{{triggerData.name}}",
+              "source": "google_drive"
+            }
+          }
+        },
+        {
+          "app": "Google Sheets",
+          "action": "Update Spreadsheet Row",
+          "spreadsheet": "EvidenceAI Pipeline",
+          "worksheet": "File Tracking",
+          "lookup_column": "File ID",
+          "lookup_value": "{{triggerData.id}}",
+          "data": {
+            "Current Location": "processed",
+            "Status": "complete",
+            "Last Updated": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+            "Processing Duration": "{{timer.duration}}s",
+            "Extracted Data": "{{JSON.stringify(parseurResult.extracted_data)}}",
+            "Confidence": "{{parseurResult.confidence}}"
+          }
+        },
+        {
+          "app": "Google Drive",
+          "action": "Move File",
+          "file": "{{triggerData.id}}",
+          "destination": "{{getDestinationFolder(parseurResult.extracted_data)}}",
+          "options": {
+            "preserve_filename": true,
+            "create_folders": true
+          }
+        },
+        {
+          "app": "Google Sheets",
+          "action": "Create Spreadsheet Row",
+          "sheet": "Automation Logs",
+          "row_data": {
+            "Operation ID": "PROC-{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+            "Timestamp": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+            "Operation Type": "document_processing",
+            "Status": "success",
+            "Source": "input/{{triggerData.name}}",
+            "Target": "{{getDestinationFolder(parseurResult.extracted_data)}}/{{triggerData.name}}",
+            "Details": "Document processed successfully with confidence {{parseurResult.confidence}}",
+            "Duration": "{{timer.duration}}s",
+            "Module": "parseur_processor",
+            "Error Message": ""
+          }
+        }
+      ],
+      "error_handler": {
+        "actions": [
+          {
+            "app": "Google Drive",
+            "action": "Move File",
+            "file": "{{triggerData.id}}",
+            "destination": "processing/errors/",
+            "options": {
+              "preserve_filename": true
+            }
+          },
+          {
+            "app": "Google Sheets",
+            "action": "Update Spreadsheet Row",
+            "spreadsheet": "EvidenceAI Pipeline",
+            "worksheet": "File Tracking",
+            "lookup_column": "File ID",
+            "lookup_value": "{{triggerData.id}}",
+            "data": {
+              "Current Location": "error",
+              "Status": "failed",
+              "Last Updated": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+              "Error Details": "{{error.message}}"
+            }
+          },
+          {
+            "app": "Google Sheets",
+            "action": "Create Spreadsheet Row",
+            "sheet": "Automation Logs",
+            "row_data": {
+              "Operation ID": "ERR-{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+              "Timestamp": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+              "Operation Type": "error_handling",
+              "Status": "error",
+              "Source": "{{triggerData.name}}",
+              "Target": "processing/errors/",
+              "Details": "Error processing document",
+              "Duration": "{{timer.duration}}s",
+              "Module": "parseur_processor",
+              "Error Message": "{{error.message}}"
+            }
+          },
+          {
+            "app": "Email",
+            "action": "Send Email",
+            "to": ["admin@example.com"],
+            "subject": "EvidenceAI Pipeline Error: {{triggerData.name}}",
+            "body": {
+              "text": "Error processing document:\n\nFile: {{triggerData.name}}\nError: {{error.message}}\n\nPlease check the error logs for more details.",
+              "html": "<h2>Error processing document</h2><p><strong>File:</strong> {{triggerData.name}}</p><p><strong>Error:</strong> {{error.message}}</p><p>Please check the error logs for more details.</p>"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "helpers": {
+    "padNumber": "function(num, size) { return String(num).padStart(size, '0'); }",
+    "formatFileSize": "function(bytes) { return Math.round(bytes/1024) + 'KB'; }",
+    "getFileTags": "function(name, ext) { const tags = [ext.toLowerCase()]; if(name.match(/Email|OFW|Messages/i)) tags.push('correspondence'); if(name.match(/Order|Agreed|Mediation/i)) tags.push('legal'); if(name.match(/Report|Form|Summary/i)) tags.push('document'); if(name.match(/\\d{4}-\\d{2}-\\d{2}/)) tags.push('dated'); return tags.join(','); }",
+    "getMailboxByType": "function(ext) { const type = ext.toLowerCase(); if(type === 'pdf') { if(name.match(/Order|Agreed/i)) return process.env.PARSEUR_ORDERS_MAILBOX_ID; if(name.match(/Mediation/i)) return process.env.PARSEUR_MEDIATION_MAILBOX_ID; if(name.match(/Report|Form|Summary/i)) return process.env.PARSEUR_REPORTS_MAILBOX_ID; } return process.env.PARSEUR_CORRESPONDENCE_MAILBOX_ID; }",
+    "getDestinationFolder": "function(data) { const date = data.date || formatDate(now, 'YYYY-MM-DD'); const [year, month] = date.split('-'); let category = 'Other'; if(data.document_type && data.document_type.match(/order/i)) category = 'Orders'; else if(data.document_type && data.document_type.match(/mediation|agreement/i)) category = 'Mediation'; else if(data.report_type) category = 'Reports'; else if(data.message_type) category = 'Correspondence'; return `processed/${category}/${year}/${month}`; }"
+  }
+}

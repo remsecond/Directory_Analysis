@@ -1,82 +1,66 @@
-import express from 'express';
-import { google } from 'googleapis';
-import open from 'open';
-import fs from 'fs';
-import dotenv from 'dotenv';
+const { google } = require('googleapis');
+const http = require('http');
+const open = require('open');
+require('dotenv').config();
 
-// Load environment variables
-dotenv.config();
+const CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+const CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
-// Initialize logger
-const logger = {
-    info: console.log,
-    error: console.error
-};
+if (!CLIENT_ID || !CLIENT_SECRET) {
+  console.error('Error: GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET must be set in .env file');
+  process.exit(1);
+}
 
-// OAuth 2.0 client configuration
+// OAuth 2.0 configuration
 const oauth2Client = new google.auth.OAuth2(
-    process.env.GOOGLE_CLIENT_ID,
-    process.env.GOOGLE_CLIENT_SECRET,
-    'http://localhost:3000/oauth2callback'
+  CLIENT_ID,
+  CLIENT_SECRET,
+  'http://localhost:3000/oauth2callback'
 );
 
-// Required scopes
-const SCOPES = [
-    'https://www.googleapis.com/auth/spreadsheets',
-    'https://www.googleapis.com/auth/drive.file'
+// Generate authentication URL
+const scopes = [
+  'https://www.googleapis.com/auth/drive.file',
+  'https://www.googleapis.com/auth/drive.folders'
 ];
 
-// Create Express app for handling OAuth callback
-const app = express();
-const port = 3000;
-
-app.get('/oauth2callback', async (req, res) => {
-    const { code } = req.query;
-    
-    if (!code) {
-        res.status(400).send('No authorization code received');
-        return;
-    }
-
-    try {
-        // Exchange code for tokens
-        const { tokens } = await oauth2Client.getToken(code);
-        
-        // Save tokens to file
-        const tokenData = {
-            ...tokens,
-            created_at: new Date().toISOString()
-        };
-        
-        fs.writeFileSync('google-token.json', JSON.stringify(tokenData, null, 2));
-        
-        res.send(`
-            <h1>Authorization Successful!</h1>
-            <p>You can close this window and return to the terminal.</p>
-            <script>setTimeout(() => window.close(), 3000);</script>
-        `);
-
-        logger.info('Token saved to google-token.json');
-        
-        // Exit process after saving token
-        setTimeout(() => process.exit(0), 1000);
-    } catch (error) {
-        logger.error('Error getting token:', error);
-        res.status(500).send('Error getting authorization token');
-    }
+const authUrl = oauth2Client.generateAuthUrl({
+  access_type: 'offline',
+  scope: scopes,
+  prompt: 'consent' // Force to get refresh token
 });
 
-// Start server and open authorization URL
-app.listen(port, async () => {
-    logger.info(`OAuth callback server listening on port ${port}`);
-    
-    // Generate authorization URL
-    const authUrl = oauth2Client.generateAuthUrl({
-        access_type: 'offline',
-        scope: SCOPES,
-        prompt: 'consent'
-    });
-    
-    logger.info('Opening authorization URL in browser');
-    await open(authUrl);
+// Create a local server to receive the OAuth callback
+const server = http.createServer(async (req, res) => {
+  try {
+    const url = new URL(req.url, `http://${req.headers.host}`);
+    const code = url.searchParams.get('code');
+
+    if (code) {
+      // Exchange the code for tokens
+      const { tokens } = await oauth2Client.getToken(code);
+      
+      console.log('\nRefresh Token:', tokens.refresh_token);
+      console.log('\nAdd this refresh token to your .env file as GOOGLE_REFRESH_TOKEN\n');
+      
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end('<h1>Authorization successful!</h1><p>You can close this window.</p>');
+      
+      setTimeout(() => process.exit(0), 1000);
+    } else {
+      res.writeHead(400);
+      res.end('No authorization code received');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    res.writeHead(500);
+    res.end('Error processing authorization');
+  }
+});
+
+// Start the server and open the auth URL
+server.listen(3000, () => {
+  console.log('Opening browser for Google authorization...');
+  console.log('Please complete the authentication in the browser window.');
+  open(authUrl).catch(console.error);
 });

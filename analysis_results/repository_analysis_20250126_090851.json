@@ -1,0 +1,66 @@
+{
+    "analysis_timestamp": "20250126_090851",
+    "root_path": "Directory_Analysis",
+    "summary": {
+        "total_files": 6,
+        "total_size_bytes": 2182730,
+        "total_size_mb": 2.08,
+        "unique_file_types": 6,
+        "potential_duplicates": 0
+    },
+    "details": {
+        "file_types": {
+            "": {
+                "count": 1,
+                "total_size_mb": 0.0
+            },
+            ".py": {
+                "count": 1,
+                "total_size_mb": 0.0
+            },
+            ".md": {
+                "count": 1,
+                "total_size_mb": 0.0
+            },
+            ".txt": {
+                "count": 1,
+                "total_size_mb": 0.0
+            },
+            ".json": {
+                "count": 1,
+                "total_size_mb": 2.07
+            },
+            ".log": {
+                "count": 1,
+                "total_size_mb": 0.0
+            }
+        },
+        "potential_duplicates": {},
+        "largest_files": [
+            {
+                "path": "Directory_Analysis\\analysis_results\\directory_analysis_20250126_090119.json",
+                "size": 2174983
+            },
+            {
+                "path": "Directory_Analysis\\directory_analyzer.py",
+                "size": 4880
+            },
+            {
+                "path": "Directory_Analysis\\README.md",
+                "size": 2274
+            },
+            {
+                "path": "Directory_Analysis\\.gitignore",
+                "size": 381
+            },
+            {
+                "path": "Directory_Analysis\\logs\\analysis.log",
+                "size": 196
+            },
+            {
+                "path": "Directory_Analysis\\requirements.txt",
+                "size": 16
+            }
+        ]
+    }
+}

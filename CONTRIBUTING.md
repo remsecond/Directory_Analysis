@@ -1,121 +1,168 @@
-# Contributing to EvidenceAI
+# Contributing to PDF Styling System
 
-Thank you for your interest in contributing to EvidenceAI! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to our PDF styling system! This document provides guidelines and information for contributors.
 
-## Code of Conduct
+## Development Environment Setup
 
-This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code.
+1. Ensure you have the following installed:
+   - Node.js 14.x or higher
+   - npm 6.x or higher
+   - Visual Studio Code (recommended)
 
-## Development Process
+2. Clone the repository:
+   ```bash
+   git clone [repository-url]
+   cd pdf-styling-system
+   ```
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run tests (`npm test`)
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to your branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Branch Naming
-
-- Feature branches: `feature/description`
-- Bug fixes: `fix/description`
-- Documentation: `docs/description`
-- Performance improvements: `perf/description`
-
-## Commit Messages
-
-Follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
+## Project Structure
 
 ```
-<type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer(s)]
+.
+├── src/                    # Source files
+│   ├── pdfGeneration.ts    # PDF generation logic
+│   ├── stylesheetHelper.ts # Stylesheet processing
+│   └── config.ts          # Configuration handling
+├── resources/
+│   └── style-template.css  # Default stylesheet
+├── test/
+│   └── ...                # Test files
+└── docs/
+    └── ...                # Documentation
 ```
 
-Types:
-- feat: New feature
-- fix: Bug fix
-- docs: Documentation only changes
-- style: Changes that do not affect the meaning of the code
-- refactor: Code change that neither fixes a bug nor adds a feature
-- perf: Code change that improves performance
-- test: Adding missing tests or correcting existing tests
-- chore: Changes to the build process or auxiliary tools
+## Coding Standards
 
-## Testing
+### TypeScript Guidelines
 
-- Write tests for new features
-- Update tests for bug fixes
+- Use TypeScript for all new code
+- Enable strict mode in TypeScript configuration
+- Follow the existing code style
+- Document public APIs using JSDoc comments
+
+### CSS Guidelines
+
+- Use descriptive class names
+- Follow BEM naming convention where applicable
+- Maintain backwards compatibility
+- Document complex CSS rules
+- Test print-specific styles
+
+### Testing
+
+- Write unit tests for new features
 - Ensure all tests pass before submitting PR
-- Follow existing test patterns
+- Include test cases for edge cases
+- Test print output manually
 
-## Code Style
+## Development Workflow
 
-- Use ESLint and Prettier configurations
-- Follow TypeScript best practices
-- Keep functions focused and small
-- Write clear, descriptive comments
-- Use meaningful variable names
+1. Create a feature branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+2. Make your changes:
+   - Follow coding standards
+   - Update documentation
+   - Add tests
+
+3. Test your changes:
+   ```bash
+   npm test
+   ```
+
+4. Commit your changes:
+   ```bash
+   git commit -m "Description of changes"
+   ```
+
+5. Submit a pull request:
+   - Provide clear description
+   - Reference any related issues
+   - Include screenshots if relevant
 
 ## Documentation
 
-- Update README.md if needed
-- Document new features
+- Update README.md for user-facing changes
+- Document new CSS features in style guide
+- Include examples for new functionality
 - Update API documentation
-- Include JSDoc comments for functions
-- Update CHANGELOG.md
+
+## Testing Guidelines
+
+### Unit Tests
+
+- Test individual components
+- Mock external dependencies
+- Test error conditions
+- Verify style applications
+
+### Integration Tests
+
+- Test full PDF generation
+- Verify stylesheet loading
+- Test different document types
+- Validate print output
+
+### Manual Testing
+
+- Test in different browsers
+- Verify print preview
+- Check PDF output
+- Validate responsive behavior
+
+## CSS Contribution Guidelines
+
+### Adding New Styles
+
+1. Identify the category (document structure, links, etc.)
+2. Add styles to appropriate section
+3. Document the purpose and usage
+4. Include print-specific considerations
+
+### Modifying Existing Styles
+
+1. Maintain backwards compatibility
+2. Document breaking changes
+3. Update examples
+4. Test with various content types
+
+### Print Optimization
+
+- Test with different page sizes
+- Verify page breaks
+- Check link handling
+- Validate font rendering
 
 ## Pull Request Process
 
 1. Update documentation
-2. Add tests for new features
-3. Update CHANGELOG.md
-4. Ensure CI passes
-5. Get review from maintainers
-6. Address review feedback
-7. Squash commits if requested
+2. Add/update tests
+3. Ensure CI passes
+4. Request review
+5. Address feedback
+6. Update changelog
 
-## Setting Up Development Environment
+## Release Process
 
-1. Install dependencies:
-```bash
-npm install
-python -m pip install -r requirements.txt
-```
+1. Version bump
+2. Update changelog
+3. Create release notes
+4. Tag release
+5. Update documentation
 
-2. Set up environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your configuration
-```
+## Questions?
 
-3. Configure Google integration:
-```bash
-node scripts/setup-google-project.js
-```
-
-## Running Tests
-
-```bash
-# Run all tests
-npm test
-
-# Run specific test suite
-npm run test:core-pipeline
-npm run test:format-handling
-npm run test:smart-chunking
-```
-
-## Getting Help
-
-- Check existing issues
-- Read documentation in /docs
-- Ask questions in discussions
-- Join our community chat
+- Open an issue for feature discussions
+- Use pull request comments for code-specific questions
+- Check existing issues and documentation first
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the MIT License.
+By contributing, you agree that your contributions will be licensed under the project's MIT License.

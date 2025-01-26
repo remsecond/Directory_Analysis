@@ -1,0 +1,33 @@
+{
+  "name": "evidenceai-cloud",
+  "version": "1.0.0",
+  "description": "Cloud-native platform for processing, analyzing, and managing evidence-based documentation",
+  "private": true,
+  "workspaces": [
+    "services/*",
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "keywords": [
+    "evidenceai",
+    "cloud",
+    "document-processing",
+    "analysis"
+  ],
+  "author": "EvidenceAI",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}

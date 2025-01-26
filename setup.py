@@ -5,9 +5,8 @@ setup(
     version="0.1.0",
     packages=find_packages(include=['evidenceai', 'evidenceai.*']),
     install_requires=[
-        "PyPDF2>=3.0.0",
-        "pdfminer.six>=20221105",
-        "python-magic>=0.4.27",
+        "pytest>=6.0.0",
+        "pytest-cov>=2.0.0",
     ],
     python_requires=">=3.8",
 )

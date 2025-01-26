@@ -1,0 +1,49 @@
+{
+  "naming_patterns": {
+    "default": "{case_id}_{type}_{date}_{source}",
+    "email": "{case_id}_EMAIL_{date}_{sender}",
+    "pdf": "{case_id}_DOC_{date}_{title}",
+    "spreadsheet": "{case_id}_DATA_{date}_{sheet}"
+  },
+  "type_mappings": {
+    "pdf": "DOC",
+    "docx": "DOC",
+    "xlsx": "DATA",
+    "csv": "DATA",
+    "msg": "EMAIL",
+    "eml": "EMAIL"
+  },
+  "format_preferences": {
+    "document": {
+      "preferred": "pdf",
+      "alternates": ["docx", "doc", "rtf"]
+    },
+    "spreadsheet": {
+      "preferred": "xlsx",
+      "alternates": ["csv", "xls"]
+    },
+    "email": {
+      "preferred": "msg",
+      "alternates": ["eml"]
+    }
+  },
+  "folder_structure": {
+    "input": "1_Input",
+    "processing": "2_Processing",
+    "complete": "3_Complete",
+    "system": {
+      "root": "_System",
+      "templates": "Templates",
+      "archive": "Archive",
+      "logs": "Logs",
+      "errors": "Errors"
+    }
+  },
+  "date_format": "YYYY-MM-DD",
+  "version_format": "v{number}",
+  "duplicate_handling": {
+    "exact_match": "archive",
+    "format_variant": "link",
+    "version": "increment"
+  }
+}

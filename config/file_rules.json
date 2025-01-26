@@ -1,0 +1,36 @@
+{
+  "patterns": {
+    "email_pdf": [
+      "OFW_Messages_Report",
+      "Email exchange",
+      "Gmail - ",
+      "OFW Communication",
+      "Message History",
+      "Email Thread",
+      "Conversation History"
+    ]
+  },
+  "extensions": {
+    "email": [".eml", ".msg", ".mbox"],
+    "documents": [".pdf", ".doc", ".docx", ".txt", ".rtf", ".odt"],
+    "images": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".webp"],
+    "spreadsheets": [".xls", ".xlsx", ".csv", ".ods", ".numbers"],
+    "presentations": [".ppt", ".pptx", ".odp", ".key"],
+    "archives": [".zip", ".rar", ".7z", ".tar", ".gz"]
+  },
+  "folders": [
+    "email",
+    "documents",
+    "images",
+    "spreadsheets",
+    "presentations",
+    "archives",
+    "other"
+  ],
+  "version_control": {
+    "enabled": true,
+    "naming_pattern": "{base_name}_v{version}{ext}",
+    "skip_exact_duplicates": true,
+    "track_versions": true
+  }
+}

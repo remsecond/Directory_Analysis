@@ -1,0 +1,68 @@
+{
+  "name": "2. File Movement & Status Update",
+  "description": "Moves detected files to processing and updates status",
+  "triggers": {
+    "app": "Google Sheets",
+    "event": "New Spreadsheet Row",
+    "spreadsheet": "EvidenceAI Pipeline",
+    "worksheet": "File Tracking",
+    "conditions": {
+      "Status": "new",
+      "Current Location": "input"
+    }
+  },
+  "actions": [
+    {
+      "app": "Google Drive",
+      "action": "Copy File",
+      "file": "{{lookupFileByName(triggerRow.Name)}}",
+      "destination": "{{getProcessingFolder(triggerRow.File_Type)}}",
+      "options": {
+        "preserve_filename": true
+      }
+    },
+    {
+      "app": "Google Sheets",
+      "action": "Update Spreadsheet Row",
+      "spreadsheet": "EvidenceAI Pipeline",
+      "worksheet": "File Tracking",
+      "row": "{{triggerRow.__row}}",
+      "data": {
+        "Current Location": "processing",
+        "Status": "processing",
+        "Last Updated": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}"
+      }
+    },
+    {
+      "app": "Google Sheets",
+      "action": "Create Spreadsheet Row",
+      "sheet": "Automation Logs",
+      "row_data": {
+        "Operation ID": "OP-{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+        "Timestamp": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+        "Operation Type": "file_movement",
+        "Status": "success",
+        "Source": "input/{{triggerRow.Name}}",
+        "Target": "processing/{{triggerRow.Name}}",
+        "Details": "File moved to processing: {{triggerRow.Name}}",
+        "Duration": "{{timer.duration}}s",
+        "Module": "file_movement",
+        "Error Message": ""
+      }
+    }
+  ],
+  "helpers": {
+    "padNumber": "function(num, size) { return String(num).padStart(size, '0'); }",
+    "getProcessingFolder": "function(type) { return 'processing/' + type.toLowerCase(); }",
+    "lookupFileByName": "function(name) { return app.drive.findFileByName(name); }"
+  },
+  "error_handler": {
+    "action": "Run Zap",
+    "zap": "3. Error Handling",
+    "input": {
+      "file_id": "{{triggerRow.File_ID}}",
+      "error": "{{error.message}}",
+      "step": "file_movement"
+    }
+  }
+}

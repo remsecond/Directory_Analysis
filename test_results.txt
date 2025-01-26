@@ -1,0 +1,22 @@
+Sync System Test Results
+======================
+Test Run: 2025-01-26 10:11:43
+
+Summary: 7/7 tests passed
+
+Detailed Results:
+-----------------
+Directory Check: documentation: PASS
+  Path: c:/Users/robmo/Desktop/evidenceai/documentation
+Directory Check: current: PASS
+  Path: c:/Users/robmo/Desktop/evidenceai/documentation/current
+Directory Check: archive: PASS
+  Path: c:/Users/robmo/Desktop/evidenceai/documentation/archive
+Directory Check: templates: PASS
+  Path: c:/Users/robmo/Desktop/evidenceai/documentation/templates
+File Check: sync_documentation.py: PASS
+  Path: c:/Users/robmo/Desktop/evidenceai/documentation\sync_documentation.py
+File Check: sync-docs.bat: PASS
+  Path: c:/Users/robmo/Desktop/evidenceai/documentation\sync-docs.bat
+File Check: sync_documentation.log: PASS
+  Path: c:/Users/robmo/Desktop/evidenceai/documentation\sync_documentation.log

@@ -1,0 +1,183 @@
+{
+  "folder_structure": {
+    "users": {
+      "_template": {
+        "user_id": "USER_ID",
+        "email": "user@example.com",
+        "input": {
+          "email": {},
+          "ofw": {},
+          "attachments": {},
+          "images": {},
+          "spreadsheets": {},
+          "documents": {}
+        },
+        "processing": {
+          "current": {},
+          "errors": {},
+          "history": {
+            "YYYY": {
+              "MM": {
+                "WW": {}
+              }
+            }
+          }
+        },
+        "processed": {
+          "YYYY": {
+            "MM": {
+              "WW": {
+                "Orders": {},
+                "Mediation": {},
+                "Reports": {},
+                "Correspondence": {}
+              }
+            }
+          }
+        },
+        "metadata": {
+          "tracking.json": {
+            "user_info": {
+              "name": "",
+              "email": "",
+              "timezone": "",
+              "active_since": "",
+              "last_activity": ""
+            },
+            "processing_stats": {
+              "total_files": 0,
+              "processed_files": 0,
+              "error_count": 0,
+              "last_processed": "",
+              "processing_time_avg": ""
+            },
+            "weekly_stats": {
+              "YYYY-WW": {
+                "files_received": 0,
+                "files_processed": 0,
+                "errors": 0,
+                "types": {
+                  "pdf": 0,
+                  "docx": 0,
+                  "xlsx": 0,
+                  "images": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "global": {
+      "tracking": {
+        "users.json": {
+          "active_users": [],
+          "total_users": 0,
+          "user_mapping": {}
+        },
+        "weekly_summary.json": {
+          "YYYY-WW": {
+            "active_users": 0,
+            "total_files": 0,
+            "processing_stats": {
+              "success": 0,
+              "errors": 0,
+              "avg_time": ""
+            },
+            "file_types": {
+              "pdf": 0,
+              "docx": 0,
+              "xlsx": 0,
+              "images": 0
+            }
+          }
+        }
+      },
+      "templates": {
+        "email_templates": {},
+        "report_templates": {}
+      }
+    }
+  },
+  "tracking_sheets": {
+    "user_sheet_template": {
+      "File Tracking": [
+        {
+          "File ID": "{{user_id}}-{{YYYY}}-{{WW}}-{{sequential_id}}",
+          "Name": "",
+          "Upload Date": "",
+          "Processing Week": "YYYY-WW",
+          "Category": "",
+          "Status": "",
+          "Current Location": "",
+          "Error Details": "",
+          "Processing Duration": "",
+          "Archive Path": ""
+        }
+      ],
+      "Weekly Summary": [
+        {
+          "Week": "YYYY-WW",
+          "Files Received": 0,
+          "Files Processed": 0,
+          "Success Rate": "100%",
+          "Average Processing Time": "",
+          "Common File Types": "",
+          "Notes": ""
+        }
+      ]
+    },
+    "master_tracking": {
+      "User Overview": [
+        {
+          "User ID": "",
+          "Email": "",
+          "Active Since": "",
+          "Total Files": 0,
+          "Current Week Files": 0,
+          "Success Rate": "100%",
+          "Last Activity": ""
+        }
+      ],
+      "Weekly Statistics": [
+        {
+          "Week": "YYYY-WW",
+          "Active Users": 0,
+          "Total Files": 0,
+          "Success Rate": "100%",
+          "System Load": "Low",
+          "Notes": ""
+        }
+      ]
+    }
+  },
+  "zapier_flows": {
+    "user_setup": {
+      "trigger": "New User Registration",
+      "actions": [
+        "Create User Folder Structure",
+        "Initialize Tracking Sheet",
+        "Send Welcome Email",
+        "Update Master Tracking"
+      ]
+    },
+    "weekly_maintenance": {
+      "trigger": "Schedule (Sunday 11:59 PM)",
+      "actions": [
+        "Create New Week Folders",
+        "Archive Old Processing Files",
+        "Generate Weekly Reports",
+        "Update Master Statistics"
+      ]
+    },
+    "file_processing": {
+      "trigger": "New File in User Input",
+      "actions": [
+        "Update User Weekly Stats",
+        "Process File Based on Type",
+        "Update Master Tracking",
+        "Send Status Notification"
+      ]
+    }
+  }
+}

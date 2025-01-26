@@ -1,0 +1,218 @@
+{
+  "flows": {
+    "1_user_onboarding": {
+      "name": "User Onboarding Flow",
+      "trigger": {
+        "app": "Google Forms",
+        "event": "New Form Response",
+        "form": "User Registration"
+      },
+      "actions": [
+        {
+          "app": "Google Drive",
+          "action": "Create Folder Structure",
+          "template": "users/{{user_id}}",
+          "subfolders": [
+            "input/{email,ofw,attachments,images,spreadsheets,documents}",
+            "processing/{current,errors}",
+            "processing/history/{{YYYY}}/{{MM}}/{{WW}}",
+            "processed/{{YYYY}}/{{MM}}/{{WW}}/{Orders,Mediation,Reports,Correspondence}"
+          ]
+        },
+        {
+          "app": "Google Sheets",
+          "action": "Create User Tracking Sheet",
+          "template": "user_sheet_template",
+          "name": "{{user_id}}_tracking"
+        },
+        {
+          "app": "Code",
+          "action": "Initialize Metadata",
+          "code": {
+            "source": "const metadata = { user_info: { name: inputData.name, email: inputData.email, timezone: inputData.timezone, active_since: new Date().toISOString(), last_activity: new Date().toISOString() }, processing_stats: { total_files: 0, processed_files: 0, error_count: 0 }, weekly_stats: {} }; return JSON.stringify(metadata, null, 2);",
+            "output": "metadata_json"
+          }
+        },
+        {
+          "app": "Google Drive",
+          "action": "Create File",
+          "path": "users/{{user_id}}/metadata/tracking.json",
+          "content": "{{metadata_json}}"
+        },
+        {
+          "app": "Google Sheets",
+          "action": "Update Master Tracking",
+          "spreadsheet": "Master User Tracking",
+          "worksheet": "User Overview",
+          "data": {
+            "User ID": "{{user_id}}",
+            "Email": "{{inputData.email}}",
+            "Active Since": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+            "Status": "Active"
+          }
+        }
+      ]
+    },
+    "2_weekly_setup": {
+      "name": "Weekly Folder Setup",
+      "trigger": {
+        "app": "Schedule",
+        "event": "Every Sunday at 11:59 PM"
+      },
+      "actions": [
+        {
+          "app": "Code",
+          "action": "Get Active Users",
+          "code": {
+            "source": "const users = await app.googleSheets.getRows('Master User Tracking', 'User Overview', { filter: { Status: 'Active' } }); return users.map(u => u['User ID']);",
+            "output": "active_users"
+          }
+        },
+        {
+          "app": "Looper",
+          "action": "For Each User",
+          "input": "{{active_users}}",
+          "actions": [
+            {
+              "app": "Google Drive",
+              "action": "Create Weekly Folders",
+              "base_path": "users/{{currentItem}}/processed/{{YYYY}}/{{MM}}/{{WW}}",
+              "subfolders": ["Orders", "Mediation", "Reports", "Correspondence"]
+            },
+            {
+              "app": "Google Drive",
+              "action": "Create Processing History",
+              "path": "users/{{currentItem}}/processing/history/{{YYYY}}/{{MM}}/{{WW}}"
+            },
+            {
+              "app": "Code",
+              "action": "Initialize Weekly Stats",
+              "code": {
+                "source": "const stats = { files_received: 0, files_processed: 0, errors: 0, types: { pdf: 0, docx: 0, xlsx: 0, images: 0 } }; return JSON.stringify(stats);",
+                "output": "weekly_stats"
+              }
+            },
+            {
+              "app": "Google Sheets",
+              "action": "Add Weekly Summary Row",
+              "spreadsheet": "{{currentItem}}_tracking",
+              "worksheet": "Weekly Summary",
+              "row_data": {
+                "Week": "{{YYYY}}-{{WW}}",
+                "Files Received": 0,
+                "Files Processed": 0,
+                "Success Rate": "100%"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "3_file_intake": {
+      "name": "Multi-User File Intake",
+      "trigger": {
+        "app": "Google Drive",
+        "event": "New File in Folder",
+        "folder": "users/*/input/*"
+      },
+      "actions": [
+        {
+          "app": "Code",
+          "action": "Extract User and File Info",
+          "code": {
+            "source": "const path = inputData.path; const match = path.match(/users\\/([^\\/]+)\\/input\\/([^\\/]+)/); return { user_id: match[1], input_type: match[2], week: formatDate(now, 'YYYY-WW') };",
+            "output": "file_info"
+          }
+        },
+        {
+          "app": "Google Sheets",
+          "action": "Log File Entry",
+          "spreadsheet": "{{file_info.user_id}}_tracking",
+          "worksheet": "File Tracking",
+          "row_data": {
+            "File ID": "{{file_info.user_id}}-{{YYYY}}-{{WW}}-{{id}}",
+            "Name": "{{triggerFile.name}}",
+            "Upload Date": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+            "Processing Week": "{{file_info.week}}",
+            "Status": "new"
+          }
+        },
+        {
+          "app": "Google Drive",
+          "action": "Copy to Processing",
+          "source": "{{triggerFile.id}}",
+          "destination": "users/{{file_info.user_id}}/processing/current/{{triggerFile.name}}"
+        },
+        {
+          "app": "Google Sheets",
+          "action": "Update Weekly Stats",
+          "spreadsheet": "{{file_info.user_id}}_tracking",
+          "worksheet": "Weekly Summary",
+          "filter": {
+            "Week": "{{file_info.week}}"
+          },
+          "update": {
+            "Files Received": "{{add(currentValue, 1)}}"
+          }
+        }
+      ]
+    },
+    "4_weekly_cleanup": {
+      "name": "Weekly Processing Cleanup",
+      "trigger": {
+        "app": "Schedule",
+        "event": "Every Sunday at 11:00 PM"
+      },
+      "actions": [
+        {
+          "app": "Code",
+          "action": "Get Active Users",
+          "code": {
+            "source": "const users = await app.googleSheets.getRows('Master User Tracking', 'User Overview', { filter: { Status: 'Active' } }); return users.map(u => u['User ID']);",
+            "output": "active_users"
+          }
+        },
+        {
+          "app": "Looper",
+          "action": "For Each User",
+          "input": "{{active_users}}",
+          "actions": [
+            {
+              "app": "Google Drive",
+              "action": "Move Files",
+              "source": "users/{{currentItem}}/processing/current",
+              "destination": "users/{{currentItem}}/processing/history/{{YYYY}}/{{MM}}/{{WW}}"
+            },
+            {
+              "app": "Google Sheets",
+              "action": "Generate Weekly Report",
+              "spreadsheet": "{{currentItem}}_tracking",
+              "worksheet": "Weekly Summary",
+              "filter": {
+                "Week": "{{YYYY}}-{{WW}}"
+              },
+              "update": {
+                "Success Rate": "{{calculateSuccessRate(row)}}",
+                "Notes": "Week completed. Files archived to history."
+              }
+            }
+          ]
+        },
+        {
+          "app": "Google Sheets",
+          "action": "Update Master Stats",
+          "spreadsheet": "Master User Tracking",
+          "worksheet": "Weekly Statistics",
+          "row_data": {
+            "Week": "{{YYYY}}-{{WW}}",
+            "Active Users": "{{active_users.length}}",
+            "Total Files": "{{calculateTotalFiles()}}",
+            "Success Rate": "{{calculateOverallSuccess()}}",
+            "System Load": "{{getSystemLoad()}}",
+            "Notes": "Weekly processing complete"
+          }
+        }
+      ]
+    }
+  }
+}

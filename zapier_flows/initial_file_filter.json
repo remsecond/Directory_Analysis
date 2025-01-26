@@ -1,0 +1,90 @@
+{
+  "name": "01 – Initial File Sort from Incoming",
+  "description": "Filters incompatible files from incoming folder",
+  "triggers": {
+    "app": "Google Drive",
+    "event": "New File in Folder",
+    "folder_id": "1KgKsJvWXT63mPlv67vu9-LrdMyo44ThQ",
+    "include_subfolders": false
+  },
+  "actions": [
+    {
+      "app": "Code by Zapier",
+      "action": "Run JavaScript",
+      "input_data": {
+        "file": "{{trigger.file}}"
+      },
+      "code": "const incompatibleTypes = ['application/vnd.google-apps.spreadsheet', 'application/vnd.google-apps.form', 'application/vnd.google-apps.presentation', 'video/', 'audio/', 'image/']; const fileType = inputData.file.mimeType; const fileName = inputData.file.name; output = { isIncompatible: incompatibleTypes.some(type => fileType.startsWith(type)), fileType: fileType, fileName: fileName, timestamp: new Date().toISOString() };"
+    },
+    {
+      "app": "Path by Zapier",
+      "action": "Path",
+      "conditions": {
+        "paths": [
+          {
+            "name": "Move to Other Files",
+            "conditions": [
+              {
+                "field": "isIncompatible",
+                "value": true,
+                "condition": "boolean_true"
+              }
+            ]
+          },
+          {
+            "name": "Keep in Incoming",
+            "conditions": [
+              {
+                "field": "isIncompatible",
+                "value": false,
+                "condition": "boolean_false"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "Move to Other Files",
+      "app": "Google Drive",
+      "action": "Move File",
+      "params": {
+        "file_id": "{{trigger.id}}",
+        "destination_folder_id": "10fnMQLgbPD_Y9Lfu46o70HeBUHH3EYMD"
+      }
+    },
+    {
+      "app": "Google Sheets",
+      "action": "Create Spreadsheet Row",
+      "sheet": "Automation Logs",
+      "row_data": {
+        "Operation ID": "FILTER-{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+        "Timestamp": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+        "Operation Type": "file_filter",
+        "Status": "success",
+        "Source": "02_Incoming/{{trigger.name}}",
+        "Target": "{{steps.path.value}} ? 'Other_Files/{{trigger.name}}' : '02_Incoming/{{trigger.name}}'",
+        "Details": "{{steps.path.value}} ? 'Moved incompatible file' : 'Kept compatible file'",
+        "Duration": "{{timer.duration}}s",
+        "Module": "file_filter",
+        "Error Message": ""
+      }
+    }
+  ],
+  "error_handler": {
+    "action": "Google Sheets",
+    "sheet": "Automation Logs",
+    "row_data": {
+      "Operation ID": "FILTER-ERR-{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+      "Timestamp": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+      "Operation Type": "file_filter",
+      "Status": "error",
+      "Source": "02_Incoming/{{trigger.name}}",
+      "Target": "",
+      "Details": "Error filtering file",
+      "Duration": "{{timer.duration}}s",
+      "Module": "file_filter",
+      "Error Message": "{{error.message}}"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 3px;
+        }
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Firefox Profile Test Page</h1>
+    
+    <div class="test-section">
+        <h2>Local Storage Test</h2>
+        <button onclick="testLocalStorage()">Test Local Storage</button>
+        <div id="storage-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Cookie Test</h2>
+        <button onclick="testCookies()">Test Cookies</button>
+        <div id="cookie-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>JavaScript Test</h2>
+        <button onclick="testJavaScript()">Test JavaScript</button>
+        <div id="js-result" class="result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Pop-up Test</h2>
+        <button onclick="testPopup()">Test Pop-up</button>
+        <div id="popup-result" class="result"></div>
+    </div>
+
+    <script>
+        // Test Local Storage
+        function testLocalStorage() {
+            try {
+                localStorage.setItem('test', 'Hello from localStorage');
+                const value = localStorage.getItem('test');
+                document.getElementById('storage-result').textContent = 
+                    `LocalStorage test: ${value}`;
+                console.log('LocalStorage test:', value);
+            } catch (e) {
+                document.getElementById('storage-result').textContent = 
+                    `LocalStorage error: ${e.message}`;
+                console.error('LocalStorage error:', e);
+            }
+        }
+
+        // Test Cookies
+        function testCookies() {
+            try {
+                document.cookie = "testCookie=Hello from cookie; path=/";
+                document.getElementById('cookie-result').textContent = 
+                    `Cookie test: ${document.cookie}`;
+                console.log('Cookie test:', document.cookie);
+            } catch (e) {
+                document.getElementById('cookie-result').textContent = 
+                    `Cookie error: ${e.message}`;
+                console.error('Cookie error:', e);
+            }
+        }
+
+        // Test JavaScript
+        function testJavaScript() {
+            try {
+                const result = eval('2 + 2');
+                document.getElementById('js-result').textContent = 
+                    `JavaScript test: 2 + 2 = ${result}`;
+                console.log('JavaScript test:', result);
+            } catch (e) {
+                document.getElementById('js-result').textContent = 
+                    `JavaScript error: ${e.message}`;
+                console.error('JavaScript error:', e);
+            }
+        }
+
+        // Test Pop-up
+        function testPopup() {
+            try {
+                const popup = window.open('', 'Test Popup', 'width=300,height=200');
+                if (popup) {
+                    popup.document.write('<h3>Test Popup Window</h3>');
+                    document.getElementById('popup-result').textContent = 
+                        'Pop-up test: Pop-up opened successfully';
+                    console.log('Pop-up test: Success');
+                } else {
+                    document.getElementById('popup-result').textContent = 
+                        'Pop-up test: Pop-up blocked';
+                    console.log('Pop-up test: Blocked');
+                }
+            } catch (e) {
+                document.getElementById('popup-result').textContent = 
+                    `Pop-up error: ${e.message}`;
+                console.error('Pop-up error:', e);
+            }
+        }
+
+        // Log initial load
+        console.log('Test page loaded successfully');
+        document.getElementById('storage-result').textContent = 'Ready for testing';
+        document.getElementById('cookie-result').textContent = 'Ready for testing';
+        document.getElementById('js-result').textContent = 'Ready for testing';
+        document.getElementById('popup-result').textContent = 'Ready for testing';
+    </script>
+</body>
+</html>

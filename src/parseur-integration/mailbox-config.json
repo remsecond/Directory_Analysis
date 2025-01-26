@@ -1,0 +1,153 @@
+{
+  "mailboxes": [
+    {
+      "id": "orders",
+      "name": "Court Orders",
+      "rules": [
+        {
+          "name": "Order Type Detection",
+          "field": "document_type",
+          "pattern": "(?i)(agreed|temporary|final|emergency)\\s*order",
+          "confidence": 0.8
+        },
+        {
+          "name": "Case Number",
+          "field": "case_number",
+          "pattern": "\\d{2}-\\d{4}-[A-Z]{2}",
+          "required": true
+        },
+        {
+          "name": "Order Date",
+          "field": "date",
+          "pattern": "\\d{4}-\\d{2}-\\d{2}",
+          "required": true
+        }
+      ],
+      "validation": {
+        "required_fields": ["document_type", "case_number", "date"],
+        "confidence_threshold": 0.8
+      }
+    },
+    {
+      "id": "mediation",
+      "name": "Mediation Documents",
+      "rules": [
+        {
+          "name": "Document Type",
+          "field": "document_type",
+          "pattern": "(?i)(mediation|agreement|settlement)",
+          "confidence": 0.8
+        },
+        {
+          "name": "Participants",
+          "field": "participants",
+          "pattern": "(?s)(?<=PRESENT:).*?(?=\\n\\n)",
+          "multiple": true
+        },
+        {
+          "name": "Agreement Date",
+          "field": "date",
+          "pattern": "\\d{4}-\\d{2}-\\d{2}",
+          "required": true
+        }
+      ],
+      "validation": {
+        "required_fields": ["document_type", "date"],
+        "confidence_threshold": 0.8
+      }
+    },
+    {
+      "id": "correspondence",
+      "name": "Correspondence",
+      "rules": [
+        {
+          "name": "Message Type",
+          "field": "message_type",
+          "pattern": "(?i)(email|ofw|message)",
+          "confidence": 0.7
+        },
+        {
+          "name": "Sender",
+          "field": "from",
+          "pattern": "(?<=From:).*?(?=\\n)",
+          "required": true
+        },
+        {
+          "name": "Recipients",
+          "field": "to",
+          "pattern": "(?<=To:).*?(?=\\n)",
+          "multiple": true
+        },
+        {
+          "name": "Date",
+          "field": "date",
+          "pattern": "\\d{4}-\\d{2}-\\d{2}",
+          "required": true
+        },
+        {
+          "name": "Thread ID",
+          "field": "thread_id",
+          "pattern": "(?<=Thread-ID:).*?(?=\\n)"
+        }
+      ],
+      "validation": {
+        "required_fields": ["message_type", "from", "date"],
+        "confidence_threshold": 0.7
+      }
+    },
+    {
+      "id": "reports",
+      "name": "Reports",
+      "rules": [
+        {
+          "name": "Report Type",
+          "field": "report_type",
+          "pattern": "(?i)(summary|evaluation|assessment|form)",
+          "confidence": 0.8
+        },
+        {
+          "name": "Author",
+          "field": "author",
+          "pattern": "(?<=Prepared by:).*?(?=\\n)"
+        },
+        {
+          "name": "Date",
+          "field": "date",
+          "pattern": "\\d{4}-\\d{2}-\\d{2}",
+          "required": true
+        },
+        {
+          "name": "Case Reference",
+          "field": "case_ref",
+          "pattern": "\\d{2}-\\d{4}-[A-Z]{2}"
+        }
+      ],
+      "validation": {
+        "required_fields": ["report_type", "date"],
+        "confidence_threshold": 0.8
+      }
+    }
+  ],
+  "global_settings": {
+    "ocr": {
+      "enabled": true,
+      "language": "eng",
+      "dpi": 300,
+      "enhance": true
+    },
+    "table_extraction": {
+      "enabled": true,
+      "min_confidence": 0.7
+    },
+    "output": {
+      "format": "json",
+      "include_raw_text": true,
+      "include_confidence": true
+    },
+    "error_handling": {
+      "retry_count": 3,
+      "retry_delay": 60,
+      "notification_threshold": 0.6
+    }
+  }
+}

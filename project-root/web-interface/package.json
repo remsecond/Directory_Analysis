@@ -1,0 +1,19 @@
+{
+  "name": "pdf-converter-web",
+  "version": "1.0.0",
+  "description": "Web interface for PDF conversion with custom styling",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "cors": "^2.8.5",
+    "puppeteer": "^10.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

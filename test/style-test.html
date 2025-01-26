@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Style Test</title>
+    <link rel="stylesheet" href="../style-template.css">
+</head>
+<body>
+    <h1>PDF Styling System Test Document</h1>
+    
+    <h2>1. Typography & Document Structure</h2>
+    <p>This document demonstrates the styling capabilities of our PDF styling system. It includes examples of all supported elements and their print-optimized styles.</p>
+    
+    <h2>2. Link Types</h2>
+    <p>The system handles different types of links:</p>
+    <ul>
+        <li><a href="http://example.com">External link (with indicator icon)</a></li>
+        <li><a href="#typography">Internal reference (purple)</a></li>
+        <li><a href="document.md">Cross-document link (green)</a></li>
+    </ul>
+
+    <h2>3. Code Formatting</h2>
+    <p>Here's an example of <code>inline code</code> within text.</p>
+    <pre>
+function example() {
+    // Code block with syntax highlighting
+    const value = "test";
+    return value;
+}
+    </pre>
+
+    <h2>4. Lists</h2>
+    <h3>Unordered List</h3>
+    <ul>
+        <li>First item</li>
+        <li>Second item with <code>inline code</code></li>
+        <li>Third item with <a href="#lists">internal link</a></li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol>
+        <li>First numbered item</li>
+        <li>Second numbered item</li>
+        <li>Third numbered item</li>
+    </ol>
+
+    <h2>5. Tables</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>6. Blockquotes</h2>
+    <blockquote>
+        <p>This is a blockquote demonstrating the left border and subtle background color. It can contain multiple paragraphs and other elements.</p>
+        <p>Second paragraph in blockquote with a <a href="#blockquotes">link</a>.</p>
+    </blockquote>
+
+    <h2>7. Heading Levels</h2>
+    <h1>Heading Level 1</h1>
+    <h2>Heading Level 2</h2>
+    <h3>Heading Level 3</h3>
+    <h4>Heading Level 4</h4>
+    <h5>Heading Level 5</h5>
+    <h6>Heading Level 6</h6>
+
+    <h2>8. Horizontal Rules</h2>
+    <p>Text before horizontal rule</p>
+    <hr>
+    <p>Text after horizontal rule</p>
+
+    <h2>9. Print-Specific Features</h2>
+    <p>The following elements have special handling in print:</p>
+    <ul>
+        <li>Links show their URLs in parentheses</li>
+        <li>Page breaks are optimized</li>
+        <li>Font sizes are adjusted for print</li>
+        <li>Images scale appropriately</li>
+    </ul>
+
+    <h2>10. Images</h2>
+    <p>Images are centered and scale to fit:</p>
+    <img src="https://via.placeholder.com/600x300" alt="Example image">
+
+    <h2>11. Mixed Content</h2>
+    <div class="mixed-example">
+        <h3>Combined Elements</h3>
+        <p>This section shows how different elements work together:</p>
+        <ul>
+            <li>Text with <code>inline code</code> and <a href="#mixed">internal link</a></li>
+            <li>A short code block:
+                <pre>console.log("Hello!");</pre>
+            </li>
+            <li>A blockquote:
+                <blockquote>
+                    Nested blockquote example
+                </blockquote>
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+    <footer>
+        <p>End of test document. When printed, this document will demonstrate all print-specific optimizations.</p>
+    </footer>
+</body>
+</html>

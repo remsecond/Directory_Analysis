@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Database</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Asset Database</h2>
+    <table>
+        <tr>
+            <th>File ID</th>
+            <th>Name</th>
+            <th>Path</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Hash</th>
+            <th>Modified</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>test.txt</td>
+            <td>03_Completed/test.txt</td>
+            <td>txt</td>
+            <td>Created_Evidence</td>
+            <td>abc123</td>
+            <td>2025-01-26 03:02:00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Emails With Lisa to Date_Part1.pdf</td>
+            <td>04_Completed/Emails With Lisa to Date_Part1.pdf</td>
+            <td>pdf</td>
+            <td>Evidence</td>
+            <td>def456</td>
+            <td>2025-01-26 03:02:00</td>
+        </tr>
+    </table>
+
+    <h2>Tags</h2>
+    <table>
+        <tr>
+            <th>Tag ID</th>
+            <th>Tag Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>important</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>evidence</td>
+        </tr>
+    </table>
+
+    <h2>File Tags</h2>
+    <table>
+        <tr>
+            <th>File ID</th>
+            <th>Tag ID</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
+</body>
+</html>

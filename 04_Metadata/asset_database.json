@@ -1,0 +1,27 @@
+{
+  "files": [
+    {
+      "file_name": "test.txt",
+      "file_path": "03_Completed/test.txt",
+      "file_type": "txt",
+      "document_category": "Created_Evidence",
+      "sha256_hash": "abc123",
+      "date_modified": "2025-01-26T03:02:00.907080",
+      "ocr_text": null,
+      "summary": null,
+      "date_range": {
+        "start": null,
+        "end": null
+      },
+      "tags": [
+        "important",
+        "evidence"
+      ],
+      "participants": [
+        "John Doe"
+      ],
+      "related_documents": []
+    }
+  ],
+  "last_updated": "2025-01-26T03:02:00.918676"
+}

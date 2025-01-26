@@ -1,0 +1,53 @@
+{
+  "name": "1. File Detection & Logging",
+  "description": "Monitors input folder and logs new files",
+  "triggers": {
+    "app": "Google Drive",
+    "event": "New File in Folder",
+    "folder": "input/",
+    "include_subfolders": true
+  },
+  "actions": [
+    {
+      "app": "Google Sheets",
+      "action": "Create Spreadsheet Row",
+      "sheet": "File Tracking",
+      "row_data": {
+        "File ID": "{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+        "Name": "{{triggerData.name}}",
+        "Current Location": "input",
+        "Status": "new",
+        "Last Updated": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+        "Error Details": "",
+        "File Type": "{{toLowerCase(triggerData.fileExtension)}}",
+        "File Size": "{{formatFileSize(triggerData.size)}}",
+        "Processing Duration": "",
+        "Tags": "{{getFileTags(triggerData.name, triggerData.fileExtension)}}"
+      }
+    },
+    {
+      "app": "Google Sheets",
+      "action": "Create Spreadsheet Row",
+      "sheet": "Automation Logs",
+      "row_data": {
+        "Operation ID": "OP-{{formatDate(now, 'YYYY')}}-{{padNumber(id, 3)}}",
+        "Timestamp": "{{formatDate(now, 'YYYY-MM-DD HH:mm:ss')}}",
+        "Operation Type": "file_detection",
+        "Status": "success",
+        "Source": "{{triggerData.path}}",
+        "Target": "",
+        "Details": "New file detected: {{triggerData.name}}",
+        "Duration": "{{timer.duration}}s",
+        "Module": "file_detection",
+        "Error Message": ""
+      }
+    }
+  ],
+  "helpers": {
+    "padNumber": "function(num, size) { return String(num).padStart(size, '0'); }",
+    "formatFileSize": "function(bytes) { return Math.round(bytes/1024) + 'KB'; }",
+    "getFileTags": "function(name, ext) { const tags = [ext.toLowerCase()]; if(name.match(/Email|OFW|Messages/i)) tags.push('correspondence'); if(name.match(/Order|Agreed|Mediation/i)) tags.push('legal'); if(name.match(/Report|Form|Summary/i)) tags.push('document'); if(name.match(/\\d{4}-\\d{2}-\\d{2}/)) tags.push('dated'); return tags.join(','); }",
+    "extractDateRange": "function(name) { const dates = name.match(/\\d{4}-\\d{2}-\\d{2}/g); return dates ? dates.join(' to ') : ''; }",
+    "getCategory": "function(name) { if(name.match(/Order|Agreed/i)) return 'Orders'; if(name.match(/Mediation/i)) return 'Mediation'; if(name.match(/Report|Summary/i)) return 'Reports'; return 'Correspondence'; }"
+  }
+}

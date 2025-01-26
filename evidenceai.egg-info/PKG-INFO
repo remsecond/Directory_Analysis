@@ -4,6 +4,7 @@ Version: 0.1.0
 Summary: PDF processing and text extraction tools
 Author: EvidenceAI Team
 Requires-Python: >=3.8
+License-File: LICENSE
 Requires-Dist: PyPDF2>=3.0.0
 Requires-Dist: pdfminer.six>=20221105
 Requires-Dist: python-magic>=0.4.27

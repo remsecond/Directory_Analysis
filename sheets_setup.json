@@ -1,0 +1,134 @@
+{
+  "File Tracking": [
+    {
+      "File ID": "EMAIL-2024-001",
+      "Name": "Email exchange with christinemoyer_hotmail.com after 2024-10-31 before 2025-01-12.pdf",
+      "Current Location": "input",
+      "Status": "new",
+      "Last Updated": "2024-01-11 09:00:00",
+      "Error Details": "",
+      "File Type": "pdf",
+      "Category": "Email Exchange",
+      "Date Range": "2024-10-31 to 2025-01-12",
+      "Source": "Email",
+      "File Size": "2.3KB",
+      "Processing Duration": "",
+      "Tags": "email,christine,pdf,exchange"
+    },
+    {
+      "File ID": "OFW-2024-001",
+      "Name": "OFW_Messages_Report_2025-01-12_09-01-06.pdf",
+      "Current Location": "processing",
+      "Status": "extracting",
+      "Last Updated": "2024-01-11 10:30:00",
+      "Error Details": "",
+      "File Type": "pdf",
+      "Category": "OFW Report",
+      "Date": "2025-01-12",
+      "Source": "OFW",
+      "File Size": "4.1KB",
+      "Processing Duration": "2m 30s",
+      "Tags": "ofw,report,messages"
+    }
+  ],
+  "Automation Logs": [
+    {
+      "Operation ID": "OP-2024-001",
+      "Timestamp": "2024-01-11 09:00:00",
+      "Operation Type": "file_detection",
+      "Status": "success",
+      "Source": "input/email/Initial Contact.txt",
+      "Target": "processing/",
+      "Details": "New email thread detected",
+      "Duration": "1.2s",
+      "Module": "file_detection",
+      "Error Message": ""
+    },
+    {
+      "Operation ID": "OP-2024-002",
+      "Timestamp": "2024-01-11 10:30:00",
+      "Operation Type": "file_movement",
+      "Status": "success",
+      "Source": "input/ofw/Field Report.txt",
+      "Target": "processing/",
+      "Details": "OFW report moved to processing",
+      "Duration": "0.8s",
+      "Module": "file_movement",
+      "Error Message": ""
+    }
+  ],
+  "Pipeline Config": [
+    {
+      "Module Name": "pdf_processor",
+      "Status": "active",
+      "Input Path": "input/pdf",
+      "Output Path": "processed/pdf",
+      "Error Path": "processing/errors/pdf",
+      "Retry Count": "3",
+      "Last Success": "2024-01-11 09:05:00",
+      "Last Error": "",
+      "Settings JSON": "{\"extract_text\":true,\"ocr_enabled\":true,\"handle_large_files\":true}",
+      "Description": "Processes PDF files and extracts text content"
+    },
+    {
+      "Module Name": "spreadsheet_processor",
+      "Status": "active",
+      "Input Path": "input/spreadsheets",
+      "Output Path": "processed/spreadsheets",
+      "Error Path": "processing/errors/spreadsheets",
+      "Retry Count": "3",
+      "Last Success": "2024-01-11 10:35:00",
+      "Last Error": "",
+      "Settings JSON": "{\"supported_types\":[\"ods\",\"xlsx\",\"xls\",\"csv\"],\"convert_to_csv\":true,\"extract_metadata\":true,\"handle_large_files\":true}",
+      "Description": "Processes spreadsheet files of various formats"
+    },
+    {
+      "Module Name": "image_processor",
+      "Status": "active",
+      "Input Path": "input/images",
+      "Output Path": "processed/images",
+      "Error Path": "processing/errors/images",
+      "Retry Count": "3",
+      "Last Success": "2024-01-11 11:00:00",
+      "Last Error": "",
+      "Settings JSON": "{\"supported_types\":[\"png\",\"jpg\",\"jpeg\",\"gif\",\"bmp\"],\"extract_metadata\":true,\"ocr_enabled\":true}",
+      "Description": "Processes image files with OCR capabilities"
+    },
+    {
+      "Module Name": "document_processor",
+      "Status": "active",
+      "Input Path": "input/documents",
+      "Output Path": "processed/documents",
+      "Error Path": "processing/errors/documents",
+      "Retry Count": "3",
+      "Last Success": "2024-01-11 11:15:00",
+      "Last Error": "",
+      "Settings JSON": "{\"supported_types\":[\"doc\",\"docx\",\"rtf\",\"txt\"],\"extract_metadata\":true,\"extract_text\":true}",
+      "Description": "Processes document files of various formats"
+    },
+    {
+      "Module Name": "attachment_processor",
+      "Status": "active",
+      "Input Path": "input/attachments",
+      "Output Path": "processed/attachments",
+      "Error Path": "processing/errors/attachments",
+      "Retry Count": "3",
+      "Last Success": "2024-01-11 11:30:00",
+      "Last Error": "",
+      "Settings JSON": "{\"supported_types\":[\"pdf\",\"csv\",\"docx\",\"xlsx\",\"png\",\"jpg\"],\"extract_metadata\":true,\"handle_large_files\":true}",
+      "Description": "Processes email attachments of various formats"
+    },
+    {
+      "Module Name": "categorizer",
+      "Status": "active",
+      "Input Path": "processed",
+      "Output Path": "categorized",
+      "Error Path": "processing/errors/categorizer",
+      "Retry Count": "3",
+      "Last Success": "2024-01-11 11:45:00",
+      "Last Error": "",
+      "Settings JSON": "{\"categories\":[\"Orders\",\"Mediation\",\"Reports\",\"Correspondence\"],\"use_date_folders\":true,\"handle_large_files\":true}",
+      "Description": "Categorizes processed files into appropriate folders"
+    }
+  ]
+}
